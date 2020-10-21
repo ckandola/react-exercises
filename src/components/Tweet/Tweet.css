@@ -1,0 +1,17 @@
+.date {
+  text-indent: 2em;
+  font-weight: 600;
+}
+
+.message {
+  font-style: italic;
+  padding-left: 1em;
+}
+
+.name {
+  font-size: x-small;
+}
+
+.user {
+  text-decoration: underline;
+}
