@@ -1,0 +1,25 @@
+.entry {
+  background-color: silver;
+  border-radius: 2em;
+  width: 10em;
+  height: 12em;
+  padding: 0.1em;
+  margin: 1em;
+}
+
+.name {
+  color: blue;
+  text-align: center;
+}
+
+.type {
+  text-align: center;
+  color: navy;
+}
+
+.image {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 50%;
+}
