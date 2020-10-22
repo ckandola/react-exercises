@@ -1,0 +1,8 @@
+.finished {
+  text-decoration: line-through;
+}
+
+.buttons {
+  text-align: right;
+  padding-right: 2em;
+}
