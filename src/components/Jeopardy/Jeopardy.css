@@ -1,0 +1,36 @@
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 1em;;
+    display: block;
+}
+
+.button {
+    justify-content: center;
+    width:8em;
+    height:3em;
+    font-size: 1em;
+}
+
+.table {
+    display:table;
+}
+
+.table tbody tr {
+    margin:1px;
+}
+
+.maintext {
+    background-color: blueviolet;
+    width: 75%;
+    height: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    padding: 25vh;
+    font-size: 15px;
+}
