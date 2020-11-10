@@ -101,7 +101,7 @@ class App extends React.Component {
 
         {/* <Timer/> */}
 
-        <Slider />
+        <Slider initial={1} max={2} onChange={value => console.log(value)}/>
       </div>
     );
   }
