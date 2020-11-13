@@ -33,7 +33,9 @@ import "./App.css";
 
 // import Timer from './components/Timer';
 
-import Slider from './components/Slider';
+// import Slider from './components/Slider';
+
+import BirthdayReminder from './components/BirthdayReminder';
 
 class App extends React.Component {
   render() {
@@ -101,7 +103,9 @@ class App extends React.Component {
 
         {/* <Timer/> */}
 
-        <Slider />
+        {/* <Slider initial={1} max={2} onChange={value => console.log(value)}/> */}
+
+        <BirthdayReminder/>
       </div>
     );
   }
