@@ -1,3 +1,5 @@
+// from https://www.youtube.com/watch?v=a_7Z7C_JCyo
+
 import React, {useState, useEffect} from 'react';
 import Loading from './Loading';
 import Tour from './Tour';
@@ -22,6 +24,13 @@ const Tours = () => {
         }
     };
 
+    const deleteTour = id => {
+        const newTours = tours.filter(tour => {
+            return tour.id !== id;
+        })
+        setTours(newTours);
+    }
+
     useEffect(() => {
         fetchTours();
     }, []);
@@ -35,13 +44,19 @@ const Tours = () => {
     return (
         <section>
             <div className="title">
-                <h2>Our Tours</h2>
-                <div className="underline"></div>
-            </div>
-            <div>
-                {tours.map(tour => {
-                    return <Tour key={tour.id} {...tour}></Tour>
-                })}
+                {tours.length !== 0 ? 
+                    <div>
+                        <h2>Our Tours</h2>
+                        <div className="underline"></div>
+                        {tours.map(tour => {
+                            return <Tour key={tour.id} {...tour} deleteTour={deleteTour}></Tour>
+                        })}
+                    </div> :
+                    <div>
+                        <h2>No Tours Left</h2>
+                        <button className="btn" onClick={fetchTours}>Refresh</button>
+                    </div>
+                }
             </div>
         </section>
     );
