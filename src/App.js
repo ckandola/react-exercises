@@ -35,7 +35,9 @@ import "./App.css";
 
 // import Slider from './components/Slider';
 
-import BirthdayReminder from './components/BirthdayReminder';
+// import BirthdayReminder from './components/BirthdayReminder';
+
+import Tours from './components/Tours';
 
 class App extends React.Component {
   render() {
@@ -105,7 +107,9 @@ class App extends React.Component {
 
         {/* <Slider initial={1} max={2} onChange={value => console.log(value)}/> */}
 
-        <BirthdayReminder/>
+        {/* <BirthdayReminder/>*/}
+
+        <Tours />
       </div>
     );
   }
