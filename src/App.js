@@ -37,7 +37,9 @@ import "./App.css";
 
 // import BirthdayReminder from './components/BirthdayReminder';
 
-import Tours from './components/Tours';
+// import Tours from './components/Tours';
+
+import Reviews from './components/Reviews';
 
 class App extends React.Component {
   render() {
@@ -109,7 +111,9 @@ class App extends React.Component {
 
         {/* <BirthdayReminder/>*/}
 
-        <Tours />
+        {/* <Tours /> */}
+
+        <Reviews />
       </div>
     );
   }
