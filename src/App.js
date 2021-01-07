@@ -41,8 +41,10 @@ import "./App.css";
 
 // import Reviews from './components/Reviews';
 
-import Accordion from './components/Accordion';
-import accordionData from './components/Accordion/data';
+// import Accordion from './components/Accordion';
+// import accordionData from './components/Accordion/data';
+
+import FoodMenu from './components/FoodMenu';
 
 class App extends React.Component {
   render() {
@@ -118,7 +120,7 @@ class App extends React.Component {
 
         {/* <Reviews /> */}
         
-        <div className="accordion-main">
+        {/* <div className="accordion-main">
           <div className="accordion-container">
             <h3>Login Questions</h3>
             <section className="info">
@@ -129,7 +131,9 @@ class App extends React.Component {
               })}
             </section>
           </div>
-        </div>
+        </div> */}
+
+        <FoodMenu />
 
       </div>
     );
