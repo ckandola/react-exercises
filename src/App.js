@@ -115,7 +115,7 @@ class App extends React.Component {
         {/* <BirthdayReminder/>*/}
 
         {/* <Tours /> */}
-        
+
         {/* <Reviews /> */}
         
         <div className="accordion-main">
