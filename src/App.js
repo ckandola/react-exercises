@@ -118,7 +118,18 @@ class App extends React.Component {
         
         {/* <Reviews /> */}
         
-        <Accordion />
+        <div className="accordion-main">
+          <div className="accordion-container">
+            <h3>Login Questions</h3>
+            <section className="info">
+              {accordionData.map(accordion => {
+                return (
+                  <Accordion key={accordion.id} question={accordion.title} answer={accordion.info} />
+                );
+              })}
+            </section>
+          </div>
+        </div>
 
       </div>
     );

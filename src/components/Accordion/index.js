@@ -1,15 +1,22 @@
-import React from 'react';
-import {BsFillCircleFill, BsDashCircleFill} from 'react-icons/bs';
+import React, {useState} from 'react';
+import {BsFillPlusCircleFill, BsDashCircleFill} from 'react-icons/bs';
+import './index.css';
 
 
-const Accordion = ({isOpen = false, question}) => {
+const Accordion = ({question, answer}) => {
+    const [isOpen, setIsOpen] = useState(false);
+    
     return (
-        <div>
-            <span>
+        <article className="question">
+            <header>
                 <h4>{question}</h4>
-                {isOpen ? <BsDashCircleFill /> : <BsFillCircleFill />}
-            </span>
-        </div>
+                <button className="btn" onClick={() => setIsOpen(!isOpen)}>
+                    {isOpen ? <BsDashCircleFill /> : <BsFillPlusCircleFill />}
+                </button>
+
+            </header>
+            {isOpen && <p>{answer}</p>}
+        </article>
     );
 };
 
