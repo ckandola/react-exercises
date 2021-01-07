@@ -39,6 +39,8 @@ import "./App.css";
 
 // import Tours from './components/Tours';
 
+// import Reviews from './components/Reviews';
+
 import Accordion from './components/Accordion';
 import accordionData from './components/Accordion/data';
 
@@ -114,7 +116,10 @@ class App extends React.Component {
 
         {/* <Tours /> */}
         
+        {/* <Reviews /> */}
+        
         <Accordion />
+
       </div>
     );
   }
