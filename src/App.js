@@ -39,7 +39,10 @@ import "./App.css";
 
 // import Tours from './components/Tours';
 
-import Reviews from './components/Reviews';
+// import Reviews from './components/Reviews';
+
+import Accordion from './components/Accordion';
+import accordionData from './components/Accordion/data';
 
 class App extends React.Component {
   render() {
@@ -113,7 +116,21 @@ class App extends React.Component {
 
         {/* <Tours /> */}
 
-        <Reviews />
+        {/* <Reviews /> */}
+        
+        <div className="accordion-main">
+          <div className="accordion-container">
+            <h3>Login Questions</h3>
+            <section className="info">
+              {accordionData.map(accordion => {
+                return (
+                  <Accordion key={accordion.id} question={accordion.title} answer={accordion.info} />
+                );
+              })}
+            </section>
+          </div>
+        </div>
+
       </div>
     );
   }

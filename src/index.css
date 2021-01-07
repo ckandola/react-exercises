@@ -11,3 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.accordion-main {
+  min-height: 100vh;
+    /* using flex because of better browser support */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion-container {
+  width: 90vw;
+  margin: 5rem auto;
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  max-width: var(--fixed-width);
+  display: grid;
+  gap: 1rem 2rem;
+}
+
+.accordion-container h3 {
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.accordion-section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+@media screen and (min-width: 992px) {
+  .accordion-section {
+    width: 95vw;
+  }
+}
