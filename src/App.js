@@ -37,7 +37,10 @@ import "./App.css";
 
 // import BirthdayReminder from './components/BirthdayReminder';
 
-import Tours from './components/Tours';
+// import Tours from './components/Tours';
+
+import Accordion from './components/Accordion';
+import accordionData from './components/Accordion/data';
 
 class App extends React.Component {
   render() {
@@ -109,7 +112,9 @@ class App extends React.Component {
 
         {/* <BirthdayReminder/>*/}
 
-        <Tours />
+        {/* <Tours /> */}
+        
+        <Accordion />
       </div>
     );
   }
