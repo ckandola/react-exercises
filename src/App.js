@@ -45,6 +45,8 @@ import "./App.css";
 // import accordionData from './components/Accordion/data';
 
 import FoodMenu from './components/FoodMenu';
+import FoodCategories from './components/FoodMenu/FoodCategories';
+import foodItems from './components/FoodMenu/data';
 
 class App extends React.Component {
   render() {
@@ -133,7 +135,16 @@ class App extends React.Component {
           </div>
         </div> */}
 
-        <FoodMenu />
+        <main>
+          <section className="food-menu food-section">
+            <div className="food-title">
+              <h2>Our Menu</h2>
+              <div className="underline"></div>
+            </div>
+            <FoodCategories />
+            <FoodMenu items={foodItems}/>
+          </section>
+        </main>
 
       </div>
     );

@@ -72,5 +72,7 @@ const menu = [
       desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
     },
   ];
+
+  // note: the only way to dynamically add image sources is to use the `images` folder provided by create-react-app.
   export default menu;
   

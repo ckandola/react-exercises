@@ -46,4 +46,30 @@ code {
   .accordion-section {
     width: 95vw;
   }
+  .food-section {
+    width: 95vw;
+  }
+}
+
+.food-menu {
+  padding: 5rem 0;
+}
+
+.food-section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+.food-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  background: var(--clr-gold);
+  margin-left: auto;
+  margin-right: auto;
 }
