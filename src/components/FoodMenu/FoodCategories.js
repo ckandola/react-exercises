@@ -1,8 +1,16 @@
 import React from 'react';
+import './index.css';
 
-const FoodCategories = () => {
+const FoodCategories = ({categoryList, filterItems}) => {
+
     return (
-        <h3>Categories...!</h3>
+        <div className="btn-container">
+            {categoryList.map(category => {
+                return (
+                    <button key={category} className="filter-btn" onClick={() => filterItems(category)}>{category}</button>
+                );
+            })}
+        </div>
     );
 };
 
