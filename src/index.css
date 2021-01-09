@@ -46,4 +46,23 @@ code {
   .accordion-section {
     width: 95vw;
   }
+
+ .section {
+   width: 90vw;
+   margin: 0 auto;
+   max-width: var(--max-width);
+ }
+
+ .title {
+   text-align: center;
+   margin-bottom: 2rem;
+ }
+
+ .underline-main {
+  width: 5rem;
+  height: 0.25rem;
+  background:maroon;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
