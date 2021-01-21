@@ -18,7 +18,7 @@ import ColorGrid from "./components/ColorGrid";
 
 import ToDoList from "./components/ToDoList";
 
-import LinkApp from "./components/LinkApp";
+// import LinkApp from "./components/LinkApp";
 
 import Jokes from "./components/Jokes";
 import Gif from "./components/Gif";
@@ -52,7 +52,7 @@ import FoodMenuProject from "./components/FoodMenu/FoodMenuProject";
 
 const App = () => {
 
-  const [currentComponent, setCurrentComponent] = useState(null);
+  // const [currentComponent, setCurrentComponent] = useState(null);
 
   const componentMapping = {
     FirstComponent,
@@ -63,7 +63,6 @@ const App = () => {
     Pokedex,
     ColorGrid,
     ToDoList,
-    LinkApp,
     Jokes,
     Gif,
     TicTacToe,
@@ -88,7 +87,6 @@ const App = () => {
     'Pokedex',
     'ColorGrid',
     'ToDoList',
-    'LinkApp',
     'Jokes',
     'Gif',
     'TicTacToe',
@@ -107,7 +105,7 @@ const App = () => {
   const createComponent = name => {
     console.log(`creating ${name}...`)
     const Component = componentMapping[name];
-    setCurrentComponent(Component);
+    // setCurrentComponent(Component);
     return <Component />;
   }
 
