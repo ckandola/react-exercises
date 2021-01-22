@@ -1,6 +1,6 @@
 // https://dev.to/andyrewlee/how-to-dynamically-render-components-in-react-4n7g
 
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import './index.css';
 
@@ -50,9 +50,11 @@ import accordionData from './components/Accordion/data';
 
 import FoodMenuProject from "./components/FoodMenu/FoodMenuProject";
 
-const App = () => {
+// import RouterBasic from "./components/RouterBasic";
 
-  // const [currentComponent, setCurrentComponent] = useState(null);
+import RouterNested from "./components/RouterBasic/RouterNested";
+
+const App = () => {
 
   const componentMapping = {
     FirstComponent,
@@ -218,10 +220,14 @@ const App = () => {
         </div>
       </div> */}
 
-      {/* <FoodMenuProject /> */}
+        {/* <FoodMenuProject />*/}
 
-    </div>
-  );
-}
+        {/* <RouterBasic /> */}
+        
+        <RouterNested />
+
+      </div>
+    );
+};
 
 export default App;
