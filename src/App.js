@@ -45,7 +45,11 @@ import "./App.css";
 // import Accordion from './components/Accordion';
 // import accordionData from './components/Accordion/data';
 
-import FoodMenuProject from "./components/FoodMenu/FoodMenuProject";
+// import FoodMenuProject from "./components/FoodMenu/FoodMenuProject";
+
+// import RouterBasic from "./components/RouterBasic";
+
+import RouterNested from "./components/RouterBasic/RouterNested";
 
 class App extends React.Component {
   render() {
@@ -134,7 +138,11 @@ class App extends React.Component {
           </div>
         </div> */}
 
-        <FoodMenuProject />
+        {/* <FoodMenuProject />*/}
+
+        {/* <RouterBasic /> */}
+        
+        <RouterNested />
 
       </div>
     );
