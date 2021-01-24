@@ -3,6 +3,14 @@
 import React from "react";
 import "./App.css";
 import './index.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
 
 import FirstComponent from "./components/FirstComponent";
 import SecondComponent from "./components/SecondComponent";
@@ -46,38 +54,38 @@ import Tours from './components/Tours';
 import Reviews from './components/Reviews';
 
 import Accordion from './components/Accordion';
-import accordionData from './components/Accordion/data';
+// import accordionData from './components/Accordion/data';
 
 import FoodMenuProject from "./components/FoodMenu/FoodMenuProject";
 
 // import RouterBasic from "./components/RouterBasic";
 
-import RouterNested from "./components/RouterBasic/RouterNested";
+// import RouterNested from "./components/RouterBasic/RouterNested";
 
 const App = () => {
 
   const componentMapping = {
-    FirstComponent,
-    SecondComponent,
-    NamedComponent,
-    Tweet,
-    Person,
-    Pokedex,
-    ColorGrid,
-    ToDoList,
-    Jokes,
-    Gif,
-    TicTacToe,
-    HangMan,
-    Radio,
-    BasicMenu,
-    Tooltip,
-    Timer,
-    BirthdayReminder,
-    Tours,
-    Reviews,
-    Accordion,
-    FoodMenuProject
+    "FirstComponent": FirstComponent,
+    "SecondComponent": SecondComponent,
+    "NamedComponent": NamedComponent,
+    "Tweet": Tweet,
+    "Person": Person,
+    "Pokedex": Pokedex,
+    "ColorGrid": ColorGrid,
+    "ToDoList": ToDoList,
+    "Jokes": Jokes,
+    "Gif": Gif,
+    "TicTacToe": TicTacToe,
+    "HangMan": HangMan,
+    "Radio": Radio,
+    "BasicMenu": BasicMenu,
+    "Tooltip": Tooltip,
+    "Timer": Timer,
+    "BirthdayReminder": BirthdayReminder,
+    "Tours": Tours,
+    "Reviews": Reviews,
+    "Accordion": Accordion,
+    "FoodMenuProject": FoodMenuProject
   }
 
   const componentNames = [
@@ -104,13 +112,6 @@ const App = () => {
     'FoodMenuProject'
   ]
 
-  const createComponent = name => {
-    console.log(`creating ${name}...`)
-    const Component = componentMapping[name];
-    // setCurrentComponent(Component);
-    return <Component />;
-  }
-
   return (
     <div className="main">
       <main>
@@ -120,24 +121,47 @@ const App = () => {
             <div className="underline-main"></div>
           </div>
           
-          {/* {currentComponent ? 
-          (<div>{currentComponent}</div>) :  */}
-          (<div className="button-container">
-            {componentNames.map(componentName => {
-              return (
-                <button 
-                  key={componentName} 
-                  className="button-project" 
-                  onClick={() => createComponent(componentName)}
-                >{componentName}</button>
-              );
-            })}
-          </div>)
-          {/* } */}
+          <div>
+            <Router>
+              <div className="button-container">
+              {componentNames.map(componentName => {
+                return (
+                  <Link key={componentName} 
+                    className="button-project" 
+                    style={{
+                      color: 'white', 
+                      textDecoration: 'none', 
+                      border: '2px solid darkslateblue',
+                    }}
+                    to={`/${componentName}`} >
+                    {componentName}
+                  </Link>
+                  // <button 
+                  //   key={componentName} 
+                  //   className="button-project" 
+                  // >{componentName}</button>
+                );
+              })}
+              
+
+              <Switch>
+                <Route path="/FirstComponent">
+                  <FirstComponent />
+                </Route>
+              </Switch>
+              <Switch>
+                <Route path="/SecondComponent">
+                  {/* looks like this doesn't throw an error...could be made dynamically */}
+                  <SecondComponent />
+                </Route>
+              </Switch>
+              </div>
+            </Router>
+          </div>
 
         </section>
       </main>
-      {/* <FirstComponent />
+      {/*
       <SecondComponent />
       <NamedComponent style={style} name="CK" /> */}
 
@@ -224,7 +248,7 @@ const App = () => {
 
         {/* <RouterBasic /> */}
         
-        <RouterNested />
+        {/* <RouterNested /> */}
 
       </div>
     );

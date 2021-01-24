@@ -52,9 +52,6 @@ code {
    margin: 0 auto;
    max-width: var(--max-width);
  }
-
- 
- 
 }
 
 .main {
@@ -76,11 +73,12 @@ code {
 }
 
 .button-container {
-  display:block;
+  display:grid;
+  grid-template-columns: auto auto auto auto auto auto;
   border-radius: 15%;
   background-color:#e3d5f1;
   padding: 1.5rem;
-  width: 70vw;
+  min-width: 70vw;
 }
 
 .button-project {
@@ -94,6 +92,10 @@ code {
   justify-content: center;
   height:2rem;
   cursor: pointer;
+  max-width: fit-content;
+  padding:1vw;
+  display: flex;
+  text-align: center;
   margin-left: 1rem;
   margin-bottom: .5rem;
   min-width: 2rem;
