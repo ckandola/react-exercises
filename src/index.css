@@ -74,11 +74,11 @@ code {
 
 .button-container {
   display:grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto auto;
   border-radius: 15%;
   background-color:#e3d5f1;
   padding: 1.5rem;
-  min-width: 70vw;
+  min-width: 80vw;
 }
 
 .button-project {
