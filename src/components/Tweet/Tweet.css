@@ -1,17 +1,28 @@
 .date {
-  text-indent: 2em;
   font-weight: 600;
 }
 
 .message {
   font-style: italic;
-  padding-left: 1em;
 }
 
-.name {
-  font-size: x-small;
+.tweet-name {
+  font-weight: bold;
+  color:black;
 }
 
 .user {
-  text-decoration: underline;
+  font-size: 0.8em;
+  color:dimgrey;
+}
+
+.tweet-box-outer {
+  background-color: rgb(29, 161, 242);
+  max-width: 50vw;
+  margin: auto;
+  max-height:10em;
+}
+
+.tweet-box-inner {
+  background-color: white;
 }

@@ -137,13 +137,13 @@ const App = () => {
                       date="6/05/99"
                       message="Gravy!"/>
                       <Tweet
-                      username="Mucho Dinero"
+                      username="Mucho-Dinero"
                       name="eddy"
                       date="7/02/99"
-                      message="Jawbreakers, Ed!"
+                      message="If elected, inflation will be a thing of the gas!"
                     />
                     <Tweet
-                      username="my_kingdom_for_suncreen"
+                      username="my_kingdom_for_sunscreen"
                       name="edd"
                       date="7/05/99"
                       message="Messy, messy, messy!"
