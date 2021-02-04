@@ -1,6 +1,6 @@
 // https://dev.to/andyrewlee/how-to-dynamically-render-components-in-react-4n7g
 
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 import './index.css';
 import {
@@ -86,12 +86,14 @@ const App = () => {
     'FoodMenuProject'
   ]
 
+  const [currentProject, setCurrentProject] = useState();
+
   return (
     <div className="main">
       <main>
         <section>
           <div className="title-main">
-            <h2>My Projects</h2>
+            <h2>My Projects {currentProject ? `- ${currentProject}` : ''}</h2>
             <div className="underline-main"></div>
           </div>
           
@@ -108,9 +110,11 @@ const App = () => {
                           color: 'white', 
                           textDecoration: 'none', 
                           border: '2px solid darkslateblue',
+                          minWidth: 'fit-content'
                         }}
+                        onClick={() => setCurrentProject(componentName)}
                         to={`/${componentName}`} >
-                        {componentName}
+                        {componentName === currentProject ? `${componentName.toUpperCase()}*` : componentName}
                       </Link>
                     );
                   })}

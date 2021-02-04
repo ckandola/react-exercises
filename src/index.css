@@ -92,7 +92,6 @@ code {
   justify-content: center;
   height:2rem;
   cursor: pointer;
-  max-width: fit-content;
   padding:1vw;
   display: flex;
   text-align: center;
