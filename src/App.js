@@ -153,14 +153,14 @@ const App = () => {
                     <Person
                       name="AgeEight"
                       age="8"
-                      hobbies={["running, schooling, eating"]}
+                      hobbies={["running", "schooling", "eating"]}
                     />
                     <Person
                       name="TooLongOfAName"
                       age="20"
-                      hobbies={["thinking, pondering, querying, imagining"]}
+                      hobbies={["thinking", "pondering", "querying", "imagining"]}
                     />
-                    <Person name="Bob" age="30" hobbies={["building, fixing it"]} />
+                    <Person name="Bob" age="30" hobbies={["building", "fixing it"]} />
                   </Route>
                   <Route path="/Pokedex">
                     <Pokedex />
