@@ -7,9 +7,9 @@ class Pokecard extends Component {
     return (
       <li key={this.props.id}>
         <div className="entry">
-          <h3 className="name">{this.props.name}</h3>
-          <img src={this.props.image} alt={this.props.name} className="image" />
+          <h3 className="pokemon-name">{this.props.name}</h3>
           <h3 className="type">Type: {this.props.type}</h3>
+          <img src={this.props.image} alt={this.props.name} className="image" />
         </div>
       </li>
     );

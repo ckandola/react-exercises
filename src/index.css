@@ -75,7 +75,7 @@ code {
 .button-container {
   display:grid;
   grid-template-columns: auto auto auto auto auto auto auto;
-  border-radius: 15%;
+  border-radius: 15em;
   background-color:#e3d5f1;
   padding: 1.5rem;
   min-width: 80vw;
@@ -87,7 +87,7 @@ code {
   border-color:transparent;
   background-color:slateblue;
   color:white;
-  border-radius: 5%;
+  border-radius: 5em;
   border-color: darkslateblue;
   justify-content: center;
   height:2rem;
