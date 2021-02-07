@@ -22,7 +22,7 @@ class ColorGrid extends React.Component {
     return table;
   };
   render() {
-    return <table>{this.createGrid()}</table>;
+    return <table style={{margin: 'auto'}}>{this.createGrid()}</table>;
   }
 }
 
