@@ -19,5 +19,6 @@
 .entry {
   width: 20em;
   max-height: 2em;
+  padding:0em;
   padding-left: 0.5em;
 }
