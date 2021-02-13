@@ -46,4 +46,57 @@ code {
   .accordion-section {
     width: 95vw;
   }
+
+ .section {
+   width: 90vw;
+   margin: 0 auto;
+   max-width: var(--max-width);
+ }
+}
+
+.main {
+  background-color: #D8CBF1;
+}
+
+.title-main {
+  text-align: center;
+  margin-bottom: 2rem;
+  color:mediumpurple;
+}
+
+.underline-main {
+ width: 5rem;
+ height: 0.25rem;
+ background:indigo;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.button-container {
+  display:grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  border-radius: 15em;
+  background-color:#e3d5f1;
+  padding: 1.5rem;
+  min-width: 80vw;
+}
+
+.button-project {
+  align-self:center;
+  align-items: center;
+  border-color:transparent;
+  background-color:slateblue;
+  color:white;
+  border-radius: 1em;
+  border-color: darkslateblue;
+  justify-content: center;
+  height:2rem;
+  cursor: pointer;
+  padding:1vw;
+  display: flex;
+  text-align: center;
+  margin-left: 1rem;
+  margin-bottom: .5rem;
+  min-width: 2rem;
+  font-size: 1.2rem;
 }

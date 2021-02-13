@@ -1,5 +1,15 @@
+.background {
+  background-color:seashell;
+  background-image: url(../../assets/notebook_paper.png);
+  max-width: 60vw;
+  margin:auto;
+  margin-top: 3em;
+  align-items: center;
+}
+
 .header {
   text-align: center;
+  text-decoration: underline;
 }
 
 .textEntry {
@@ -8,4 +18,7 @@
 
 .entry {
   width: 20em;
+  max-height: 2em;
+  padding:0em;
+  padding-left: 0.5em;
 }

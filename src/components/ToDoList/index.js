@@ -41,8 +41,8 @@ const ToDoList = () => {
   };
 
   return (
-    <div>
-      <h1 className="header">React Header:</h1>
+    <div className="background">
+      <h2 className="header">ToDo List:</h2>
       <ul>
         {todos.map(item => {
           return (

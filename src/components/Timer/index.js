@@ -92,7 +92,7 @@ const Timer = () => {
     }
 
     return (
-        <div>
+        <div style={{margin: 'auto', width: '50%', textAlign: 'center'}}>
             <h2>Timer</h2>
             <span>
                 {timeChoices.map(choice => {

@@ -32,7 +32,7 @@ const ToDo = ({ task, onDelete, onEdit }) => {
               onClick={() => onDelete(task)}
             />
           </div>
-          <input type="checkbox" value={task} onClick={() => setIsFinished(!isFinished)} />{" "}
+          <input className="check" type="checkbox" value={task} onClick={() => setIsFinished(!isFinished)} />
           {!isFinished ? (
             <span>{task}</span>
           ) : (

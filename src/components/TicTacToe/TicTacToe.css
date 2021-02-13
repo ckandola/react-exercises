@@ -1,5 +1,6 @@
 .board {
  display: table;
+ margin: auto;
 }
 
 .board-row:after {

@@ -4,12 +4,14 @@ import "./Tweet.css";
 const Tweet = ({ username, name, date, message }) => {
   return (
     <>
-      <div>
-        <span className="user">{username}</span>
-        <span className="name">({name})</span>:
-        <span className="message">{message}</span>
+      <div className="tweet-box-outer">
+        <div className="tweet-name">{`${name.toUpperCase()}`}</div>
+        <span className="user">@{username}</span>
+        <div className="tweet-box-inner">
+          <div className="message">{message}</div>
+          <p className="date">{`${date}`}</p>
+        </div>
       </div>
-      <p className="date">{`--- ${date}`}</p>
     </>
   );
 };
