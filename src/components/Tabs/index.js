@@ -1,30 +1,33 @@
-import React, {useState, useEffect} from 'react';
+// ** comment and uncomment for tutorial's data file vs my json file
+
+import React, {useState/* , useEffect */} from 'react';
 import { FaAngleDoubleRight} from 'react-icons/fa';
 import './Tabs.css';
+import jobs from './data.json';
 
-const url = 'https://course-api.com/react-tabs-project';
+// const url = 'https://course-api.com/react-tabs-project'; **
 
 const Tabs = () => {
-    const [loading, setLoading] = useState(true);
-    const [jobs, setJobs] = useState([]);
+    // const [loading, setLoading] = useState(true);        **
+    // const [jobs, setJobs] = useState([]);                **
     const [value, setValue] = useState(0);
 
-    const fetchJobs = async () => {
-        const response = await fetch(url);
-        const newJobs = await response.json();
-        setJobs(newJobs);
-        setLoading(false);
-    };
+    // const fetchJobs = async () => {                      ** --
+    //     const response = await fetch(url);
+    //     const newJobs = await response.json();
+    //     setJobs(newJobs);
+    //     setLoading(false);
+    // };
     
-    useEffect(() => {
-        fetchJobs();
-    }, []);
+    // useEffect(() => {
+    //     fetchJobs();
+    // }, []);                                              
     
-    if (loading) {
-        return <section className="tab-section tab-loading">
-            <h1>loading...</h1>
-        </section>
-    }
+    // if (loading) {
+    //     return <section className="tab-section tab-loading">
+    //         <h1>loading...</h1>
+    //     </section>
+    // }                                                    -- **
 
     const {company, dates, duties, title} = jobs[value];
 
@@ -41,7 +44,7 @@ const Tabs = () => {
                                     key={index} 
                                     className={`tab-job-btn ${index === value && 'tab-active-btn'}`}
                                     onClick={() => setValue(index)}>
-                                        {job.company}
+                                        {job.title}
                                 </button>
                             );
                         })}

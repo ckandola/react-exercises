@@ -86,7 +86,7 @@ const App = () => {
     'Reviews',
     'Accordion',
     'FoodMenuProject',
-    'Tabs'
+    'ResumeTabs'
   ]
 
   const [currentProject, setCurrentProject] = useState();
@@ -232,7 +232,7 @@ const App = () => {
                   <Route path="/FoodMenuProject">
                     <FoodMenuProject />
                   </Route>
-                  <Route path="/Tabs">
+                  <Route path="/ResumeTabs">
                     <Tabs />
                   </Route>
                 </Switch>

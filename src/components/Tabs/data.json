@@ -1,0 +1,42 @@
+[
+    {
+        "company": "Sehome Diner", 
+        "dates": "August 2012 - February 2020",
+        "duties": [
+            "Cashiering",
+            "Greeting customers and taking orders",
+            "Making espresso drinks and delivering food",
+            "Cleaning tables, sweeping, washing dishes" 
+        ],
+        "title": "Waitress/Cashier"
+    },
+    {
+        "company": "Lowe's", 
+        "dates": "September 2019 - present",
+        "duties": [
+            "Cashiering" 
+        ],
+        "title": "Cashier"
+    },
+    {
+        "company": "Cornerstone Systems NW", 
+        "dates": "April 2019 - July 2019",
+        "duties": [
+            "Learning Javascript.", 
+            "Learning DevTools.", 
+            "Researching encryption algorithms included in Node.js Crypto module. Chose an algorithm based on security and speed requirements, created module for both encryption and decryption."
+        ],
+        "title": "Software Developer Intern"
+    },
+    {
+        "company": "Faithlife", 
+        "dates": "October 2019 - January 2020",
+        "duties": [
+            "Using GIT.",
+            "Learning ReactJS.", 
+            "Learning to improve user interactions with React hooks", 
+            "Worked on media editor features, including a QR Code menu, adding shortcuts, and modifying a color picker."
+        ],
+        "title": "Software Developer Intern"
+    }
+]
