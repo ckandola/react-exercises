@@ -2,12 +2,12 @@
 
 import React, {useState/* , useEffect */} from 'react';
 import { FaAngleDoubleRight} from 'react-icons/fa';
-import './Tabs.css';
+import './ResumeTabs.css';
 import jobs from './data.json';
 
 // const url = 'https://course-api.com/react-tabs-project'; **
 
-const Tabs = () => {
+const ResumeTabs = () => {
     // const [loading, setLoading] = useState(true);        **
     // const [jobs, setJobs] = useState([]);                **
     const [value, setValue] = useState(0);
@@ -68,4 +68,4 @@ const Tabs = () => {
     );
 };
 
-export default Tabs;
+export default ResumeTabs;

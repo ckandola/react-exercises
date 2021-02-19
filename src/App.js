@@ -60,7 +60,7 @@ import FoodMenuProject from "./components/FoodMenu/FoodMenuProject";
 
 // import RouterNested from "./components/RouterBasic/RouterNested";
 
-import Tabs from './components/Tabs';
+import ResumeTabs from './components/ResumeTabs';
 
 const App = () => {
 
@@ -86,7 +86,7 @@ const App = () => {
     'Reviews',
     'Accordion',
     'FoodMenuProject',
-    'ResumeTabs'
+    'Resume Tabs'
   ]
 
   const [currentProject, setCurrentProject] = useState();
@@ -232,8 +232,8 @@ const App = () => {
                   <Route path="/FoodMenuProject">
                     <FoodMenuProject />
                   </Route>
-                  <Route path="/ResumeTabs">
-                    <Tabs />
+                  <Route path="/Resume Tabs">
+                    <ResumeTabs />
                   </Route>
                 </Switch>
 
