@@ -4,10 +4,9 @@ import React, {useState, useEffect} from 'react';
 import {FiChevronRight, FiChevronLeft} from 'react-icons/fi';
 import {FaQuoteRight} from 'react-icons/fa';
 import './Carousel.css';
-import data from './data';
+import people from './data';
 
 const Carousel = () => {
-    const [people, setPeople] = useState(data);
     const [ix, setIx] = useState(0);
 
     useEffect(() => {
@@ -15,7 +14,7 @@ const Carousel = () => {
             setIx(ix === people.length - 1 ? 0 : ix + 1);
         }, 5000);
         return () => clearInterval(slider);
-    }, [ix, people.length])
+    }, [ix])
 
     return (
         <section className="carousel-section">
