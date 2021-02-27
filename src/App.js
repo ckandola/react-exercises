@@ -62,6 +62,8 @@ import FoodMenuProject from "./components/FoodMenu/FoodMenuProject";
 
 import ResumeTabs from './components/ResumeTabs';
 
+import Carousel from './components/Carousel';
+
 const App = () => {
 
   const componentNames = [
@@ -86,7 +88,8 @@ const App = () => {
     'Reviews',
     'Accordion',
     'FoodMenuProject',
-    'Resume Tabs'
+    'Resume Tabs',
+    'Carousel'
   ]
 
   const [currentProject, setCurrentProject] = useState();
@@ -234,6 +237,9 @@ const App = () => {
                   </Route>
                   <Route path="/Resume Tabs">
                     <ResumeTabs />
+                  </Route>
+                  <Route path="/Carousel">
+                    <Carousel />
                   </Route>
                 </Switch>
 
