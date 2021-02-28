@@ -64,6 +64,8 @@ import ResumeTabs from './components/ResumeTabs';
 
 import Carousel from './components/Carousel';
 
+import LoremIpsum from './components/LoremIpsum';
+
 const App = () => {
 
   const componentNames = [
@@ -89,7 +91,8 @@ const App = () => {
     'Accordion',
     'FoodMenuProject',
     'Resume Tabs',
-    'Carousel'
+    'Carousel',
+    'LoremIpsum'
   ]
 
   const [currentProject, setCurrentProject] = useState();
@@ -240,6 +243,9 @@ const App = () => {
                   </Route>
                   <Route path="/Carousel">
                     <Carousel />
+                  </Route>
+                  <Route path="/LoremIpsum">
+                    <LoremIpsum />
                   </Route>
                 </Switch>
 
