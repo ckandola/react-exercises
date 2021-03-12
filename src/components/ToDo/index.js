@@ -19,9 +19,9 @@ const ToDo = ({ task, onDelete, onEdit }) => {
   };
 
   return (
-    <div style={{ display: "flex", textAlign: "left", marginLeft: "25%" }}>
+    <div style={{ display: "flex", textAlign: "left", margin: "0.5em" }}>
       <div className="buttons">
-        <input type="submit" value={isEditing ? "Save Changes" : "Edit"} onClick={onEditTask} />
+        <input type="submit" value={isEditing ? "Save Changes" : "Edit"} onClick={onEditTask} className="todo-input"/>
       </div>
       {!isEditing ? (
         <>
@@ -29,12 +29,13 @@ const ToDo = ({ task, onDelete, onEdit }) => {
             <input
               type="submit"
               value="Delete"
+              className="todo-input"
               onClick={() => onDelete(task)}
             />
           </div>
           <input className="check" type="checkbox" value={task} onClick={() => setIsFinished(!isFinished)} />
           {!isFinished ? (
-            <span>{task}</span>
+            <span style={{marginLeft: "-1em"}}>{task}</span>
           ) : (
             <span className="finished">{task}</span>
           )}
