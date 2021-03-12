@@ -66,6 +66,8 @@ import Carousel from './components/Carousel';
 
 import LoremIpsum from './components/LoremIpsum';
 
+import ColorGenerator from './components/ColorGenerator';
+
 const App = () => {
 
   const componentNames = [
@@ -92,7 +94,8 @@ const App = () => {
     'FoodMenuProject',
     'Resume Tabs',
     'Carousel',
-    'LoremIpsum'
+    'LoremIpsum',
+    'ColorGenerator'
   ]
 
   const [currentProject, setCurrentProject] = useState();
@@ -246,6 +249,9 @@ const App = () => {
                   </Route>
                   <Route path="/LoremIpsum">
                     <LoremIpsum />
+                  </Route>
+                  <Route path="/ColorGenerator">
+                    <ColorGenerator />
                   </Route>
                 </Switch>
 
