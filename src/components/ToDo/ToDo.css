@@ -4,11 +4,16 @@
 
 .check {
   position: relative;
-  top: 0.5em;
+  top: 0.4em;
   margin-right: 0.5em;
 }
 
 .buttons {
-  text-align: right;
-  padding-right: 2em;
+  padding-right: 0.5em;
 }
+
+.todo-input {
+  font-size: 1em;
+  width: 10vw;
+}
+

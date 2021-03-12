@@ -32,7 +32,7 @@ const Carousel = () => {
                         position = 'lastSlide';
                     }
                     return (
-                        <article className={position} key={id}>
+                        <article className={`.carousel-${position}`} key={id}>
                             <img src={image} alt={name} className="carousel-person-img"/>
                             <h4>{name}</h4>
                             <p className="carousel-title">{title}</p>

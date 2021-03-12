@@ -110,7 +110,7 @@ article h4 {
         font-size: 1.5rem;
     }
 }
-article {
+.carousel-article {
     position: absolute;
     top: 0;
     left: 0;
@@ -120,13 +120,13 @@ article {
     transition: var(--transition);
 }
 
-article.activeSlide {
+.carousel-article.activeSlide {
     opacity: 1;
     transform: translateX(0);
 }
-article.lastSlide {
+.carousel-article.lastSlide {
     transform: translateX(-100%);
 }
-article.nextSlide {
+.carousel-article.nextSlide {
     transform: translateX(100%);
 }
