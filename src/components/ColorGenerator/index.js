@@ -4,6 +4,8 @@ import React, {useState} from 'react';
 import './ColorGenerator.css';
 import Values from 'values.js';
 import SingleColor from './SingleColor';
+import './ColorPicker';
+import ColorPicker from './ColorPicker';
 
 const ColorGenerator = () => {
     const [color, setColor] = useState('#8b0000');
@@ -17,6 +19,7 @@ const ColorGenerator = () => {
             // generates shades and tints divided by 10, 100 / 10 = 10. Larger number ==> less shades & tints
             let colors = new Values(color).all(numResults);
             setList(colors);
+            setError(false);
         } catch (error) {
             setError(true);
             console.log(error);
@@ -29,6 +32,10 @@ const ColorGenerator = () => {
         }
         setNumResults(e.target.value <= 0 ? 1 : Math.floor(100 / Math.floor(e.target.value)));
     };
+
+    const handleClick = chosenColor => {
+        setColor(chosenColor);
+    }
 
     return (
         <>
@@ -50,6 +57,7 @@ const ColorGenerator = () => {
                     <button className="cgen-btn" type="submit">Submit</button>
                 </form>
             </div>
+            <ColorPicker onClick={handleClick}/>
             <section className="cgen-colors">
                 {list.map((listItem, index) => {
                     return (

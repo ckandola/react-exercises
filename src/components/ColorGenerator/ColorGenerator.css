@@ -164,6 +164,26 @@ Variables
     width: 4em;
   }
 
+  .cgen-color-btn {
+    width: 2em;
+    height: 2em;
+    margin: 0.25em;
+    display: inline-grid;
+    border-radius: 0.5em;
+    cursor: pointer;
+  }
+
+  .cgen-color-picker {
+    background-color: #A0A0A0;
+    border-radius: 0.7em;
+    justify-content: center;
+    margin: auto;
+    width:fit-content;
+    max-width: 60%;
+    padding:0.25em;
+    margin-bottom: 1em;
+  }
+
   .cgen-btn {
     background: var(--clr-primary-5);
     padding: 0.5rem 1rem;
