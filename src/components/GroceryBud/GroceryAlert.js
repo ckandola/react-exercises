@@ -1,8 +1,17 @@
 import React, {useEffect} from 'react';
+import './GroceryBud.css';
 
-const GroceryAlert = () => {
+const GroceryAlert = ({type, msg, removeAlert}) => {
+    
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            removeAlert();
+        }, 3000);
+        return () => clearTimeout(timeout);
+    }, [removeAlert]);
+    
     return (
-        <h2>Alert</h2>
+        <p className={`gList-alert gList-alert-${type}`}>{msg}</p>
     );
 };
 
