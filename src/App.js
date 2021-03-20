@@ -72,6 +72,8 @@ import GroceryBud from './components/GroceryBud';
 
 import NavBar from './components/NavBar';
 
+import Sidebar from './components/Sidebar';
+
 const App = () => {
 
   const componentNames = [
@@ -101,7 +103,8 @@ const App = () => {
     'LoremIpsum',
     'ColorGenerator',
     'GroceryBud',
-    'NavBar'
+    'NavBar',
+    'Sidebar'
   ]
 
   const [currentProject, setCurrentProject] = useState();
@@ -264,6 +267,9 @@ const App = () => {
                   </Route>
                   <Route path="/NavBar">
                     <NavBar />
+                  </Route>
+                  <Route path="/Sidebar">
+                    <Sidebar />
                   </Route>
                 </Switch>
 
