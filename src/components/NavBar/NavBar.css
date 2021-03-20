@@ -66,6 +66,9 @@ Variables
   .navbar {
     background: var(--clr-white);
     box-shadow: var(--light-shadow);
+    width:70%;
+    margin:auto;
+    margin-top: 1rem;
   }
   .navbar-header {
     display: flex;
@@ -74,6 +77,7 @@ Variables
     padding: 1rem;
   }
   .navbar-toggle {
+    margin-left:200%;
     font-size: 1.5rem;
     color: var(--clr-primary-5);
     background: transparent;
@@ -113,7 +117,7 @@ Variables
   .navbar-show-container {
     height: 10rem;
   }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1000px) {
     .navbar-center {
       max-width: 1170px;
       margin: 0 auto;
