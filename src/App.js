@@ -68,6 +68,8 @@ import LoremIpsum from './components/LoremIpsum';
 
 import ColorGenerator from './components/ColorGenerator';
 
+import GroceryBud from './components/GroceryBud';
+
 const App = () => {
 
   const componentNames = [
@@ -95,7 +97,8 @@ const App = () => {
     'Resume Tabs',
     'Carousel',
     'LoremIpsum',
-    'ColorGenerator'
+    'ColorGenerator',
+    'GroceryBud'
   ]
 
   const [currentProject, setCurrentProject] = useState();
@@ -252,6 +255,9 @@ const App = () => {
                   </Route>
                   <Route path="/ColorGenerator">
                     <ColorGenerator />
+                  </Route>
+                  <Route path="/GroceryBud">
+                    <GroceryBud />
                   </Route>
                 </Switch>
 
