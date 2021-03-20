@@ -70,6 +70,8 @@ import ColorGenerator from './components/ColorGenerator';
 
 import GroceryBud from './components/GroceryBud';
 
+import NavBar from './components/NavBar';
+
 const App = () => {
 
   const componentNames = [
@@ -98,7 +100,8 @@ const App = () => {
     'Carousel',
     'LoremIpsum',
     'ColorGenerator',
-    'GroceryBud'
+    'GroceryBud',
+    'NavBar'
   ]
 
   const [currentProject, setCurrentProject] = useState();
@@ -258,6 +261,9 @@ const App = () => {
                   </Route>
                   <Route path="/GroceryBud">
                     <GroceryBud />
+                  </Route>
+                  <Route path="/NavBar">
+                    <NavBar />
                   </Route>
                 </Switch>
 
