@@ -1,13 +1,15 @@
-import React, {useContext} from 'react';
-import {AppContext} from '../../context';
+import React from 'react';
+import {useGlobalContext} from '../../context';
 import './Modal.css';
 
 const Home = () => {
-    const data = useContext(AppContext);
-    console.log(data);
+    const {openModal} = useGlobalContext();
+
     return (
         <main className="modal-main">
-            <button className="modal-btn">
+            <button 
+                className="modal-btn"
+                onClick={openModal}>
                 Show Modal
             </button>
         </main>
