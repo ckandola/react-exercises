@@ -74,6 +74,9 @@ import NavBar from './components/NavBar';
 
 import Sidebar from './components/Sidebar';
 
+import Modal from './components/Modal';
+import Home from './components/Modal/Home';
+
 const App = () => {
 
   const componentNames = [
@@ -104,7 +107,8 @@ const App = () => {
     'ColorGenerator',
     'GroceryBud',
     'NavBar',
-    'Sidebar'
+    'Sidebar',
+    'Modal'
   ]
 
   const [currentProject, setCurrentProject] = useState();
@@ -270,6 +274,10 @@ const App = () => {
                   </Route>
                   <Route path="/Sidebar">
                     <Sidebar />
+                  </Route>
+                  <Route path="/Modal">
+                    <Home />
+                    <Modal />
                   </Route>
                 </Switch>
 
