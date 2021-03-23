@@ -6,6 +6,29 @@ const AppContext = React.createContext();
 const AppProvider = ({children}) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     
+    // StripeMenu ---
+
+    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+    const [isSubmenuOpen, setIsSubmenuOpen] = useState(true);
+
+    const openSidebar = () => {
+        setIsSidebarOpen(true);
+    }
+    
+    const closeSidebar = () => {
+        setIsSidebarOpen(false);
+    }
+    
+    const openSubmenu = () => {
+        setIsSubmenuOpen(true);
+    }
+    
+    const closeSubmenu = () => {
+        setIsSubmenuOpen(false);
+    }
+
+    // StripeMenu ---
+
     const openModal = () => {
         setIsModalOpen(true);
     }
@@ -16,7 +39,10 @@ const AppProvider = ({children}) => {
     
     return (
         <AppContext.Provider value={{
-            isModalOpen, openModal, closeModal
+            isModalOpen, openModal, closeModal,
+            
+            isSidebarOpen, openSidebar, closeSidebar,
+            isSubmenuOpen, openSubmenu, closeSubmenu
         }}>
             {children}
         </AppContext.Provider>

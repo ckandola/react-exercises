@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-const Submenu= () => {
+const Submenu = () => {
     return (
         <h2>Submenu</h2>
     );

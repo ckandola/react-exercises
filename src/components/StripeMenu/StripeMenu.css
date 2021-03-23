@@ -149,7 +149,7 @@
       text-align: center;
       height: 100%;
       display: grid;
-      align-itemsS: center;
+      align-items: center;
     }
     .nav-links li {
       height: 100%;
