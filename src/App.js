@@ -77,6 +77,8 @@ import Sidebar from './components/Sidebar';
 import Modal from './components/Modal';
 import Home from './components/Modal/Home';
 
+import StripeMenu from './components/StripeMenu';
+
 const App = () => {
 
   const componentNames = [
@@ -108,7 +110,8 @@ const App = () => {
     'GroceryBud',
     'NavBar',
     'Sidebar',
-    'Modal'
+    'Modal',
+    'StripeMenu'
   ]
 
   const [currentProject, setCurrentProject] = useState();
@@ -278,6 +281,9 @@ const App = () => {
                   <Route path="/Modal">
                     <Home />
                     <Modal />
+                  </Route>
+                  <Route path="/StripeMenu">
+                    <StripeMenu />
                   </Route>
                 </Switch>
 
