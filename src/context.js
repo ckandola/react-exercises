@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import {default as smenulinks} from './components/StripeMenu/data';
 
 const AppContext = React.createContext();
     // gives both Provider and Consumer
@@ -8,8 +9,10 @@ const AppProvider = ({children}) => {
     
     // StripeMenu ---
 
-    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-    const [isSubmenuOpen, setIsSubmenuOpen] = useState(true);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+    const [location, setLocation] = useState({});
+    const [page, setPage] = useState({page: '', links:[]});
 
     const openSidebar = () => {
         setIsSidebarOpen(true);
@@ -19,7 +22,9 @@ const AppProvider = ({children}) => {
         setIsSidebarOpen(false);
     }
     
-    const openSubmenu = () => {
+    const openSubmenu = (text, coordinates) => {
+        setPage(smenulinks.find(x => x.page === text));
+        setLocation(coordinates);
         setIsSubmenuOpen(true);
     }
     
@@ -42,7 +47,8 @@ const AppProvider = ({children}) => {
             isModalOpen, openModal, closeModal,
             
             isSidebarOpen, openSidebar, closeSidebar,
-            isSubmenuOpen, openSubmenu, closeSubmenu
+            isSubmenuOpen, openSubmenu, closeSubmenu,
+            location, page
         }}>
             {children}
         </AppContext.Provider>
