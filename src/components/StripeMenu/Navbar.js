@@ -8,9 +8,8 @@ const Navbar = () => {
     const displaySubmenu = e => {
         const page = e.target.textContent;
         const tempBtn = e.target.getBoundingClientRect();
-        console.log(tempBtn);
         const center = (tempBtn.left + tempBtn.right) / 2;
-        const bottom = tempBtn.bottom; // hang 275px below
+        const bottom = tempBtn.bottom + window.scrollY; // hang depending on scroll
         openSubmenu(page, {center, bottom});
     }
 
