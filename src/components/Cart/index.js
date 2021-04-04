@@ -7,13 +7,14 @@ import CartContainer from './CartContainer';
 import './Cart.css';
 
 const Cart = () => {
-    // if (loading) {
-    //     return (
-    //         <div className="cart-loading">
-    //             <h1>Loading...</h1>
-    //         </div>
-    //     );
-    // }
+    const { cartLoading } = useGlobalContext();
+    if (cartLoading) {
+        return (
+            <div className="cart-loading">
+                <h1>Loading...</h1>
+            </div>
+        );
+    }
     return (
         <main>
             <Navbar />

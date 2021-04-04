@@ -3,7 +3,7 @@ import CartItem from './CartItem';
 import { useGlobalContext } from './index';
 
 const CartContainer = () => {
-    const {cart} = useGlobalContext();
+    const { cart, cartTotal, clearCart } = useGlobalContext();
 
     return (
         <section className="cart">
@@ -12,7 +12,9 @@ const CartContainer = () => {
             </header>
 
             {cart.length === 0 ?
-                <h4>Is Currently Empty</h4>
+                <header>
+                    <h4 style={{width:'28%', margin:'auto'}}>Is Currently Empty</h4>
+                </header>
                 :
                 <div>
                     <div>
@@ -24,10 +26,12 @@ const CartContainer = () => {
                         <hr className="cart-hr"/>
                         <div className="cart-total">
                             <h4>
-                                Total <span>$0.00</span>
+                                Total <span>${cartTotal}</span>
                             </h4>
                         </div>
-                        <button className="cart-btn cart-clear-btn">
+                        <button 
+                            className="cart-btn cart-clear-btn"
+                            onClick={clearCart}>
                             Clear Cart
                         </button>
                     </footer>
