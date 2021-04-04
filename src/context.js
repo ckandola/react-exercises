@@ -1,6 +1,9 @@
 import React, { useState, useContext } from 'react';
 import {default as smenulinks} from './components/StripeMenu/data';
 
+import cartItems from './components/Cart/data';
+// import reducer from './components/Cart/reducer';
+
 const AppContext = React.createContext();
     // gives both Provider and Consumer
 
@@ -41,6 +44,10 @@ const AppProvider = ({children}) => {
     const closeModal = () => {
         setIsModalOpen(false);
     }
+
+    // Cart ---
+    // const cartUrl = 'https://course-api.com/react-useReducer-cart-project';
+    const [cart, setCart] = useState(cartItems);
     
     return (
         <AppContext.Provider value={{
@@ -48,7 +55,9 @@ const AppProvider = ({children}) => {
             
             isSidebarOpen, openSidebar, closeSidebar,
             isSubmenuOpen, openSubmenu, closeSubmenu,
-            location, page
+            location, page,
+
+            cart
         }}>
             {children}
         </AppContext.Provider>
