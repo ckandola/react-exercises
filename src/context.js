@@ -1,4 +1,4 @@
-import React, { useState, useContext, useReducer } from 'react';
+import React, { useState, useContext, useReducer, useEffect } from 'react';
 import {default as smenulinks} from './components/StripeMenu/data';
 
 import cartItems from './components/Cart/data';
@@ -57,6 +57,29 @@ const AppProvider = ({children}) => {
     const clearCart = () => {
         cartDispatch({type: 'CLEAR_CART'});
     };
+    const removeCartItem = id => {
+        cartDispatch({type: 'REMOVE_ITEM', payload: id});
+    }
+    const increaseCartAmt = id => {
+        cartDispatch({type: 'INCREASE', payload: id});
+    }
+    const decreaseCartAmt = id => {
+        cartDispatch({type: 'DECREASE', payload: id});
+    }
+    const fetchCartData = async () => {
+        cartDispatch({type: 'LOADING'});
+        const response = await fetch(cartUrl);
+        const cart = await response.json();
+        cartDispatch({type: 'DISPLAY_ITEMS', payload: cart});
+    }
+
+    useEffect(() => {
+        cartDispatch({type: 'GET_TOTALS'});
+    }, [cartState.cart]);
+
+    useEffect(() => {
+        fetchCartData();
+    }, []);
     
     return (
         <AppContext.Provider value={{
@@ -66,7 +89,8 @@ const AppProvider = ({children}) => {
             isSubmenuOpen, openSubmenu, closeSubmenu,
             location, page,
 
-            ...cartState, clearCart
+            ...cartState, clearCart, removeCartItem, 
+            increaseCartAmt, decreaseCartAmt, fetchCartData
         }}>
             {children}
         </AppContext.Provider>
