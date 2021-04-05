@@ -79,6 +79,8 @@ import Home from './components/Modal/Home';
 
 import StripeMenu from './components/StripeMenu';
 
+import Cart from './components/Cart';
+
 const App = () => {
 
   const componentNames = [
@@ -111,7 +113,8 @@ const App = () => {
     'NavBar',
     'Sidebar',
     'Modal',
-    'StripeMenu'
+    'StripeMenu',
+    'Cart'
   ]
 
   const [currentProject, setCurrentProject] = useState();
@@ -284,6 +287,9 @@ const App = () => {
                   </Route>
                   <Route path="/StripeMenu">
                     <StripeMenu />
+                  </Route>
+                  <Route path="/Cart">
+                    <Cart />
                   </Route>
                 </Switch>
 
