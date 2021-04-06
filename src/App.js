@@ -81,6 +81,8 @@ import StripeMenu from './components/StripeMenu';
 
 import Cart from './components/Cart';
 
+import CocktailMain from './components/Cocktail';
+
 const App = () => {
 
   const componentNames = [
@@ -114,7 +116,8 @@ const App = () => {
     'Sidebar',
     'Modal',
     'StripeMenu',
-    'Cart'
+    'Cart',
+    'Cocktail'
   ]
 
   const [currentProject, setCurrentProject] = useState();
@@ -290,6 +293,9 @@ const App = () => {
                   </Route>
                   <Route path="/Cart">
                     <Cart />
+                  </Route>
+                  <Route path="/Cocktail">
+                    <CocktailMain />
                   </Route>
                 </Switch>
 
