@@ -1,11 +1,11 @@
 import React from 'react';
-import { useGlobalContext } from './Cocktail';
+// import { useGlobalContext } from './Cocktail';
 
 const SearchForm = () => {
     return (
-        <div>
+        <section className="cocktails-section">
             <h2>SearchForm</h2>
-        </div>
+        </section>
     );
 };
 

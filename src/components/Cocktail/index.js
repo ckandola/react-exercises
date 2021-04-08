@@ -14,7 +14,7 @@ const CocktailMain = () => {
         <Router>
             <Navbar />
             <Switch>
-                <Route exact path="/cocktail_home">
+                <Route exact path="/Cocktail">
                     <Home />
                 </Route>
 
@@ -22,12 +22,12 @@ const CocktailMain = () => {
                     <About />
                 </Route>
                 
-                <Route path="*">
-                    <Error />
-                </Route>
-                
                 <Route path="/cocktail/:id">
                     <SingleCocktail />
+                </Route>
+                
+                <Route path="*">
+                    <Error />
                 </Route>
 
             </Switch>
