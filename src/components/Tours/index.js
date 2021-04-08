@@ -37,7 +37,7 @@ const Tours = () => {
 
     if (loading) {
         return (
-            <main><Loading /></main>
+            <main className="tours-main"><Loading /></main>
         );
     }
 

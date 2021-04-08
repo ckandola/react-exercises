@@ -151,7 +151,7 @@ Variables
   Tours
   ===============
   */
-  main {
+  .tours-main {
     width: 90vw;
     max-width: var(--fixed-width);
     margin: 5rem auto;

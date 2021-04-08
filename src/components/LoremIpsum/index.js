@@ -17,7 +17,6 @@ const LoremIpsum = () => {
 
     const handleChange = e => {
         setCount(e.target.value);
-        console.log('changes')
     }
 
     return (
