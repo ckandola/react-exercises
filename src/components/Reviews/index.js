@@ -34,7 +34,7 @@ const Reviews = () => {
     }
 
     return (
-        <main>
+        <main className="reviews-main">
             <section>
                 <div className="title">
                     <h2>Our Reviews</h2>

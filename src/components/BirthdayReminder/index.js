@@ -8,7 +8,7 @@ import './index.css';
 const BirthdayReminder = () => {
     const [people, setPeople] = useState(data);
     return (
-        <main>
+        <main className="birthday-main">
             <section className="container">
                 <h3>{`${people.length} birthdays today`}</h3>
                 <BirthdayList people={people}/>
