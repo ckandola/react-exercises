@@ -55,6 +55,7 @@ code {
 }
 
 .main {
+  padding:1em;
   background-color: #D8CBF1;
 }
 
@@ -75,7 +76,7 @@ code {
 .button-container {
   display:grid;
   grid-template-columns: auto auto auto auto auto auto auto;
-  border-radius: 15em;
+  border-radius: 5em;
   background-color:#e3d5f1;
   padding: 1.5rem;
   min-width: 80vw;
