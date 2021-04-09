@@ -1,4 +1,4 @@
-import React, { useState, useContext, useReducer, useEffect } from 'react';
+import React, { useState, useContext, useReducer, useEffect, useCallback } from 'react';
 import {default as smenulinks} from './components/StripeMenu/data';
 
 import cartItems from './components/Cart/data';
@@ -80,7 +80,39 @@ const AppProvider = ({children}) => {
     useEffect(() => {
         fetchCartData();
     }, []);
-    
+
+    // CocktailDB ---
+    const cocktailUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
+    const [cocktailLoading, setCocktailLoading] = useState(true);
+    const [cocktailSearchTerm, setCocktailSearchTerm] = useState('a');
+    const [cocktails, setCocktails] = useState([]);
+
+    const fetchDrinks = useCallback(async () => {
+        try {
+            setCocktailLoading(true);
+            const response = await fetch(`${cocktailUrl}${cocktailSearchTerm}`);
+            const data = await response.json();
+            const {drinks} = data;
+            if (!drinks) {
+                setCocktails([]);
+            } else {
+                const newDrinks = drinks.map(item => {
+                    const {idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass} = item;
+                    return {id: idDrink, name: strDrink, img: strDrinkThumb, isAlcoholic: strAlcoholic, glass: strGlass};
+                });
+                setCocktails(newDrinks);
+            }
+            setCocktailLoading(false);
+        } catch (error) {
+            console.error(error);
+            setCocktailLoading(false);
+        }
+    }, [cocktailSearchTerm]);
+
+    useEffect(() => {
+        fetchDrinks();
+    }, [fetchDrinks, cocktailSearchTerm]);
+
     return (
         <AppContext.Provider value={{
             isModalOpen, openModal, closeModal,
@@ -90,7 +122,9 @@ const AppProvider = ({children}) => {
             location, page,
 
             ...cartState, clearCart, removeCartItem, 
-            increaseCartAmt, decreaseCartAmt, fetchCartData
+            increaseCartAmt, decreaseCartAmt, fetchCartData,
+
+            cocktailLoading, cocktails, setCocktailSearchTerm
         }}>
             {children}
         </AppContext.Provider>

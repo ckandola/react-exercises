@@ -178,6 +178,12 @@
     border-top-left-radius: var(--mainBorderRadius);
     border-top-right-radius: var(--mainBorderRadius);
   }
+
+  .cocktail-img {
+    width: 100%;
+    display: block;
+  }
+
   .cocktail-footer {
     padding: 1.5rem;
   }
