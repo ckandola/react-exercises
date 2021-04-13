@@ -1,4 +1,4 @@
-.background {
+.todo-background {
   background-color:seashell;
   background-image: url(../../assets/notebook_paper.png);
   max-width: 75vw;
@@ -7,18 +7,19 @@
   align-items: center;
 }
 
-.header {
+.todo-header {
   text-align: center;
   text-decoration: underline;
 }
 
-.textEntry {
+.todo-textEntry {
   text-align: center;
 }
 
-.entry {
+.todo-entry {
   width: 20em;
   max-height: 2em;
   padding:0em;
   padding-left: 0.5em;
+  background: silver;
 }
