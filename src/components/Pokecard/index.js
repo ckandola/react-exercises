@@ -6,10 +6,10 @@ class Pokecard extends Component {
   render() {
     return (
       <li key={this.props.id}>
-        <div className="entry">
+        <div className="pokedex-entry">
           <h3 className="pokemon-name">{this.props.name}</h3>
-          <h3 className="type">Type: {this.props.type}</h3>
-          <img src={this.props.image} alt={this.props.name} className="image" />
+          <h3 className="pokemon-type">Type: {this.props.type}</h3>
+          <img src={this.props.image} alt={this.props.name} className="pokedex-image" />
         </div>
       </li>
     );
