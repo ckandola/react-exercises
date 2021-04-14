@@ -152,7 +152,7 @@ Variables
     margin-right: 2rem;
   }
   
-  input {
+  .cgen-input {
     border-color: transparent;
     width:15vw;
     padding: 0.5rem 1rem;

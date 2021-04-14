@@ -46,7 +46,7 @@ const ColorGenerator = () => {
                         type="text" 
                         value={color}
                         onChange={e => setColor(e.target.value)}
-                        className={`${error ? 'error' : 'null'}`}/>
+                        className={`cgen-input ${error ? 'error' : 'null'}`}/>
                     <input
                         type="number"
                         className="cgen-input-num"

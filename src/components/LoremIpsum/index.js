@@ -27,7 +27,7 @@ const LoremIpsum = () => {
                     <label htmlFor="amount">
                         paragraphs: 
                     </label>
-                    <input type="number" name="amount" id="amount" value={count}
+                    <input className="lorem-input" type="number" name="amount" id="amount" value={count}
                         onChange={handleChange}/>
                     <button type="submit" className="ipsum-btn">Generate</button> 
                 </form>
