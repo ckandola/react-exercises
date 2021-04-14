@@ -26,7 +26,7 @@ import ToDoList from "./components/ToDoList";
 
 // import LinkApp from "./components/LinkApp";
 
-import Jokes from "./components/Jokes";
+import NewJokes from "./components/Jokes/NewJokes";
 import Gif from "./components/Gif";
 
 import TicTacToe from "./components/TicTacToe";
@@ -206,7 +206,7 @@ const App = () => {
                     <ToDoList />
                   </Route>
                   <Route path="/Jokes">
-                    <Jokes />
+                    <NewJokes />
                   </Route>
                   <Route path="/Gif">
                     <Gif />
