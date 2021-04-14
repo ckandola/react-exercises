@@ -27,7 +27,6 @@ import ToDoList from "./components/ToDoList";
 // import LinkApp from "./components/LinkApp";
 
 import NewJokes from "./components/Jokes/NewJokes";
-import Gif from "./components/Gif";
 
 import TicTacToe from "./components/TicTacToe";
 
@@ -95,7 +94,6 @@ const App = () => {
     'ColorGrid',
     'ToDoList',
     'Jokes',
-    'Gif',
     'TicTacToe',
     'HangMan',
     'Radio',
@@ -207,9 +205,6 @@ const App = () => {
                   </Route>
                   <Route path="/Jokes">
                     <NewJokes />
-                  </Route>
-                  <Route path="/Gif">
-                    <Gif />
                   </Route>
                   <Route path="/TicTacToe">
                     <TicTacToe />
