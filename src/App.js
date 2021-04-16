@@ -52,6 +52,7 @@ import Reviews from './components/Reviews';
 
 import Accordion from './components/Accordion';
 import accordionData from './components/Accordion/data';
+import './components/Accordion/Accordion.css';
 
 import FoodMenuProject from "./components/FoodMenu/FoodMenuProject";
 
@@ -245,7 +246,7 @@ const App = () => {
                   <div className="accordion-main">
                     <div className="accordion-container">
                       <h3>Login Questions</h3>
-                      <section className="info">
+                      <section>
                         {accordionData.map(accordion => {
                           return (
                             <Accordion key={accordion.id} question={accordion.title} answer={accordion.info} />
