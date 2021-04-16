@@ -44,94 +44,13 @@ Variables
     --max-width: 1170px;
     --fixed-width: 620px;
   }
-  /*
-  =============== 
-  Global Styles
-  ===============
-  */
-  
-  *,
-  ::after,
-  ::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: var(--clr-grey-10);
-    color: var(--clr-grey-1);
-    line-height: 1.5;
-    font-size: 0.875rem;
-  }
-  ul {
-    list-style-type: none;
-  }
-  a {
-    text-decoration: none;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    letter-spacing: var(--spacing);
-    text-transform: capitalize;
-    line-height: 1.25;
-    margin-bottom: 0.75rem;
-  }
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.25rem;
-  }
-  h4 {
-    font-size: 0.875rem;
-  }
-  p {
-    margin-bottom: 1.25rem;
-    color: var(--clr-grey-5);
-  }
-  @media screen and (min-width: 800px) {
-    h1 {
-      font-size: 4rem;
-    }
-    h2 {
-      font-size: 2.5rem;
-    }
-    h3 {
-      font-size: 1.75rem;
-    }
-    h4 {
-      font-size: 1rem;
-    }
-    body {
-      font-size: 1rem;
-    }
-    h1,
-    h2,
-    h3,
-    h4 {
-      line-height: 1;
-    }
-  }
-  /*  global classes */
   
   /* section */
-  .section {
+  .reviews-section {
+    display: contents;
     width: 90vw;
     margin: 0 auto;
     max-width: var(--max-width);
-  }
-  
-  @media screen and (min-width: 992px) {
-    .section {
-      width: 95vw;
-    }
   }
   
   /*
@@ -144,18 +63,18 @@ Variables
     display: grid;
     place-items: center;
   }
-  .title {
+  .reviews-title {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
-  .underline {
+  .reviews-underline {
     height: 0.25rem;
     width: 5rem;
     background: var(--clr-primary-5);
     margin-left: auto;
     margin-right: auto;
   }
-  .container {
+  .reviews-container {
     width: 80vw;
     max-width: var(--fixed-width);
   }
@@ -170,7 +89,7 @@ Variables
   .review:hover {
     box-shadow: var(--dark-shadow);
   }
-  .img-container {
+  .reviews-img-container {
     position: relative;
     width: 150px;
     height: 150px;
@@ -178,7 +97,7 @@ Variables
     margin: 0 auto;
     margin-bottom: 1.5rem;
   }
-  .person-img {
+  .reviews-person-img {
     width: 100%;
     display: block;
     height: 100%;
@@ -186,7 +105,7 @@ Variables
     border-radius: 50%;
     position: relative;
   }
-  .quote-icon {
+  .reviews-quote-icon {
     position: absolute;
     top: 0;
     left: 0;
@@ -199,7 +118,7 @@ Variables
     background: var(--clr-primary-5);
     color: var(--clr-white);
   }
-  .img-container::before {
+  .reviews-img-container::before {
     content: '';
     width: 100%;
     height: 100%;
@@ -209,20 +128,20 @@ Variables
     right: -0.5rem;
     border-radius: 50%;
   }
-  .author {
+  .reviews-author {
     margin-bottom: 0.25rem;
   }
-  .job {
+  .reviews-job {
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     color: var(--clr-primary-5);
     font-size: 0.85rem;
   }
-  .info {
+  .reviews-info {
     margin-bottom: 0.75rem;
   }
-  .prev-btn,
-  .next-btn {
+  .reviews-prev-btn,
+  .reviews-next-btn {
     color: var(--clr-primary-7);
     font-size: 1.25rem;
     background: transparent;
@@ -231,11 +150,11 @@ Variables
     transition: var(--transition);
     cursor: pointer;
   }
-  .prev-btn:hover,
-  .next-btn:hover {
+  .reviews-prev-btn:hover,
+  .reviews-next-btn:hover {
     color: var(--clr-primary-5);
   }
-  .random-btn {
+  .reviews-random-btn {
     margin-top: 0.5rem;
     background: var(--clr-primary-10);
     color: var(--clr-primary-5);
@@ -246,7 +165,7 @@ Variables
     border-color: transparent;
     cursor: pointer;
   }
-  .random-btn:hover {
+  .reviews-random-btn:hover {
     background: var(--clr-primary-5);
     color: var(--clr-primary-1);
   }
