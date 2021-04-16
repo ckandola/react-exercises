@@ -1,0 +1,81 @@
+:root {
+    --accent:rgb(0, 57, 80);
+    --textColor:rgb(89, 173, 206);
+    --btn: rgb(59, 59, 168);
+    --btn-padding: 0.3rem;
+}
+
+.timer-div {
+    color:var(--textColor);
+    text-align: center;
+    background: rgb(69, 69, 136);
+    border-radius: 0.75rem;
+    width: 80%;
+    margin:auto;
+    padding-bottom: 0.5rem;
+}
+
+.timer-div h2 {
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    text-shadow: 1px 3px 3px var(--accent);
+}
+
+.timer-minbtn {
+    width: 8rem;
+    margin: 0rem;
+}
+
+.timer-minbtn-span {
+    display: block;
+    margin:auto;
+    width:50%;
+}
+
+.timer-statusbtn {
+    margin: 0.5rem;
+    padding: var(--btn-padding);
+    border-radius: 0.25rem;
+    box-shadow: 0px 2px 2px black;
+}
+
+.timer-btn {
+    text-transform: uppercase;
+    background: var(--btn);
+    color:white;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.timer-form {
+    margin:0.5rem;
+    font-size: 1rem;
+}
+
+.timer-input {
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+    margin-right:0.5rem;
+}
+
+.timer-submit {
+    padding: 0px var(--btn-padding);
+    border-radius: 0.25rem;
+    box-shadow: 0px 2px 2px black;
+}
+
+/* when screen is large... */
+@media screen and (min-width: 1100px) {
+    .timer-div {
+        width: 40%;
+    }
+
+    .timer-minbtn {
+        margin: 0.5rem;
+    }
+
+    .timer-minbtn-span {
+        display:flex;
+        width:max-content;
+    }
+}
