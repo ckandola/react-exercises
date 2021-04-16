@@ -45,7 +45,7 @@
     box-shadow: var(--dark-shadow);
 }
 
-article h4 {
+.carousel-article h4 {
     text-transform: uppercase;
     color: var(--clr-primary-5);
     margin-bottom: 0.25rem;
@@ -120,13 +120,13 @@ article h4 {
     transition: var(--transition);
 }
 
-.carousel-article.activeSlide {
+.carousel-article-activeSlide {
     opacity: 1;
     transform: translateX(0);
 }
-.carousel-article.lastSlide {
+.carousel-article-lastSlide {
     transform: translateX(-100%);
 }
-.carousel-article.nextSlide {
+.carousel-article-nextSlide {
     transform: translateX(100%);
 }

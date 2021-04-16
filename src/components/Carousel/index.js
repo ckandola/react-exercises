@@ -7,14 +7,14 @@ import './Carousel.css';
 import people from './data';
 
 const Carousel = () => {
-    const [ix, setIx] = useState(0);
+    const [carousel_ix, setCarousel_Ix] = useState(0);
 
     useEffect(() => {
         let slider = setInterval(() => {
-            setIx(ix === people.length - 1 ? 0 : ix + 1);
+            setCarousel_Ix(carousel_ix === people.length - 1 ? 0 : carousel_ix + 1);
         }, 5000);
         return () => clearInterval(slider);
-    }, [ix])
+    }, [carousel_ix])
 
     return (
         <section className="carousel-section">
@@ -27,12 +27,12 @@ const Carousel = () => {
                 {people.map((person, index) => {
                     const {id, image, name, title, quote} = person;
 
-                    let position = index === ix ? 'activeSlide' : 'nextSlide';
-                    if (index === ix - 1 || (ix === 0 && index === people.length - 1)) {
+                    let position = index === carousel_ix ? 'activeSlide' : 'nextSlide';
+                    if (index === carousel_ix - 1 || (carousel_ix === 0 && index === people.length - 1)) {
                         position = 'lastSlide';
                     }
                     return (
-                        <article className={`.carousel-${position}`} key={id}>
+                        <article className={`carousel-article carousel-article-${position}`} key={id}>
                             <img src={image} alt={name} className="carousel-person-img"/>
                             <h4>{name}</h4>
                             <p className="carousel-title">{title}</p>
@@ -43,12 +43,12 @@ const Carousel = () => {
                 })};
                 <button 
                     className="carousel-prev" 
-                    onClick={() => setIx(ix === 0 ? people.length - 1 : ix - 1)}>
+                    onClick={() => setCarousel_Ix(carousel_ix === 0 ? people.length - 1 : carousel_ix - 1)}>
                         <FiChevronLeft />
                 </button>
                 <button 
                     className="carousel-next" 
-                    onClick={() => setIx(ix === people.length - 1 ? 0 : ix + 1)}>
+                    onClick={() => setCarousel_Ix(carousel_ix === people.length - 1 ? 0 : carousel_ix + 1)}>
                         <FiChevronRight />
                 </button>
             </div>
