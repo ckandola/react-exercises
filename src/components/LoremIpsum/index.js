@@ -34,7 +34,7 @@ const LoremIpsum = () => {
                 <div className="lorem-text">
                     {text.map((sentence, index) => {
                         return <p key={index}>{sentence}</p>
-                    })};
+                    })}
                 </div>
             </section>
         </div>
