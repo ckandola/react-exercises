@@ -3,7 +3,7 @@
 import React, {useState, useEffect} from 'react';
 import Loading from './Loading';
 import Tour from './Tour';
-import './index.css';
+import './Tours.css';
 
 const url = 'https://course-api.com/react-tours-project';
 
@@ -42,19 +42,19 @@ const Tours = () => {
     }
 
     return (
-        <section>
-            <div className="title">
+        <section className="tour-section">
+            <div className="tour-title">
                 {tours.length !== 0 ? 
                     <div>
                         <h2>Our Tours</h2>
-                        <div className="underline"></div>
+                        <div className="tour-underline"></div>
                         {tours.map(tour => {
                             return <Tour key={tour.id} {...tour} deleteTour={deleteTour}></Tour>
                         })}
                     </div> :
                     <div>
                         <h2>No Tours Left</h2>
-                        <button className="btn" onClick={fetchTours}>Refresh</button>
+                        <button className="tour-btn" onClick={fetchTours}>Refresh</button>
                     </div>
                 }
             </div>
