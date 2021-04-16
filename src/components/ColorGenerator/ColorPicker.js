@@ -9,9 +9,11 @@ const colorList = [
     '#FEDBB8',  // beige
     '#5600AC',  // violet
     '#AC77F9',  // periwinkle
+    '#051a8d',  // navy
     '#0000ff',  // blue
     '#0080ff',  // sky blue
     '#00f0ff',  // cyan
+    '#23af89',  // teal
     '#008000',  // dark green
     '#13B517',  // green
     '#00ff00',  // light green
@@ -33,8 +35,8 @@ const ColorPicker = ({colors = colorList, onClick}) => {
     }
 
     return (
-        <section className="cgen-color-picker">
-            <div>
+        <section>
+            <div className="cgen-color-picker">
                 {colors.map((color, index) => {
                     return <div key={index} className="cgen-color-btn" style={{backgroundColor: color}} onClick={() => handleClick(color)} />;
                 })}
