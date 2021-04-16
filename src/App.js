@@ -54,7 +54,7 @@ import Accordion from './components/Accordion';
 import accordionData from './components/Accordion/data';
 import './components/Accordion/Accordion.css';
 
-import FoodMenuProject from "./components/FoodMenu/FoodMenuProject";
+import FoodMenuProject from "./components/FoodMenuProject";
 
 // import RouterBasic from "./components/RouterBasic";
 

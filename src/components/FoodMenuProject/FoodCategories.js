@@ -1,13 +1,12 @@
 import React from 'react';
-import './index.css';
 
 const FoodCategories = ({categoryList, filterItems}) => {
 
     return (
-        <div className="btn-container">
+        <div className="food-btn-container">
             {categoryList.map(category => {
                 return (
-                    <button key={category} className="filter-btn" onClick={() => filterItems(category)}>{category}</button>
+                    <button key={category} className="food-filter-btn" onClick={() => filterItems(category)}>{category}</button>
                 );
             })}
         </div>
