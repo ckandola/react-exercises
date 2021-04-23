@@ -1,3 +1,18 @@
+:root {
+    /* primary/main color */
+    --clr-primary-5: hsl(205, 78%, 60%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+
+    --clr-white: #fff;
+    --transition: all 0.3s linear;
+    --radius: 0.25rem;
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+}
+
 .carousel-title {
     text-align: center;
     margin-bottom: 2rem;

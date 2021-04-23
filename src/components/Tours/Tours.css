@@ -1,3 +1,17 @@
+:root {
+  --clr-primary-5: hsl(205, 78%, 60%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+  
   /* section */
   .tour-section {
     width: 90vw;

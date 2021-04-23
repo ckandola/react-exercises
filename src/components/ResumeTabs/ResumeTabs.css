@@ -1,3 +1,14 @@
+:root {
+    --clr-primary-5: #2caeba;
+    --clr-primary-10: hsl(186, 100%, 94%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+}
+
 .tab-section {
     width: 90vw;
     margin: 5rem auto;
