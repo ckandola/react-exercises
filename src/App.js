@@ -1,5 +1,3 @@
-// https://dev.to/andyrewlee/how-to-dynamically-render-components-in-react-4n7g
-
 import React, {useState} from "react";
 import "./App.css";
 import './index.css';
@@ -24,15 +22,11 @@ import ColorGrid from "./components/ColorGrid";
 
 import ToDoList from "./components/ToDoList";
 
-// import LinkApp from "./components/LinkApp";
-
 import NewJokes from "./components/Jokes/NewJokes";
 
 import TicTacToe from "./components/TicTacToe";
 
  import HangMan from "./components/HangMan";
-
-//  import Jeopardy from "./components/Jeopardy";
 
 import Radio from "./components/Radio";
 
@@ -41,8 +35,6 @@ import BasicMenu from './components/BasicMenu';
 import Tooltip from './components/Tooltip';
 
 import Timer from './components/Timer';
-
-// import Slider from './components/Slider';
 
 import BirthdayReminder from './components/BirthdayReminder';
 
@@ -213,9 +205,6 @@ const App = () => {
                   <Route path="/HangMan">
                     <HangMan />
                   </Route>
-                  {/* <Route path="/Jeopardy">
-                    <Jeopardy />
-                  </Route> */}
                   <Route path="/Radio">
                     <Radio name="radio-group" id="radio1" order="1" label="Credit card"/>
                     <Radio name="radio-group" id="radio2" order="2" label="Paypal"/>
@@ -230,9 +219,6 @@ const App = () => {
                   <Route path="/Timer">
                     <Timer />
                   </Route>
-                  {/* <Route path="/Slider">
-                    <Slider />
-                  </Route> */}
                   <Route path="/BirthdayReminder">
                     <BirthdayReminder />
                   </Route>
