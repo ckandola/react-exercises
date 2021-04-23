@@ -6,10 +6,10 @@ const Tweet = ({ username, name, date, message }) => {
     <>
       <div className="tweet-box-outer">
         <div className="tweet-name">{`${name.toUpperCase()}`}</div>
-        <span className="user">@{username}</span>
+        <span className="tweet-user">@{username}</span>
         <div className="tweet-box-inner">
-          <div className="message">{message}</div>
-          <p className="date">{`${date}`}</p>
+          <div className="tweet-message">{message}</div>
+          <p className="tweet-date">{`${date}`}</p>
         </div>
       </div>
     </>

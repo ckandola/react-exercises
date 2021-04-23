@@ -1,0 +1,88 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-white: #fff;
+    --clr-red-special: #b4345c;
+    --clr-grey-special: #eae6eb;
+    --transition: all 0.3s linear;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --fixed-width: 920px;
+  }
+  
+  /*
+  =============== 
+  Questions
+  ===============
+  */
+  
+  .accordion-main {
+    min-height: 100vh;
+      /* using flex because of better browser support */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .accordion-container {
+    width: 90vw;
+    margin: 1rem auto;
+    background: var(--clr-white);
+    border-radius: var(--radius);
+    padding: 2.5rem 2rem;
+    max-width: var(--fixed-width);
+    display: grid;
+    gap: 1rem 2rem;
+  }
+  
+  .accordion-container h3 {
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  .accordion-question {
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--clr-grey-special);
+    margin-bottom: 1rem;
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+  }
+  .accordion-question h4 {
+    text-transform: none;
+    line-height: 1.5;
+  }
+  .accordion-question p {
+    color: var(--clr-grey-3);
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+  }
+  .accordion-question header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .accordion-question header h4 {
+    margin-bottom: 0;
+  }
+  .accordion-btn {
+    background: transparent;
+    border-color: transparent;
+    width: 2rem;
+    height: 2rem;
+    background: var(--clr-grey-special);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--clr-red-special);
+    cursor: pointer;
+    margin-left: 1rem;
+    align-self: center;
+    min-width: 2rem;
+  }
+  

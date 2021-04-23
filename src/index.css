@@ -1,3 +1,7 @@
+:root {
+  --transitionTime : all 0.3s linear;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,51 +11,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+ul {
+  list-style-type: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.accordion-main {
-  min-height: 100vh;
-    /* using flex because of better browser support */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.accordion-container {
-  width: 90vw;
-  margin: 5rem auto;
-  background: var(--clr-white);
-  border-radius: var(--radius);
-  padding: 2.5rem 2rem;
-  max-width: var(--fixed-width);
-  display: grid;
-  gap: 1rem 2rem;
-}
-
-.accordion-container h3 {
-  line-height: 1.2;
-  font-weight: 500;
-}
-
-.accordion-section {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: var(--max-width);
-}
-
-@media screen and (min-width: 992px) {
-  .accordion-section {
-    width: 95vw;
-  }
-
- .section {
-   width: 90vw;
-   margin: 0 auto;
-   max-width: var(--max-width);
- }
 }
 
 .main {
@@ -75,11 +41,12 @@ code {
 
 .button-container {
   display:grid;
-  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-template-columns: auto auto;
   border-radius: 5em;
   background-color:#e3d5f1;
   padding: 1.5rem;
-  min-width: 80vw;
+  width: 90vw;
+  transition: var(--transitionTime);
 }
 
 .button-project {
@@ -100,4 +67,35 @@ code {
   margin-bottom: .5rem;
   min-width: 2rem;
   font-size: 1.2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .button-container {
+    width: fit-content;
+    margin:auto;
+    grid-template-columns: auto auto auto;
+    transition: var(--transitionTime);
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .button-container {
+    grid-template-columns: auto auto auto auto;
+    transition: var(--transitionTime);
+
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .button-container {
+    grid-template-columns: auto auto auto auto auto;
+    transition: var(--transitionTime);
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .button-container {
+    grid-template-columns: auto auto auto auto auto auto auto;
+    transition: var(--transitionTime);
+  }
 }

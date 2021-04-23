@@ -34,7 +34,7 @@ const ResumeTabs = () => {
     return (
         <section className="tab-section">
             <div className="tab-title">
-                <h2>Experience</h2>
+                <h2>Professional Experience</h2>
                 <div className="tab-underline"></div>
                 <div className="tab-job-center">
                     <div className="tab-btn-container">

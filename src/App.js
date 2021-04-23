@@ -26,8 +26,7 @@ import ToDoList from "./components/ToDoList";
 
 // import LinkApp from "./components/LinkApp";
 
-import Jokes from "./components/Jokes";
-import Gif from "./components/Gif";
+import NewJokes from "./components/Jokes/NewJokes";
 
 import TicTacToe from "./components/TicTacToe";
 
@@ -53,8 +52,9 @@ import Reviews from './components/Reviews';
 
 import Accordion from './components/Accordion';
 import accordionData from './components/Accordion/data';
+import './components/Accordion/Accordion.css';
 
-import FoodMenuProject from "./components/FoodMenu/FoodMenuProject";
+import FoodMenuProject from "./components/FoodMenuProject";
 
 // import RouterBasic from "./components/RouterBasic";
 
@@ -95,7 +95,6 @@ const App = () => {
     'ColorGrid',
     'ToDoList',
     'Jokes',
-    'Gif',
     'TicTacToe',
     'HangMan',
     'Radio',
@@ -206,10 +205,7 @@ const App = () => {
                     <ToDoList />
                   </Route>
                   <Route path="/Jokes">
-                    <Jokes />
-                  </Route>
-                  <Route path="/Gif">
-                    <Gif />
+                    <NewJokes />
                   </Route>
                   <Route path="/TicTacToe">
                     <TicTacToe />
@@ -250,7 +246,7 @@ const App = () => {
                   <div className="accordion-main">
                     <div className="accordion-container">
                       <h3>Login Questions</h3>
-                      <section className="info">
+                      <section>
                         {accordionData.map(accordion => {
                           return (
                             <Accordion key={accordion.id} question={accordion.title} answer={accordion.info} />

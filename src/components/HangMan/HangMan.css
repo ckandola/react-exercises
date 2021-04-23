@@ -1,26 +1,49 @@
-.center {
+.hangman-center {
     display:block;
     margin: auto;
     max-width: fit-content;
     width: 50%;
 }
 
-.button {
+.hangman-button {
     margin:2px;
     display: inline-flex !important;
 }
 
-.guessWord {
+.hangman-letters {
+    margin: auto;
+    width:90%;
+    text-align: center;
+}
+
+.hangman-guessWord {
     font-size:1.5em;
     text-align: center;
     margin: 1em;
 }
 
-.gameStatus {
+.hangman-gameStatus {
     font-size:2em;
     text-align: center;
 }
 
-.game-main {
+.hangman-game-main {
     padding: 1em;
+}
+
+.hangman-playagain {
+    width:100%;
+    padding:0.3em;
+    margin:1em;
+    border-radius:0.25rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    border: transparent;
+    background: white;
+    color: black;
+}
+
+.hangman-playagain:hover {
+    background: black;
+    color: white;
 }

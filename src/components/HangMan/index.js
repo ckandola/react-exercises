@@ -57,14 +57,20 @@ const HangMan = () => {
     const currentGuess = currentWord();
     const gameOver = strikes === maxWrong || currentGuess.join('') === word;
     return (
-        <div className="game-main">
-            {gameOver && (<div className="center gameStatus">{strikes === maxWrong ? 'GAME OVER' : 'YOU WIN!'}</div>)}
-            <div className="center">{images[strikes]}</div>
-            <div className="guessWord">{currentGuess}</div>
-            {letters.map(letter => {
-                return <Button className="button" variant="primary" size="sm" margin="2" key={letter} onClick={() => addLetter(letter)} disabled={guessedLetters.indexOf(letter) > -1 || gameOver}>{letter}</Button>
-            })}
-            {gameOver && (<div className="center"><button onClick={getRandomWord}>PLAY AGAIN</button></div>)}
+        <div className="hangman-game-main">
+            {gameOver && (<div className="hangman-center hangman-gameStatus">{strikes === maxWrong ? 'GAME OVER' : 'YOU WIN!'}</div>)}
+            <div className="hangman-center">{images[strikes]}</div>
+            <div className="hangman-guessWord">{currentGuess}</div>
+            <div className="hangman-letters">
+                {letters.map(letter => {
+                    return <Button className="hangman-button" variant="primary" size="sm" margin="2" key={letter} onClick={() => addLetter(letter)} disabled={guessedLetters.indexOf(letter) > -1 || gameOver}>{letter}</Button>
+                })}
+            </div>
+            {gameOver && (
+                <div className="hangman-center">
+                    <button className="hangman-playagain" onClick={getRandomWord}>PLAY AGAIN</button>
+                </div>)
+            }
         </div>
     )
 }

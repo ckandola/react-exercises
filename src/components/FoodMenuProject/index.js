@@ -1,6 +1,8 @@
+// from https://youtu.be/a_7Z7C_JCyo?t=5299
+
 import React, {useState} from 'react';
-import './index.css';
-import FoodMenu from './index';
+import './FoodMenu.css';
+import FoodMenu from './FoodMenu';
 import FoodCategories from './FoodCategories';
 import foodItems from './data';
 
@@ -22,7 +24,7 @@ const FoodMenuProject = () => {
           <section className="food-menu food-section">
             <div className="food-title">
               <h2>Our Menu</h2>
-              <div className="underline"></div>
+              <div className="food-underline"></div>
             </div>
             <FoodCategories filterItems={filterItems} categoryList={categoryList} />
             <FoodMenu items={menuItems}/>

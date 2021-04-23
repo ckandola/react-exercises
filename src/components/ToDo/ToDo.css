@@ -1,14 +1,14 @@
-.finished {
+.todo-finished {
   text-decoration: line-through;
 }
 
-.check {
+.todo-check {
   position: relative;
   top: 0.4em;
   margin-right: 0.5em;
 }
 
-.buttons {
+.todo-buttons {
   padding-right: 0.5em;
 }
 

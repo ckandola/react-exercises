@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import soundfile from './level_up.m4r';
+import './Timer.css';
 
 const Timer = () => {
     const initialText = 'Enter countdown value';
@@ -92,26 +93,26 @@ const Timer = () => {
     }
 
     return (
-        <div style={{margin: 'auto', width: '50%', textAlign: 'center'}}>
+        <div className="timer-div">
             <h2>Timer</h2>
-            <span>
+            <span className="timer-minbtn-span">
                 {timeChoices.map(choice => {
-                    return (<button key={choice} onClick={() => {handleClick(choice)}}>{choice} seconds</button>);
+                    return (<button key={choice} className="timer-btn timer-minbtn" onClick={() => {handleClick(choice)}}>{choice} seconds</button>);
                 })}
             </span>
             <h2>{countdownText}</h2>
             <span>
-                <button onClick={() => setCanResume(!canResume)} 
+                <button className="timer-btn timer-statusbtn" onClick={() => setCanResume(!canResume)} 
                         disabled={remainingTime === 0}>Pause/Resume</button>
-                <button onClick={cancel}>Cancel</button>
-                <button onClick={reset}>Reset</button>
+                <button className="timer-btn timer-statusbtn" onClick={cancel}>Cancel</button>
+                <button className="timer-btn timer-statusbtn" onClick={reset}>Reset</button>
             </span>
-            <div>
-                <input value={inputText} 
+            <div className="timer-form">
+                <input className="timer-input" value={inputText} 
                     onFocus={() => {if(!isNumber(inputText)) setInputText('')}} 
                     onChange={handleTextChange}
                     onBlur={() => setInputText(inputText ? inputText : initialText)}/>
-                <input type="submit" onClick={handleSubmit}/>
+                <input type="submit" className="timer-btn timer-submit" onClick={handleSubmit}/>
             </div>
         </div>
     )

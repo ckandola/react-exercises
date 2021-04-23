@@ -1,8 +1,8 @@
-.date {
+.tweet-date {
   font-weight: 600;
 }
 
-.message {
+.tweet-message {
   font-style: italic;
 }
 
@@ -11,7 +11,7 @@
   color:black;
 }
 
-.user {
+.tweet-user {
   font-size: 0.8em;
   color:dimgrey;
 }

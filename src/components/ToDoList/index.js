@@ -41,8 +41,8 @@ const ToDoList = () => {
   };
 
   return (
-    <div className="background">
-      <h2 className="header">ToDo List:</h2>
+    <div className="todo-background">
+      <h2 className="todo-header">ToDo List:</h2>
       <ul>
         {todos.map(item => {
           return (
@@ -50,9 +50,9 @@ const ToDoList = () => {
           );
         })}
       </ul>
-      <div className="textEntry">
+      <div className="todo-textEntry">
         <input
-          className="entry"
+          className="todo-entry"
           type="text"
           onChange={onChange}
           value={text}

@@ -1,0 +1,75 @@
+:root {
+    --themeColor: rgb(0, 0, 139);
+    --themeColor2: rgb(23, 150, 235);
+    --backgroundSilver: rgb(230,230,230);
+    --background: rgb(192, 96, 192);
+}
+
+.joke-header {
+    text-align: center;
+    font-family: 'Georgia';
+    padding:1rem;
+    border-radius: 1em;
+    background: var(--background);
+    min-width:60vw;
+    margin:1em auto;
+    color:white;
+    max-width: 80vw;
+
+}
+
+.joke-loading {
+    text-align: center;
+    font-size: 2em;
+}
+
+.joke {
+    margin: .1em auto;
+    width: 50%;
+    display:list-item;
+    list-style-type: initial;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.joke-form {
+    margin:auto;
+    margin-top:2em;
+    width:30%;
+    background:white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0px 2px 3px 0px;
+}
+
+.joke-form label {
+    display: block;
+    font-weight:bold;
+    letter-spacing: 0.15rem;
+    color:var(--themeColor);
+}
+
+.joke-form input {
+    border-radius: 1em;
+    padding: 0em 0.5em;
+    margin:0.5em;
+    width:50%;
+    background: var(--backgroundSilver) ;
+    font-size: 1.15rem;
+}
+
+.joke-form button {
+    border-radius: 1em;
+    padding: 0.1rem 0.5rem;
+    border-color: transparent;
+    background: var(--themeColor);
+    color:white;
+    margin:1em;
+    width: 30%;
+}
+
+.joke-form button:hover {
+    background: var(--themeColor2);
+    color:var(--themeColor);
+    font-weight: 600;
+    transition:all 0.1s linear;
+}
