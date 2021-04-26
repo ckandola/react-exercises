@@ -1,0 +1,45 @@
+:root {
+    --transition: all 0.3s linear;
+}
+
+.radio-form {
+    text-align: left;
+    margin:auto;
+    width:20%;
+    background:rgb(71, 143, 0);
+    border-radius: 1em;
+    padding:0.25em;
+    transition: var(--transition);
+}
+
+.radio-form:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.radio-label {
+    color:white;
+    margin-left:0.5em;
+}
+
+.radio-center-text {
+    text-align: center;
+}
+
+.radio-submit {
+    border-radius: 1em;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-width: 4px;
+    border-color: rgb(68, 56, 143);
+    background: rgb(144, 136, 196);
+    color:rgb(39, 27, 114);
+    padding:0.25em;
+    margin-bottom:0.25em;
+    transition: var(--transition);
+}
+
+.radio-submit:hover {
+    background: rgb(68, 56, 143);
+    border-color: rgb(144, 136, 196);
+    color:rgb(186, 182, 212);
+}
