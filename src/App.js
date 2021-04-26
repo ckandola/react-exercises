@@ -26,9 +26,9 @@ import NewJokes from "./components/Jokes/NewJokes";
 
 import TicTacToe from "./components/TicTacToe";
 
- import HangMan from "./components/HangMan";
+import HangMan from "./components/HangMan";
 
-import Radio from "./components/Radio";
+import RadioGroup from "./components/Radio/RadioGroup";
 
 import BasicMenu from './components/BasicMenu';
 
@@ -89,7 +89,7 @@ const App = () => {
     'Jokes',
     'TicTacToe',
     'HangMan',
-    'Radio',
+    'RadioGroup',
     'BasicMenu',
     'Tooltip',
     'Timer',
@@ -205,10 +205,10 @@ const App = () => {
                   <Route path="/HangMan">
                     <HangMan />
                   </Route>
-                  <Route path="/Radio">
-                    <Radio name="radio-group" id="radio1" order="1" label="Credit card"/>
-                    <Radio name="radio-group" id="radio2" order="2" label="Paypal"/>
-                    <Radio name="radio-group" id="radio3" order="3" label="Check"/>
+                  <Route path="/RadioGroup">
+                    <RadioGroup name="radio-group" labels={["Credit card", "Paypal", "Check"]} 
+                      onSubmit={selection => console.log(`Selected ${selection}`)} 
+                      submitDesc={"see selection in console"}/>
                   </Route>
                   <Route path="/BasicMenu">
                     <BasicMenu />
