@@ -19,9 +19,9 @@ const ToDo = ({ task, onDelete, onEdit }) => {
   };
 
   return (
-    <div style={{ display: "flex", textAlign: "left", margin: "0.5em" }}>
+    <div className="todo-main">
       <div className="todo-buttons">
-        <input type="submit" value={isEditing ? "Save Changes" : "Edit"} onClick={onEditTask} className="todo-input"/>
+        <input type="submit" value={isEditing ? "Save Changes" : "Edit"} onClick={onEditTask} className="todo-submit"/>
       </div>
       {!isEditing ? (
         <>
@@ -29,19 +29,19 @@ const ToDo = ({ task, onDelete, onEdit }) => {
             <input
               type="submit"
               value="Delete"
-              className="todo-input"
+              className="todo-submit"
               onClick={() => onDelete(task)}
             />
           </div>
           <input className="todo-check" type="checkbox" value={task} onClick={() => setIsFinished(!isFinished)} />
           {!isFinished ? (
-            <span style={{marginLeft: "-1em"}}>{task}</span>
+            <span>{task}</span>
           ) : (
             <span className="todo-finished">{task}</span>
           )}
         </>
       ) : (
-        <input style={{background: 'silver'}} value={text} onChange={onChange} />
+        <input className="todo-entry" value={text} onChange={onChange} />
       )}
     </div>
   );

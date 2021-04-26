@@ -40,7 +40,7 @@ const Carousel = () => {
                             <FaQuoteRight className="carousel-icon" />
                         </article>
                     );
-                })};
+                })}
                 <button 
                     className="carousel-prev" 
                     onClick={() => setCarousel_Ix(carousel_ix === 0 ? people.length - 1 : carousel_ix - 1)}>
