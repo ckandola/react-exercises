@@ -16,11 +16,19 @@ const BirthdayReminder = ({date = new Date()}) => {
             <section className="birthday-container birthday-section">
                 <div className="birthday-input-section">
                     <h3>Search for a birthday:</h3>
-                    <DatePicker 
-                        selected={selectedDate}
-                        onSelect={newDate => setSelectedDate(newDate)}
-                        placeholderText={'Enter a day!'}
-                    />
+                    <div className="birthday-input-section-container">
+                        <DatePicker 
+                            selected={selectedDate}
+                            onSelect={newDate => setSelectedDate(newDate)}
+                            placeholderText={'Enter a day!'}
+                            />
+                        <div className="birthday-reset-sectn">
+                            <button 
+                                className="birthday-reset-date-btn"
+                                onClick={() => {setSelectedDate(date)}}
+                            >Return to today</button>
+                        </div>
+                    </div>
                 </div>
                 <BirthdayList
                     currentDay={selectedDate.toString()} 

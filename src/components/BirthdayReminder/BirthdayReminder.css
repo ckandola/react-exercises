@@ -92,7 +92,27 @@ Variables
     background-color:rgba(242, 138, 178, 0.8);
     width: 50%;
   }
-
+  
   .birthday-input-section {
     text-align: center;
+  }
+  
+  .birthday-input-section-container {
+    display:flex;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .birthday-reset-sectn {
+    position: relative;
+    width:9rem;
+  }
+  
+  .birthday-reset-date-btn {
+    border-radius: var(--radius);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: skyblue;
   }
