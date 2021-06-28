@@ -47,11 +47,11 @@ Variables
   .birthday-container h3 {
     font-weight: normal;
     text-transform: none;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
   }
   .birthday-person {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr 2fr;
     column-gap: 0.75rem;
     margin-bottom: 1.5rem;
     align-items: center;
@@ -69,7 +69,7 @@ Variables
   .birthday-person p {
     margin-bottom: 0;
   }
-  .birthday-container button {
+  .birthday-btn {
     color: var(--clr-white);
     display: block;
     width: 100%;
@@ -85,3 +85,34 @@ Variables
     cursor: pointer;
   }
   
+  .birthday-congrat-btn {
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    background-color:rgba(242, 138, 178, 0.8);
+    width: 50%;
+  }
+  
+  .birthday-input-section {
+    text-align: center;
+  }
+  
+  .birthday-input-section-container {
+    display:flex;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .birthday-reset-sectn {
+    position: relative;
+    width:9rem;
+  }
+  
+  .birthday-reset-date-btn {
+    border-radius: var(--radius);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: skyblue;
+  }
