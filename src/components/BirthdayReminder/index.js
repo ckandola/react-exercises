@@ -4,18 +4,38 @@ import React, {useState} from 'react';
 import data from './data';
 import BirthdayList from './BirthdayList';
 import './BirthdayReminder.css';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+import PropTypes from 'prop-types';
 
-const BirthdayReminder = () => {
+const BirthdayReminder = ({date = new Date()}) => {
     const [people, setPeople] = useState(data);
+    const [selectedDate, setSelectedDate] = useState(date);
     return (
         <main className="birthday-main">
             <section className="birthday-container birthday-section">
-                <h3>{`${people.length} birthdays today`}</h3>
-                <BirthdayList people={people}/>
-                <button onClick={() => setPeople([])}>Clear All</button>
+                <div className="birthday-input-section">
+                    <h3>Search for a birthday:</h3>
+                    <DatePicker 
+                        selected={selectedDate}
+                        onSelect={newDate => setSelectedDate(newDate)}
+                        placeholderText={'Enter a day!'}
+                    />
+                </div>
+                <BirthdayList
+                    currentDay={selectedDate.toString()} 
+                    people={people} 
+                    onCongratulate={id => setPeople(people.filter(person => person.id !== id))}
+                />
+                <button className="birthday-btn" onClick={() => setPeople([])}>Clear All</button>
+                <button className="birthday-btn" onClick={() => window.location.reload()}>Reload</button>
             </section>
         </main>
     );
 }
 
 export default BirthdayReminder;
+
+BirthdayReminder.propTypes = {
+    date: PropTypes.object
+}

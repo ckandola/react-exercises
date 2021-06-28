@@ -1,6 +1,7 @@
 export default [
     {
       id: 1,
+      birthday: "06/28/1993",
       name: 'Bertie Yates',
       age: 29,
       image:
@@ -8,6 +9,7 @@ export default [
     },
     {
       id: 2,
+      birthday: "06/29/1993",
       name: 'Hester Hogan',
       age: 32,
       image:
@@ -15,6 +17,7 @@ export default [
     },
     {
       id: 3,
+      birthday: "06/28/1993",
       name: 'Larry Little',
       age: 36,
       image:
@@ -22,6 +25,7 @@ export default [
     },
     {
       id: 4,
+      birthday: "06/28/1993",
       name: 'Sean Walsh',
       age: 34,
       image:
@@ -29,6 +33,7 @@ export default [
     },
     {
       id: 5,
+      birthday: "01/02/1993",
       name: 'Lola Gardner',
       age: 29,
       image:
