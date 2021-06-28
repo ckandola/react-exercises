@@ -12,7 +12,7 @@ const BirthdayReminder = () => {
             <section className="birthday-container birthday-section">
                 <h3>{`${people.length} birthdays today`}</h3>
                 <BirthdayList people={people}/>
-                <button onClick={() => setPeople([])}>Clear All</button>
+                <button id={'birthday-list-clear'} onClick={() => setPeople([])}>Clear All</button>
             </section>
         </main>
     );
