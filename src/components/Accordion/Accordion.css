@@ -72,8 +72,8 @@ Variables
   .accordion-btn {
     background: transparent;
     border-color: transparent;
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     background: var(--clr-grey-special);
     display: flex;
     align-items: center;
