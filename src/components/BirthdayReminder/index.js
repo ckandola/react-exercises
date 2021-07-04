@@ -35,7 +35,7 @@ const BirthdayReminder = ({date = new Date()}) => {
                     people={people} 
                     onCongratulate={id => setPeople(people.filter(person => person.id !== id))}
                 />
-                <button className="birthday-btn" onClick={() => setPeople([])}>Clear All</button>
+                <button id="birthday-list-clear" className="birthday-btn" onClick={() => setPeople([])}>Clear All</button>
                 <button className="birthday-btn" onClick={() => window.location.reload()}>Reload</button>
             </section>
         </main>
