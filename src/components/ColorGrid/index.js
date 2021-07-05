@@ -4,9 +4,9 @@ import ColorSquare from "../ColorSquare";
 class ColorGrid extends React.Component {
   createGrid = () => {
     let table = [];
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 7; i++) {
       let columns = [];
-      for (let j = 0; j < 3; j++) {
+      for (let j = 0; j < 4; j++) {
         columns.push(
           <td key={i + "" + j}>
             <ColorSquare />
