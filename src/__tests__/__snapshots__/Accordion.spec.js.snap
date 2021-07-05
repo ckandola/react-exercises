@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion tests contains the correct questions and answers 1`] = `
+<div
+  className="accordion-main"
+>
+  <div
+    className="accordion-container"
+  >
+    <h3>
+      Tests
+    </h3>
+    <section>
+      <article
+        className="accordion-question"
+      >
+        <header>
+          <h4>
+            Do I have to allow the use of cookies?
+          </h4>
+          <button
+            className="accordion-btn"
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M16 8A8 8 0 110 8a8 8 0 0116 0zM8.5 4a.5.5 0 00-1 0v3.5H4a.5.5 0 000 1h3.5V12a.5.5 0 001 0V8.5H12a.5.5 0 000-1H8.5V4z"
+                fillRule="evenodd"
+              />
+            </svg>
+          </button>
+        </header>
+      </article>
+      <article
+        className="accordion-question"
+      >
+        <header>
+          <h4>
+            How do I change my MyPage password?
+          </h4>
+          <button
+            className="accordion-btn"
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M16 8A8 8 0 110 8a8 8 0 0116 0zM8.5 4a.5.5 0 00-1 0v3.5H4a.5.5 0 000 1h3.5V12a.5.5 0 001 0V8.5H12a.5.5 0 000-1H8.5V4z"
+                fillRule="evenodd"
+              />
+            </svg>
+          </button>
+        </header>
+      </article>
+      <article
+        className="accordion-question"
+      >
+        <header>
+          <h4>
+            What is BankID?
+          </h4>
+          <button
+            className="accordion-btn"
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M16 8A8 8 0 110 8a8 8 0 0116 0zM8.5 4a.5.5 0 00-1 0v3.5H4a.5.5 0 000 1h3.5V12a.5.5 0 001 0V8.5H12a.5.5 0 000-1H8.5V4z"
+                fillRule="evenodd"
+              />
+            </svg>
+          </button>
+        </header>
+      </article>
+      <article
+        className="accordion-question"
+      >
+        <header>
+          <h4>
+            Whose birthdate can I use?
+          </h4>
+          <button
+            className="accordion-btn"
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M16 8A8 8 0 110 8a8 8 0 0116 0zM8.5 4a.5.5 0 00-1 0v3.5H4a.5.5 0 000 1h3.5V12a.5.5 0 001 0V8.5H12a.5.5 0 000-1H8.5V4z"
+                fillRule="evenodd"
+              />
+            </svg>
+          </button>
+        </header>
+      </article>
+      <article
+        className="accordion-question"
+      >
+        <header>
+          <h4>
+            What if I didn't receive a password?
+          </h4>
+          <button
+            className="accordion-btn"
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M16 8A8 8 0 110 8a8 8 0 0116 0zM8.5 4a.5.5 0 00-1 0v3.5H4a.5.5 0 000 1h3.5V12a.5.5 0 001 0V8.5H12a.5.5 0 000-1H8.5V4z"
+                fillRule="evenodd"
+              />
+            </svg>
+          </button>
+        </header>
+      </article>
+    </section>
+  </div>
+</div>
+`;

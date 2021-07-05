@@ -15,7 +15,7 @@ const AccordionItem = ({question, answer}) => {
                 </button>
 
             </header>
-            {isOpen && <p>{answer}</p>}
+            {isOpen && <p className="accordion-answer">{answer}</p>}
         </article>
     );
 };
