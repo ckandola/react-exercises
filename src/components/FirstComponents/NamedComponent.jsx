@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 
 class NamedComponent extends Component {
   render() {
@@ -7,3 +8,7 @@ class NamedComponent extends Component {
 }
 
 export default NamedComponent;
+
+NamedComponent.propTypes = {
+  name: PropTypes.string,
+};
