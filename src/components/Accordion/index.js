@@ -2,7 +2,7 @@ import React from 'react';
 import AccordionItem from './AccordionItem';
 import accordionData from './data';
 import './Accordion.css';
-
+import PropTypes from 'prop-types';
 
 const Accordion = ({title}) => {
     
@@ -23,3 +23,7 @@ const Accordion = ({title}) => {
 };
 
 export default Accordion;
+
+Accordion.propTypes = {
+    title: PropTypes.string,
+};

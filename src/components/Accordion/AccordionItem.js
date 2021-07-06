@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {BsFillPlusCircleFill, BsDashCircleFill} from 'react-icons/bs';
 import './Accordion.css';
-
+import PropTypes from 'prop-types';
 
 const AccordionItem = ({question, answer}) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,3 +21,8 @@ const AccordionItem = ({question, answer}) => {
 };
 
 export default AccordionItem;
+
+AccordionItem.propTypes = {
+    question: PropTypes.string,
+    answer: PropTypes.string,
+};
