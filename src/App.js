@@ -8,9 +8,7 @@ import {
   Link,
 } from "react-router-dom";
 
-import FirstComponent from "./components/FirstComponent";
-import SecondComponent from "./components/SecondComponent";
-import NamedComponent from "./components/NamedComponent";
+import FirstComponents from "./components/FirstComponents";
 
 import Tweet from "./components/Tweet";
 
@@ -76,9 +74,7 @@ import CocktailMain from './components/Cocktail';
 const App = () => {
 
   const componentNames = [
-    'FirstComponent',
-    'SecondComponent',
-    'NamedComponent',
+    'First Components',
     'Tweet',
     'Person',
     'Pokedex',
@@ -144,14 +140,8 @@ const App = () => {
                 </div>
                 
                 <Switch>
-                  <Route path="/FirstComponent">
-                    <FirstComponent />
-                  </Route>
-                  <Route path="/SecondComponent">
-                    <SecondComponent />
-                  </Route>
-                  <Route path="/NamedComponent">
-                    <NamedComponent name="ckandola"/>
+                  <Route path="/First Components">
+                    <FirstComponents name="ckandola" />
                   </Route>
                   <Route path="/Tweet">
                     <Tweet 
