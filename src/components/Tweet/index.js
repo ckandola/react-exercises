@@ -94,7 +94,7 @@ const TweetContainer = () => {
                         value={text}
                         onChange={e => handleChange(e, 'message')}
                         ></textarea>
-                    <input type="submit" value="Tweet"/>
+                    <input type="submit" value="Tweet" className="tweet-message-btn"/>
                 </div>
             </form>
             {tweets.map((tweet, index) => {
