@@ -10,7 +10,7 @@ import {
 
 import FirstComponents from "./components/FirstComponents";
 
-import Tweet from "./components/Tweet";
+import TweetContainer from "./components/Tweet";
 
 import Person from "./components/Person";
 
@@ -144,23 +144,7 @@ const App = () => {
                     <FirstComponents name="ckandola" />
                   </Route>
                   <Route path="/Tweet">
-                    <Tweet 
-                      username="chickensrock"
-                      name="ed"
-                      date="6/05/99"
-                      message="Gravy!"/>
-                      <Tweet
-                      username="Mucho-Dinero"
-                      name="eddy"
-                      date="7/02/99"
-                      message="If elected, inflation will be a thing of the gas!"
-                    />
-                    <Tweet
-                      username="my_kingdom_for_sunscreen"
-                      name="edd"
-                      date="7/05/99"
-                      message="Messy, messy, messy!"
-                    />
+                    <TweetContainer />
                   </Route>
                   <Route path="/Person">
                     <Person
