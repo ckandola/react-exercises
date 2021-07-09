@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pokedex test matches the snapshot 1`] = `
+<div>
+  <h1
+    className="pokedex-title"
+  >
+    Pokédex
+  </h1>
+  <ul>
+    <Pokecard
+      id={1}
+      image="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+      key="1"
+      name="Charmander"
+      type="fire"
+    />
+    <Pokecard
+      id={2}
+      image="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
+      key="2"
+      name="Squirtle"
+      type="water"
+    />
+    <Pokecard
+      id={3}
+      image="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png"
+      key="3"
+      name="Butterfree"
+      type="flying"
+    />
+    <Pokecard
+      id={4}
+      image="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png"
+      key="4"
+      name="Rattata"
+      type="normal"
+    />
+    <Pokecard
+      id={5}
+      image="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png"
+      key="5"
+      name="Metapod"
+      type="bug"
+    />
+  </ul>
+</div>
+`;

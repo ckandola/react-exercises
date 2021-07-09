@@ -1,9 +1,9 @@
 .pokedex-entry {
   background-color: silver;
   border-radius: 2em;
-  max-width: fit-content;
+  width: 10em;
   margin:auto;
-  margin-bottom: 6em;
+  margin-bottom: 2em;
   padding-bottom: 1em;
 }
 
