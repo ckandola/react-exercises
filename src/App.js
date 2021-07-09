@@ -12,8 +12,6 @@ import FirstComponents from "./components/FirstComponents";
 
 import TweetContainer from "./components/Tweet";
 
-import Person from "./components/Person";
-
 import Pokedex from "./components/Pokedex";
 
 import ColorGrid from "./components/ColorGrid";
@@ -76,7 +74,6 @@ const App = () => {
   const componentNames = [
     'First Components',
     'Tweet',
-    'Person',
     'Pokedex',
     'ColorGrid',
     'ToDoList',
@@ -145,19 +142,6 @@ const App = () => {
                   </Route>
                   <Route path="/Tweet">
                     <TweetContainer />
-                  </Route>
-                  <Route path="/Person">
-                    <Person
-                      name="AgeEight"
-                      age="8"
-                      hobbies={["running", "schooling", "eating"]}
-                    />
-                    <Person
-                      name="TooLongOfAName"
-                      age="20"
-                      hobbies={["thinking", "pondering", "querying", "imagining"]}
-                    />
-                    <Person name="Bob" age="30" hobbies={["building", "fixing it"]} />
                   </Route>
                   <Route path="/Pokedex">
                     <Pokedex />
