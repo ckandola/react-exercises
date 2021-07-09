@@ -59,7 +59,7 @@ const TweetContainer = () => {
                 setName(event.target.value);
                 break;
             case 'message':
-                if (text.length < maxLen) {
+                if (event.target.value.length <= maxLen) {
                     setText(event.target.value);
                 }
                 break;
@@ -93,7 +93,8 @@ const TweetContainer = () => {
                         placeholder={`Enter up to ${maxLen} characters`}
                         value={text}
                         onChange={e => handleChange(e, 'message')}
-                        ></textarea>
+                        >
+                    </textarea>
                     <input type="submit" value="Tweet" className="tweet-message-btn"/>
                 </div>
             </form>
