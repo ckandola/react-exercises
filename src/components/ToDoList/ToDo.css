@@ -22,3 +22,12 @@
   font-size: 1em;
   width: 10vw;
 }
+
+.todo-save-changes {
+  background-color: darkolivegreen;
+  color: white;
+}
+
+.todo-error {
+  color: red;
+}

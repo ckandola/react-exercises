@@ -11,36 +11,48 @@ exports[`ToDoList tests ToDoList matches the snapshot 1`] = `
   </h2>
   <ul>
     <ToDo
+      changeEditing={[Function]}
+      isEditingAnother={[Function]}
       key="study"
       onDelete={[Function]}
       onEdit={[Function]}
       task="study"
     />
     <ToDo
+      changeEditing={[Function]}
+      isEditingAnother={[Function]}
       key="work"
       onDelete={[Function]}
       onEdit={[Function]}
       task="work"
     />
     <ToDo
+      changeEditing={[Function]}
+      isEditingAnother={[Function]}
       key="clean"
       onDelete={[Function]}
       onEdit={[Function]}
       task="clean"
     />
     <ToDo
+      changeEditing={[Function]}
+      isEditingAnother={[Function]}
       key="dust"
       onDelete={[Function]}
       onEdit={[Function]}
       task="dust"
     />
     <ToDo
+      changeEditing={[Function]}
+      isEditingAnother={[Function]}
       key="feed the pets"
       onDelete={[Function]}
       onEdit={[Function]}
       task="feed the pets"
     />
     <ToDo
+      changeEditing={[Function]}
+      isEditingAnother={[Function]}
       key="eat"
       onDelete={[Function]}
       onEdit={[Function]}
