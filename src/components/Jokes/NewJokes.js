@@ -16,6 +16,9 @@ const NewJokes = () => {
     }
 
     useEffect(() => {
+
+        let isMounted = true;
+
         const settings = {
             method: 'GET',
             headers: {
@@ -29,17 +32,21 @@ const NewJokes = () => {
                 const response = await fetch(`${url}${searchTerm}`, settings);
                 const data = await response.json();
                 const { results } = data;
-                if (results) {
-                    setJokes(results);
-                } else {
-                    setJokes([]);
+                if (isMounted) {
+                    if (results) {
+                        setJokes(results);
+                    } else {
+                        setJokes([]);
+                    }
+                    setLoading(false);
                 }
-                setLoading(false);
             } catch (error) {
                 console.error(`Umm ${error}...`);
             }
         }
         getJokes();
+
+        return () => isMounted = false;
     }, [searchTerm]);
 
     if (loading) {
@@ -52,7 +59,7 @@ const NewJokes = () => {
         <div>
             {jokes.length > 0 ? 
                 <div>
-                    <h3 className="joke-header">Dad Jokes for "{searchTerm}": </h3>
+                    <h3 data-testid="header" className="joke-header">Dad Jokes for "{searchTerm}": </h3>
                     {jokes.map(joke => {
                         return (
                             <ul className="joke" key={joke.id}>
@@ -66,7 +73,7 @@ const NewJokes = () => {
             <form className="joke-form" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="search">Enter a type of joke</label>
-                    <input type="text" id="search" ref={searchRef}/>
+                    <input type="text" id="search" data-testid="search" ref={searchRef}/>
                     <button type="submit">Submit</button>
                 </div>
             </form>
