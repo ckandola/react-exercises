@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './TicTacToeSquare.css';
 
 const TicTacToeSquare = ({disabled, player, onClick}) => {
@@ -8,6 +8,12 @@ const TicTacToeSquare = ({disabled, player, onClick}) => {
     setValue(player);
     onClick();
   }
+
+  useEffect(() => {
+    if (!disabled) {
+      setValue("");
+    }
+  }, [disabled]);
 
     return (
       <button className="square" disabled={disabled} onClick={handleClick}>{value}</button>

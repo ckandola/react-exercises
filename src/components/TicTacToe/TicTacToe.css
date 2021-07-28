@@ -8,3 +8,12 @@
     content:"";
     display:table;
 }
+
+.tictactoe-gameover-button {
+    display:block;
+    margin:0.5rem auto;
+    width: fit-content;
+    border-radius: 0.75rem;
+    box-shadow: var(--light-shadow);
+    padding: 0.1rem 0.75rem;
+}
