@@ -1,9 +1,9 @@
-.board {
+.tictactoe-board {
  display: table;
  margin: auto;
 }
 
-.board-row:after {
+.tictactoe-board-row:after {
     clear:both;
     content:"";
     display:table;

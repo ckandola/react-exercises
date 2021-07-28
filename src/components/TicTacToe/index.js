@@ -50,18 +50,18 @@ const TicTacToe = () => {
 
   const player = count % 2 === 0 ? 'X' : 'O';
   return (
-    <div className="board">
-      <div className="message" key="turn">Turn: {count}</div>
+    <div className="tictactoe-board">
+      <div className="tictactoe-message" key="turn">Turn: {count}</div>
       {!gameOver ? 
-        <div key="player">Player: {player}</div> :
+        <div className="tictactoe-player">Player: {player}</div> :
         <div> 
-          {gameOverMessage}
+          <div className="tictactoe-gameover-msg">{gameOverMessage}</div>
           <div>
             <button className="tictactoe-gameover-button" onClick={playAgain}>Play Again</button>
           </div>
         </div>
       }
-      <div className="board-row" key={`row-1`}>
+      <div className="tictactoe-board-row" key={`row-1`}>
         <TicTacToeSquare
           key={0}
           player={player}
@@ -81,7 +81,7 @@ const TicTacToe = () => {
           onClick={() => incrementCount(2)}
         />
       </div>
-      <div className="board-row" key={`row-2`}>
+      <div className="tictactoe-board-row" key={`row-2`}>
         <TicTacToeSquare
           key={3}
           player={player}
@@ -101,7 +101,7 @@ const TicTacToe = () => {
           onClick={() => incrementCount(5)}
         />
       </div>
-      <div className="board-row" key={`row-3`}>
+      <div className="tictactoe-board-row" key={`row-3`}>
         <TicTacToeSquare
           key={6}
           player={player}

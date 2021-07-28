@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TicTacToe tests matches the snapshot 1`] = `
+<div
+  className="tictactoe-board"
+>
+  <div
+    className="tictactoe-message"
+    key="turn"
+  >
+    Turn: 
+    0
+  </div>
+  <div
+    className="tictactoe-player"
+  >
+    Player: 
+    X
+  </div>
+  <div
+    className="tictactoe-board-row"
+    key="row-1"
+  >
+    <TicTacToeSquare
+      key="0"
+      onClick={[Function]}
+      player="X"
+    />
+    <TicTacToeSquare
+      key="1"
+      onClick={[Function]}
+      player="X"
+    />
+    <TicTacToeSquare
+      key="2"
+      onClick={[Function]}
+      player="X"
+    />
+  </div>
+  <div
+    className="tictactoe-board-row"
+    key="row-2"
+  >
+    <TicTacToeSquare
+      key="3"
+      onClick={[Function]}
+      player="X"
+    />
+    <TicTacToeSquare
+      key="4"
+      onClick={[Function]}
+      player="X"
+    />
+    <TicTacToeSquare
+      key="5"
+      onClick={[Function]}
+      player="X"
+    />
+  </div>
+  <div
+    className="tictactoe-board-row"
+    key="row-3"
+  >
+    <TicTacToeSquare
+      key="6"
+      onClick={[Function]}
+      player="X"
+    />
+    <TicTacToeSquare
+      key="7"
+      onClick={[Function]}
+      player="X"
+    />
+    <TicTacToeSquare
+      key="8"
+      onClick={[Function]}
+      player="X"
+    />
+  </div>
+</div>
+`;

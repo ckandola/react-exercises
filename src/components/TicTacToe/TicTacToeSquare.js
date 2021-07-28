@@ -16,7 +16,7 @@ const TicTacToeSquare = ({disabled, player, onClick}) => {
   }, [disabled]);
 
     return (
-      <button className="square" disabled={disabled} onClick={handleClick}>{value}</button>
+      <button className="tictactoe-square" disabled={disabled} onClick={handleClick}>{value}</button>
     );
 }
 
