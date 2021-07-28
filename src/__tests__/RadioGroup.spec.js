@@ -11,7 +11,8 @@ describe('RadioGroup tests', () => {
     const mockFn = jest.fn();
 
     const wrapper = shallow(
-        <RadioGroup labels={["Credit card", "Paypal", "Check"]} 
+        <RadioGroup name={'temp'}
+            labels={["Credit card", "Paypal", "Check"]} 
             onSubmit={mockFn}
             submitDesc={"test this out."}
         />

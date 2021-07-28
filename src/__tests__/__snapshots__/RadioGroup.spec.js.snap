@@ -17,6 +17,7 @@ exports[`RadioGroup tests matches the snapshot 1`] = `
     >
       <input
         id={0}
+        name="temp"
         onClick={[Function]}
         type="radio"
       />
@@ -32,6 +33,7 @@ exports[`RadioGroup tests matches the snapshot 1`] = `
     >
       <input
         id={1}
+        name="temp"
         onClick={[Function]}
         type="radio"
       />
@@ -47,6 +49,7 @@ exports[`RadioGroup tests matches the snapshot 1`] = `
     >
       <input
         id={2}
+        name="temp"
         onClick={[Function]}
         type="radio"
       />
