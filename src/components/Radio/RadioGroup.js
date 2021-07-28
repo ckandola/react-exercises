@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './RadioGroup.css';
+import PropTypes from 'prop-types';
 
-const RadioGroup = ({name, labels, onSubmit, submitDesc}) => {
+const RadioGroup = ({labels, onSubmit, submitDesc}) => {
     const [selected, setSelected] = useState(null);
 
     const handleSubmit = e => {
@@ -16,7 +17,7 @@ const RadioGroup = ({name, labels, onSubmit, submitDesc}) => {
                 {labels.map((label, index) => {
                     return (
                         <div key={index}>
-                            <input type="radio" name={name} id={index} onClick={() => setSelected(label)}/>
+                            <input type="radio" id={index} onClick={() => setSelected(label)}/>
                             <label htmlFor={index} className="radio-label">
                                 {label}
                             </label>
@@ -32,3 +33,9 @@ const RadioGroup = ({name, labels, onSubmit, submitDesc}) => {
 };
 
 export default RadioGroup;
+
+RadioGroup.propTypes = {
+    labels: PropTypes.arrayOf(PropTypes.string),
+    onSubmit: PropTypes.func,
+    submitDesc: PropTypes.string
+};

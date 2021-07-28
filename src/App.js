@@ -162,7 +162,7 @@ const App = () => {
                     <HangMan />
                   </Route>
                   <Route path="/RadioGroup">
-                    <RadioGroup name="radio-group" labels={["Credit card", "Paypal", "Check"]} 
+                    <RadioGroup labels={["Credit card", "Paypal", "Check"]} 
                       onSubmit={selection => console.log(`Selected ${selection}`)} 
                       submitDesc={"see selection in console"}/>
                   </Route>
