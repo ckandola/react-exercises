@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './TicTacToeSquare.css';
+import PropTypes from 'prop-types';
 
 const TicTacToeSquare = ({disabled, player, onClick}) => {
   const [value, setValue] = useState("");
@@ -22,3 +23,9 @@ const TicTacToeSquare = ({disabled, player, onClick}) => {
 
 
 export default TicTacToeSquare;
+
+TicTacToeSquare.propTypes = {
+  disabled: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  player: PropTypes.string,
+  onClick: PropTypes.func
+};
