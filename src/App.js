@@ -27,6 +27,8 @@ import HangMan from "./components/HangMan";
 import RadioGroup from "./components/Radio/RadioGroup";
 
 import BasicMenu from './components/BasicMenu';
+import MenuAbout from './components/BasicMenu/pages/About';
+import MenuContact from './components/BasicMenu/pages/Contact';
 
 import Tooltip from './components/Tooltip';
 
@@ -166,9 +168,23 @@ const App = () => {
                       onSubmit={selection => console.log(`Selected ${selection}`)} 
                       submitDesc={"see selection in console"}/>
                   </Route>
-                  <Route path="/BasicMenu">
+                  
+                  <Route exact path="/BasicMenu">
                     <BasicMenu />
                   </Route>
+                  <Route exact path="/BasicMenu/About">
+                    <BasicMenu />
+                    <MenuAbout />
+                  </Route>
+                  <Route exact path="/BasicMenu/Resume">
+                    <BasicMenu />
+                    <ResumeTabs />
+                  </Route>
+                  <Route exact path="/BasicMenu/Contact">
+                    <BasicMenu />
+                    <MenuContact />
+                  </Route>
+
                   <Route path="/Tooltip">
                     <Tooltip text={"I'm ready"} textPosition='bottom'>{'Read me'}</Tooltip>
                   </Route>

@@ -1,0 +1,77 @@
+.basicmenu {
+    text-align: center;
+}
+
+.basicmenu ul {
+    display: inline-flex;
+    margin: auto;
+    padding: 0.25rem;
+}
+
+.basicmenu li {
+    margin: 1rem; 
+    padding:0.25rem 1rem;
+    background-color: rgb(143, 73, 224);
+    border-radius: 0.75rem;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+    .basicmenu ul {
+        width:70%;
+    }
+
+    .basicmenu li {
+        margin: 1rem 1rem;
+        padding:0.25rem 0.5rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .basicmenu ul {
+        width: 50%;
+    }
+
+    .basicmenu li {
+        margin: 1rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .basicmenu li {
+        margin: 1rem;
+        padding: 0.25rem 1rem;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .basicmenu ul {
+        width: 35%;
+    }
+
+    .basicmenu li {
+        margin: 1rem;
+        padding: 0.25rem 1rem;
+    }
+}
+
+.basicmenu li:hover {
+    background-color: rgb(130, 73, 224);
+}
+
+.basicmenu a {
+    color:black;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.basicmenu-about h3 {
+    text-align: center;
+}
+
+.basicmenu-about p {
+    display: block;
+    padding: 1rem 14em 0;
+}
+
