@@ -214,7 +214,7 @@ const App = () => {
                     <BasicMenu />
                   </Route>
                   <Route path="/Tooltip">
-                    <Tooltip text={"I'm ready"} textPosition='bottom'>{'Read me'}</Tooltip>
+                    <Tooltip text={"There's some priceless information here."} textPosition='top'>{'Read me'}</Tooltip>
                   </Route>
                   <Route path="/Timer">
                     <Timer />
