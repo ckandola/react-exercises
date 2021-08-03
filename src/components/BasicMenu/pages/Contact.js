@@ -2,8 +2,11 @@ import React from 'react';
 
 const Contact = () => {
     return (
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolore hic eos quasi dolores eius quo exercitationem consequuntur placeat repellat.    
+        <div className="basicmenu-text">
+            <h3>Contact Me</h3>
+            <p style={{textAlign: 'center'}}>
+                Please contact me via my email, kkandola22@hotmail.com.
+            </p>
         </div>
     );
 }

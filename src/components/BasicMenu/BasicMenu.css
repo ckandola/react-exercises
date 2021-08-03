@@ -66,12 +66,26 @@
     text-decoration: none;
 }
 
-.basicmenu-about h3 {
-    text-align: center;
+.basicmenu-text {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+    width: 75%;
+    margin: auto;
+    padding-bottom: 0.5rem;
 }
 
-.basicmenu-about p {
+.basicmenu-text:hover {
+    box-shadow: var(--dark-shadow);
+    transition: var(--transition);
+}
+
+.basicmenu-text h3 {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.basicmenu-text p {
     display: block;
-    padding: 1rem 14em 0;
+    padding: 0.5rem 3em;
 }
 

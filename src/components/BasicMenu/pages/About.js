@@ -3,7 +3,7 @@ import '../BasicMenu.css';
 
 const About = () => {
     return (
-        <div className="basicmenu-about">
+        <div className="basicmenu-text">
             <h3>About Me</h3>
             <p>
                 I studied programming in Python and Java when I was at Whatcom Community College, and I transferred to Western 
@@ -21,9 +21,21 @@ const About = () => {
             
             <p>
                 Since graduating, I have had two internships in software development, which mostly dealt with Javascript. I learned about
-                Node.js, Chrome's Dev Tools, Git, and about working remotely in general in my first internship, which was with Cornerstone
-                Systems Northwest. After learning a decent amount of Javascript, I was tasked with creating an encryption/decryption 
-                module for my team's secret environment variables. 
+                Node.js, Chrome's Dev Tools, GIT, and about working remotely in general in my first internship. After learning a decent 
+                amount of Javascript, I was tasked with creating an encryption/decryption module for my team's secret environment variables.
+            </p>
+
+            <p>
+                In my second internship, I was introduced to React, which I've really enjoyed. I worked on features for my 
+                team's media editor, like adding buttons, shortcuts, menus, and reworking existing features like their color picker.
+                In addition to writing a few tests in Mocha and learning more about GIT branching and PR's, I also got to present my 
+                additions to the other teams during our weekly meetings. 
+            </p>
+
+            <p>
+                After my second internship ended, I returned to my part-time job and continued working on React projects independently
+                in order to learn about different libraries and to practice the techniques I'd learned. I've developed an interest
+                in software testing as well, which is why I've been trying to learn some of Mocha and Jest.
             </p>
             
         </div>
