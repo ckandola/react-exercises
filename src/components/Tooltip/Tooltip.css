@@ -1,0 +1,42 @@
+:root {
+    --transition: all 0.3s linear;
+}
+
+.tooltip-main {
+    display:none;
+}
+
+.tooltip-main-show {
+    position:relative;
+    width:fit-content;
+    color:white;
+    display:block;
+    z-index:10;
+    padding:1em;
+    border-radius: 1em;
+    background: black;
+    transition:var(--transition);
+}
+
+.tooltip_top::after {
+    content: '';
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+    position: absolute;
+    top: 3.5em;
+    left:10%;
+}
+
+.tooltip_bottom::before {
+    content: '';
+    display: block;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black;
+    position: absolute;
+    transform: translateX(-50%);
+    top: -0.3em;
+    left:10%;
+}
+
