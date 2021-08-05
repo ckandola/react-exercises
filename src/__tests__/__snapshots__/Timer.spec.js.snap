@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timer tests matches the snapshot 1`] = `
+<div
+  className="timer-div"
+>
+  <h2>
+    Timer
+  </h2>
+  <span
+    className="timer-minbtn-span"
+  >
+    <button
+      className="timer-btn timer-minbtn"
+      key="1"
+      onClick={[Function]}
+    >
+      1
+       seconds
+    </button>
+    <button
+      className="timer-btn timer-minbtn"
+      key="5"
+      onClick={[Function]}
+    >
+      5
+       seconds
+    </button>
+    <button
+      className="timer-btn timer-minbtn"
+      key="10"
+      onClick={[Function]}
+    >
+      10
+       seconds
+    </button>
+    <button
+      className="timer-btn timer-minbtn"
+      key="15"
+      onClick={[Function]}
+    >
+      15
+       seconds
+    </button>
+  </span>
+  <h2>
+    No time remaining
+  </h2>
+  <span>
+    <button
+      className="timer-btn timer-statusbtn"
+      disabled={true}
+      onClick={[Function]}
+    >
+      Pause/Resume
+    </button>
+    <button
+      className="timer-btn timer-statusbtn"
+      onClick={[Function]}
+    >
+      Cancel
+    </button>
+    <button
+      className="timer-btn timer-statusbtn"
+      onClick={[Function]}
+    >
+      Reset
+    </button>
+  </span>
+  <div
+    className="timer-form"
+  >
+    <input
+      className="timer-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      value="Enter countdown value"
+    />
+    <input
+      className="timer-btn timer-submit"
+      onClick={[Function]}
+      type="submit"
+    />
+  </div>
+</div>
+`;
