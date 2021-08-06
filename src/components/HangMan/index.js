@@ -3,13 +3,13 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import images from '../../assets';
 import './HangMan.css';
+import wordList from './data';
 
 const HangMan = () => {
     const maxWrong = 6;
     const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 
     'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     
-    const wordList = ['THE GOLDEN SHILLELAGH', 'THAT MOVIE WAS RICH IN BORING ME TO DEATH', 'JOHNNY BRAVO IS NOT A DOOFUS', 'DONNY OSMOND', 'DONNY WAHLBERG FROM THE NEW KIDS ON THE BLOCK', "MAN I'M PRETTY"];
     const [word, setWord] = useState("");
     const [strikes, setStrikes] = useState(0);
     const [guessedLetters, setGuessedLetters] = useState([]);
@@ -23,7 +23,7 @@ const HangMan = () => {
         } else {
             getRandomWord();
         }
-    }, [word, wordList])
+    }, [word])
 
     useEffect(() => {
         if (word === "") {
