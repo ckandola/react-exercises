@@ -42,7 +42,7 @@ const ResumeTabs = () => {
                             return (
                                 <button 
                                     key={index} 
-                                    className={`tab-job-btn ${index === value && 'tab-active-btn'}`}
+                                    className={`tab-job-btn ${index === value ? 'tab-active-btn' : ''}`}
                                     onClick={() => setValue(index)}>
                                         {job.title}
                                 </button>
