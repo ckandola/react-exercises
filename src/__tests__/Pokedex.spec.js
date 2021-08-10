@@ -1,11 +1,8 @@
 import React from 'react';
 import Pokedex from '../components/Pokedex';
 import Pokecard from '../components/Pokedex/Pokecard';
-import { configure, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Adapter from 'enzyme-adapter-react-16';
-
-configure({adapter: new Adapter()});
 
 describe('Pokedex test', () => {
     it('matches the snapshot', () => {

@@ -1,11 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {shallow, configure} from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import {shallow} from 'enzyme';
 import Accordion from '../components/Accordion';
 import AccordionItem from '../components/Accordion/AccordionItem';
-
-configure({adapter: new Adapter()});
 
 describe('Accordion tests', () => {
     it('contains the correct questions and answers', () => {

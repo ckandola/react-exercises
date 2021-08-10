@@ -1,10 +1,7 @@
 import React from 'react';
-import { configure, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Adapter from 'enzyme-adapter-react-16';
 import ResumeTabs from '../components/ResumeTabs';
-
-configure({adapter: new Adapter()});
 
 const wrapper = shallow(<ResumeTabs />);
 

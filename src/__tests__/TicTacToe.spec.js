@@ -1,10 +1,7 @@
 import React from 'react';
-import { configure, shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import TicTacToe from '../components/TicTacToe';
-
-configure({adapter: new Adapter()});
 
 describe("TicTacToe tests", () => {
     it('matches the snapshot', () => {

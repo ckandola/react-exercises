@@ -1,11 +1,8 @@
 import React from 'react';
 import TweetContainer from '../components/Tweet';
 import Tweet from '../components/Tweet/Tweet';
-import { configure, shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-
-configure({adapter: new Adapter()});
 
 describe('Tweet tests', () => {
     describe('TweetContainer tests', () => {

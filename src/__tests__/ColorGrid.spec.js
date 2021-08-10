@@ -1,10 +1,7 @@
 import React from 'react';
-import Adapter from 'enzyme-adapter-react-16';
-import { configure, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import ColorGrid from '../components/ColorGrid';
 import ColorSquare from '../components/ColorSquare';
-
-configure({adapter: new Adapter()});
 
 describe('ColorGrid tests', () => {
     it('has 4 columns and 7 rows', () => {

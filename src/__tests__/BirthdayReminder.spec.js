@@ -1,11 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { shallow, configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { shallow } from 'enzyme';
 import BirthdayReminder from '../components/BirthdayReminder';
 import BirthdayList from '../components/BirthdayReminder/BirthdayList';
-
-configure({adapter: new Adapter()});
 
 describe('BirthdayReminder tests', () => {
     

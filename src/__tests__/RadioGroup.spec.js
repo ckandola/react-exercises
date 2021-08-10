@@ -1,10 +1,7 @@
 import React from 'react';
-import { configure, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Adapter from 'enzyme-adapter-react-16';
 import RadioGroup from '../components/Radio/RadioGroup';
-
-configure({adapter: new Adapter()});
 
 describe('RadioGroup tests', () => {
 

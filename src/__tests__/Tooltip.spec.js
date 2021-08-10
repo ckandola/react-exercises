@@ -1,10 +1,7 @@
 import React from 'react';
-import {configure, shallow} from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Tooltip from '../components/Tooltip/';
-
-configure({adapter: new Adapter()});
 
 describe('Tooltip tests', () => {
     it('matches the snapshot', () => {

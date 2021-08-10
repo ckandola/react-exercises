@@ -1,10 +1,7 @@
 import React from 'react';
-import Adapter from 'enzyme-adapter-react-16';
-import {configure, shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Timer from '../components/Timer';
-
-configure({adapter: new Adapter()});
 
 describe('Timer tests', () => {
     it('matches the snapshot', () => {

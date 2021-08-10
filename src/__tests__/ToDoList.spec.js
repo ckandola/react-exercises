@@ -1,14 +1,11 @@
 import React from 'react';
-import Adapter from 'enzyme-adapter-react-16';
-import { configure, shallow, mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import ToDoList from '../components/ToDoList';
 import ToDo from '../components/ToDoList/ToDo';
 
 const toDoListLength = 6;
 const feedThePetsIndex = 4;
-
-configure({adapter: new Adapter()});
 
 // keep mounted component for tests that won't change anything
 const mountWrapper = mount(<ToDoList />);
