@@ -7,6 +7,7 @@ const NewJokes = () => {
     const [jokes, setJokes] = useState([]);
     const [searchTerm, setSearchTerm] = useState('cat');
     const searchRef = useRef('');
+    const mountedRef = useRef(false);
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -16,8 +17,13 @@ const NewJokes = () => {
     }
 
     useEffect(() => {
+        mountedRef.current = true;
+        return () => {
+            mountedRef.current = false;
+        }
+    }, []);
 
-        let isMounted = true;
+    useEffect(() => {
 
         const settings = {
             method: 'GET',
@@ -32,7 +38,7 @@ const NewJokes = () => {
                 const response = await fetch(`${url}${searchTerm}`, settings);
                 const data = await response.json();
                 const { results } = data;
-                if (isMounted) {
+                if (mountedRef.current) {
                     if (results) {
                         setJokes(results);
                     } else {
@@ -46,7 +52,6 @@ const NewJokes = () => {
         }
         getJokes();
 
-        return () => isMounted = false;
     }, [searchTerm]);
 
     if (loading) {
