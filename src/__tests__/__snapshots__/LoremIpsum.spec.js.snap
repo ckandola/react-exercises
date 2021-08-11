@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoremIpsum tests matches the snapshot 1`] = `
+<div>
+  <section
+    className="ipsum-section-center"
+  >
+    <h3>
+      Need Lorem Ipsum?
+    </h3>
+    <form
+      className="lorem-form"
+      onSubmit={[Function]}
+    >
+      <label
+        htmlFor="amount"
+      >
+        paragraphs:
+      </label>
+      <input
+        className="lorem-input"
+        id="amount"
+        name="amount"
+        onChange={[Function]}
+        type="number"
+        value={0}
+      />
+      <button
+        className="ipsum-btn"
+        type="submit"
+      >
+        Generate
+      </button>
+    </form>
+    <div
+      className="lorem-text"
+    />
+  </section>
+</div>
+`;
