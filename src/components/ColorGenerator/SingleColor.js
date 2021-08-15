@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './ColorGenerator.css';
+import PropTypes from 'prop-types';
 
 const SingleColor = ({rgb, weight, index, hexColor}) => {
     const [alert, setAlert] = useState(false);
@@ -30,3 +31,10 @@ const SingleColor = ({rgb, weight, index, hexColor}) => {
 };
 
 export default SingleColor;
+
+SingleColor.propTypes = {
+    rgb: PropTypes.arrayOf(PropTypes.number),
+    weight: PropTypes.number,
+    index: PropTypes.number,
+    hexColor: PropTypes.string
+};

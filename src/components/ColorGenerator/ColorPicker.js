@@ -1,5 +1,6 @@
 import React from 'react';
 import './ColorGenerator.css';
+import PropTypes from 'prop-types';
 
 const colorList = [
     '#000000',  // black
@@ -46,3 +47,8 @@ const ColorPicker = ({colors = colorList, onClick}) => {
 };
 
 export default ColorPicker;
+
+ColorPicker.propTypes = {
+    colors: PropTypes.arrayOf(PropTypes.string),
+    onClick: PropTypes.func
+};
