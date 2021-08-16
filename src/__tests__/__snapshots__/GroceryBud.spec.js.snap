@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GroceryBud tests GroceryAlert tests matches the snapshot 1`] = `
+<p
+  className="gList-alert gList-alert-success"
+>
+  Tested successfully
+</p>
+`;
+
+exports[`GroceryBud tests GroceryList tests matches the snapshot 1`] = `
+<div
+  className="gList-grocery-list"
+>
+  <article
+    className="gList-grocery-item"
+    key="0"
+  >
+    <p
+      className="gList-title"
+    >
+      test
+    </p>
+    <div
+      className="gList-btn-container"
+    >
+      <button
+        className="gList-edit-btn"
+        onClick={[Function]}
+      >
+        <FaEdit />
+      </button>
+      <button
+        className="gList-delete-btn"
+        onClick={[Function]}
+      >
+        <FaTrash />
+      </button>
+    </div>
+  </article>
+</div>
+`;
+
+exports[`GroceryBud tests matches the snapshot 1`] = `
+<GroceryBud>
+  <section
+    className="gList-section-center"
+  >
+    <form
+      className="gList-grocery-form"
+      onSubmit={[Function]}
+    >
+      <h3>
+        Grocery Bud
+      </h3>
+      <div
+        className="gList-form-control"
+      >
+        <input
+          className="gList-grocery"
+          onChange={[Function]}
+          placeholder="e.g. milk"
+          type="text"
+          value=""
+        />
+        <button
+          className="gList-submit-btn"
+          onClick={[Function]}
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </section>
+</GroceryBud>
+`;

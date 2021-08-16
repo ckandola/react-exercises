@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import './GroceryBud.css';
+import PropTypes from 'prop-types';
 
 const GroceryAlert = ({type, msg, removeAlert}) => {
     
@@ -16,3 +17,9 @@ const GroceryAlert = ({type, msg, removeAlert}) => {
 };
 
 export default GroceryAlert;
+
+GroceryAlert.propTypes = {
+    type: PropTypes.string,
+    msg: PropTypes.string,
+    removeAlert: PropTypes.func
+};

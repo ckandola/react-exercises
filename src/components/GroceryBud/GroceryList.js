@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaEdit, FaTrash } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 
 const GroceryList = ({items, removeItem, editItem}) => {
     return (
@@ -27,3 +28,9 @@ const GroceryList = ({items, removeItem, editItem}) => {
 };
 
 export default GroceryList;
+
+GroceryList.propTypes = {
+    items: PropTypes.arrayOf(PropTypes.object),
+    removeItem: PropTypes.func,
+    editItem: PropTypes.func
+};
