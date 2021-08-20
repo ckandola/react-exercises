@@ -35,7 +35,7 @@ const AppProvider = ({children}) => {
         setIsSubmenuOpen(false);
     }
 
-    // StripeMenu ---
+    // Modal ---
 
     const openModal = () => {
         setIsModalOpen(true);

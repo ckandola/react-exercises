@@ -2,6 +2,7 @@ import React from 'react';
 import {FaTimes} from 'react-icons/fa';
 import {useGlobalContext} from '../../context';
 import './Modal.css';
+import PropTypes from 'prop-types';
 
 const Modal = ({children}) => {
     const {isModalOpen, closeModal} = useGlobalContext();
@@ -20,3 +21,7 @@ const Modal = ({children}) => {
 };
 
 export default Modal;
+
+Modal.propTypes = {
+    children: PropTypes.node
+};
