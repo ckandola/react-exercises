@@ -229,7 +229,9 @@ const App = () => {
                   </Route>
                   <Route path="/Modal">
                     <Home />
-                    <Modal />
+                    <Modal>
+                      <h3>Modal Content</h3>
+                    </Modal>
                   </Route>
                   <Route path="/StripeMenu">
                     <StripeMenu />
