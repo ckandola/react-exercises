@@ -70,6 +70,9 @@ import StripeMenu from './components/StripeMenu';
 import Cart from './components/Cart';
 
 import CocktailMain from './components/Cocktail';
+import SingleCocktail from './components/Cocktail/pages/SingleCocktail';
+import CocktailAbout from "./components/Cocktail/pages/About";
+import CocktailError from "./components/Cocktail/pages/Error";
 
 const App = () => {
 
@@ -239,8 +242,17 @@ const App = () => {
                   <Route path="/Cart">
                     <Cart />
                   </Route>
-                  <Route path="/Cocktail">
+                  <Route exact path="/Cocktail">
                     <CocktailMain />
+                  </Route>
+                  <Route path="/cocktail/:id">
+                    <SingleCocktail />
+                </Route>
+                  <Route exact path="/Cocktail_about">
+                    <CocktailAbout />
+                  </Route>
+                  <Route path="/Cocktail_*">
+                    <CocktailError />
                   </Route>
                 </Switch>
 
