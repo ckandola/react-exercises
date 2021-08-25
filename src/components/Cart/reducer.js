@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const reducer = (state, action) => {
     switch(action.type) {
         case 'CLEAR_CART':
@@ -19,7 +21,7 @@ const reducer = (state, action) => {
                     return {...x, amount: x.amount - 1};
                 }
                 return x;
-            }).filter(x => x.amount !== 0);
+            }).filter(x => x.amount > 0);
             return {...state, cart: decrCart};
         case 'GET_TOTALS':
             let {cartTotal, cartAmount} = state.cart.reduce((cartAccum, cartItem) => {
@@ -33,9 +35,9 @@ const reducer = (state, action) => {
             cartTotal = parseFloat(cartTotal.toFixed(2));
             return {...state, cartTotal, cartAmount};
         case 'LOADING':
-            return {...state, loading: true};
+            return {...state, cartLoading: true};
         case 'DISPLAY_ITEMS':
-            return {...state, cart: action.payload, loading: false};
+            return {...state, cart: action.payload, cartLoading: false};
         default:
             console.log(`unknown action: ${action.type}`);
             break;
@@ -44,3 +46,13 @@ const reducer = (state, action) => {
 }
 
 export default reducer;
+
+reducer.propTypes = {
+    state: PropTypes.shape({
+        cartLoading: PropTypes.bool,
+        cart: PropTypes.array,
+        cartTotal: PropTypes.number,
+        cartAmount: PropTypes.number
+    }),
+    action: PropTypes.object
+};
