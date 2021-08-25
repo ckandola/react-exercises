@@ -122,7 +122,7 @@ const AppProvider = ({children}) => {
             location, page,
 
             ...cartState, clearCart, removeCartItem, 
-            increaseCartAmt, decreaseCartAmt, fetchCartData,
+            increaseCartAmt, decreaseCartAmt,
 
             cocktailLoading, cocktails, setCocktailSearchTerm
         }}>

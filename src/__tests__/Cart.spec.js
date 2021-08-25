@@ -11,8 +11,7 @@ describe('Cart tests', () => {
         const contextValues = {
             cartLoading: false, cartAmount: 0, cart: [], cartTotal: 0,
             clearCart: placeholderFn, removeCartItem: placeholderFn, 
-            increaseCartAmt: placeholderFn, decreaseCartAmt: placeholderFn, 
-            fetchCartData: placeholderFn
+            increaseCartAmt: placeholderFn, decreaseCartAmt: placeholderFn
         };
         jest.spyOn(AppProvider, 'useGlobalContext').mockImplementation(() => contextValues);
         const wrapper = mount(<Cart />);
@@ -27,8 +26,7 @@ describe('Cart tests', () => {
             cart: [{ id: 0, title: 'test2', price: 0.50, img: './temp.img', amount: 3}], 
             cartTotal: 1.50,
             clearCart: placeholderFn, removeCartItem: placeholderFn,
-            increaseCartAmt: mockIncr, decreaseCartAmt: placeholderFn,
-            fetchCartData: placeholderFn
+            increaseCartAmt: mockIncr, decreaseCartAmt: placeholderFn
         };
         jest.spyOn(AppProvider, 'useGlobalContext').mockImplementation(() => contextValues);
         const wrapper = mount(<Cart />);
@@ -44,8 +42,7 @@ describe('Cart tests', () => {
             cart: [{ id: 0, title: 'test3', price: 0.50, img: './temp.img', amount: 4}], 
             cartTotal: 2.00,
             clearCart: placeholderFn, removeCartItem: placeholderFn,
-            increaseCartAmt: placeholderFn, decreaseCartAmt: mockDecr,
-            fetchCartData: placeholderFn
+            increaseCartAmt: placeholderFn, decreaseCartAmt: mockDecr
         };
         jest.spyOn(AppProvider, 'useGlobalContext').mockImplementation(() => contextValues);
         const wrapper = mount(<Cart />);
@@ -61,8 +58,7 @@ describe('Cart tests', () => {
             cart: [{ id: 0, title: 'test3', price: 0.50, img: './temp.img', amount: 4}], 
             cartTotal: 2.00,
             clearCart: placeholderFn, removeCartItem: mockRem,
-            increaseCartAmt: placeholderFn, decreaseCartAmt: placeholderFn,
-            fetchCartData: placeholderFn
+            increaseCartAmt: placeholderFn, decreaseCartAmt: placeholderFn
         };
         jest.spyOn(AppProvider, 'useGlobalContext').mockImplementation(() => contextValues);
         const wrapper = mount(<Cart />);
@@ -78,8 +74,7 @@ describe('Cart tests', () => {
             cart: [{ id: 0, title: 'test3', price: 0.50, img: './temp.img', amount: 4}], 
             cartTotal: 2.00,
             clearCart: mockClear, removeCartItem: placeholderFn,
-            increaseCartAmt: placeholderFn, decreaseCartAmt: placeholderFn,
-            fetchCartData: placeholderFn
+            increaseCartAmt: placeholderFn, decreaseCartAmt: placeholderFn
         };
         jest.spyOn(AppProvider, 'useGlobalContext').mockImplementation(() => contextValues);
         const wrapper = mount(<Cart />);
