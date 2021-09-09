@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/preset-env": "^7.15.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^7.1.2",
@@ -19,6 +20,10 @@
     "react-scripts": "^4.0.3",
     "styled-components": "^5.2.0",
     "values.js": "^2.0.0"
+  },
+  "babel": {
+    "presets": ["@babel/preset-env"],
+    "plugins": []
   },
   "scripts": {
     "startWIN": "set PORT=3002 && react-scripts start",
