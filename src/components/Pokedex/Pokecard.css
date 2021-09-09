@@ -1,0 +1,32 @@
+.pokedex-entry {
+  background-color: silver;
+  border-radius: 2em;
+  width: 10em;
+  margin:auto;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+}
+
+.pokemon-name {
+  color: blue;
+  font-size: 1.3em;
+  text-align: center;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+}
+
+.pokemon-type {
+  text-align: center;
+  padding:0.5em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  color: navy;
+  font-size: 1em;
+}
+
+.pokedex-image {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}

@@ -1,3 +1,40 @@
+body {
+  --tweet-transition: background-color 0.3s ease-in-out;
+}
+
+.tweet-form {
+  text-align: center;
+}
+
+.tweet-form label {
+  padding: 0.5em;
+}
+
+.tweet-section {
+  background-color: rgb(236, 233, 233);
+  width: 50%;
+  margin: 1rem auto;
+  padding: 1rem 0 3rem 0;
+  border-radius: var(--radius);
+  transition: var(--tweet-transition);
+}
+
+.tweet-section:hover {
+  background-color: rgb(226, 223, 223);
+  transition: var(--tweet-transition);
+  box-shadow: var(--light-shadow);
+}
+
+.tweet-span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.tweet-separator {
+  font-weight: 500;
+  margin: 0 0.5rem;
+}
+
 .tweet-date {
   font-weight: 600;
 }
@@ -11,18 +48,64 @@
   color:black;
 }
 
-.tweet-user {
-  font-size: 0.8em;
+.tweet-user a {
+  font-size: 0.9em;
+  text-decoration: none;
   color:dimgrey;
 }
 
 .tweet-box-outer {
   background-color: rgb(29, 161, 242);
-  max-width: 50vw;
-  margin: auto;
-  max-height:10em;
+  border-radius: 0.5rem;
+  padding: 0 0.25rem;
+  max-width: 70%;
+  margin: 1rem auto;
+  
 }
 
 .tweet-box-inner {
   background-color: white;
+  padding: 0.5rem 1rem 1rem;
+  margin: 0 -0.25rem;
+  max-height: fit-content;
+  word-wrap: break-word;
+  transition: var(--tweet-transition);
+}
+
+.tweet-box-inner:hover {
+  background-color: rgb(247,247,247);
+  transition: var(--tweet-transition);
+  box-shadow: var(--light-shadow);
+}
+
+.tweet-message-input-box label {
+  vertical-align: top;
+}
+
+.tweet-message-input-box textarea {
+  margin-top: 1rem;
+}
+
+.tweet-message-input-box input {
+  vertical-align: top;
+  margin: 1rem;
+}
+
+.tweet-btn-span {
+  height:2rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-items: center;
+}
+
+.tweet-btn {
+  border-style: none;
+  background-color: transparent;
+  width:2rem;
+  height:2rem;
+  border-radius: 50%;
+}
+
+.tweet-btn:hover {
+  background-color:azure;
 }

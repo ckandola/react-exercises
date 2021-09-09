@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip tests matches the snapshot 1`] = `
+<div>
+  <span
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  >
+    Read this
+  </span>
+  <div>
+    <div
+      className="tooltip-main"
+    >
+      hi
+    </div>
+  </div>
+</div>
+`;

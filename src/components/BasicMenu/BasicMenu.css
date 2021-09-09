@@ -1,0 +1,91 @@
+.basicmenu {
+    text-align: center;
+}
+
+.basicmenu ul {
+    display: inline-flex;
+    margin: auto;
+    padding: 0.25rem;
+}
+
+.basicmenu li {
+    margin: 1rem; 
+    padding:0.25rem 1rem;
+    background-color: rgb(143, 73, 224);
+    border-radius: 0.75rem;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+    .basicmenu ul {
+        width:70%;
+    }
+
+    .basicmenu li {
+        margin: 1rem 1rem;
+        padding:0.25rem 0.5rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .basicmenu ul {
+        width: 50%;
+    }
+
+    .basicmenu li {
+        margin: 1rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .basicmenu li {
+        margin: 1rem;
+        padding: 0.25rem 1rem;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .basicmenu ul {
+        width: 35%;
+    }
+
+    .basicmenu li {
+        margin: 1rem;
+        padding: 0.25rem 1rem;
+    }
+}
+
+.basicmenu li:hover {
+    background-color: rgb(130, 73, 224);
+}
+
+.basicmenu a {
+    color:black;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.basicmenu-text {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+    width: 75%;
+    margin: auto;
+    padding-bottom: 0.5rem;
+}
+
+.basicmenu-text:hover {
+    box-shadow: var(--dark-shadow);
+    transition: var(--transition);
+}
+
+.basicmenu-text h3 {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.basicmenu-text p {
+    display: block;
+    padding: 0.5rem 3em;
+}
+

@@ -14,31 +14,31 @@ import {
 export const links = [
   {
     id: 1,
-    url: '/',
+    url: '#',
     text: 'home',
     icon: <FaHome />,
   },
   {
     id: 2,
-    url: '/team',
+    url: '#',
     text: 'team',
     icon: <FaUserFriends />,
   },
   {
     id: 3,
-    url: '/projects',
+    url: '#',
     text: 'projects',
     icon: <FaFolderOpen />,
   },
   {
     id: 4,
-    url: '/calendar',
+    url: '#',
     text: 'calendar',
     icon: <FaCalendarAlt />,
   },
   {
     id: 5,
-    url: '/documents',
+    url: '#',
     text: 'documents',
     icon: <FaWpforms />,
   },
@@ -47,7 +47,7 @@ export const links = [
 export const social = [
   {
     id: 1,
-    url: 'https://www.twitter.com',
+    url: 'https://www.facebook.com',
     icon: <FaFacebook />,
   },
   {
@@ -57,17 +57,17 @@ export const social = [
   },
   {
     id: 3,
-    url: 'https://www.twitter.com',
+    url: 'https://www.linkedin.com',
     icon: <FaLinkedin />,
   },
   {
     id: 4,
-    url: 'https://www.twitter.com',
+    url: 'https://www.behance.net',
     icon: <FaBehance />,
   },
   {
     id: 5,
-    url: 'https://www.twitter.com',
+    url: 'https://www.sketch.com',
     icon: <FaSketch />,
   },
 ];

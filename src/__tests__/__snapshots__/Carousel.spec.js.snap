@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel tests matches the snapshot 1`] = `
+<section
+  className="carousel-section"
+>
+  <div
+    className="carousel-title"
+  >
+    <h2>
+      <span>
+        / 
+      </span>
+      Reviews
+    </h2>
+  </div>
+  <div
+    className="carousel-section-center"
+  >
+    <article
+      className="carousel-article carousel-article-activeSlide"
+      key="1"
+    >
+      <img
+        alt="maria ferguson"
+        className="carousel-person-img"
+        src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg"
+      />
+      <h4>
+        maria ferguson
+      </h4>
+      <p
+        className="carousel-title"
+      >
+        office manager
+      </p>
+      <p
+        className="carousel-text"
+      >
+        Fingerstache umami squid, kinfolk subway tile selvage tumblr man braid viral kombucha gentrify fanny pack raclette pok pok mustache.
+      </p>
+      <FaQuoteRight
+        className="carousel-icon"
+      />
+    </article>
+    <article
+      className="carousel-article carousel-article-nextSlide"
+      key="2"
+    >
+      <img
+        alt="john doe"
+        className="carousel-person-img"
+        src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+      />
+      <h4>
+        john doe
+      </h4>
+      <p
+        className="carousel-title"
+      >
+        regular guy
+      </p>
+      <p
+        className="carousel-text"
+      >
+        Gastropub sustainable tousled prism occupy. Viral XOXO roof party brunch actually, chambray listicle microdosing put a bird on it paleo subway tile squid umami.
+      </p>
+      <FaQuoteRight
+        className="carousel-icon"
+      />
+    </article>
+    <article
+      className="carousel-article carousel-article-nextSlide"
+      key="3"
+    >
+      <img
+        alt="peter smith"
+        className="carousel-person-img"
+        src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959121/person-1_aufeoq.jpg"
+      />
+      <h4>
+        peter smith
+      </h4>
+      <p
+        className="carousel-title"
+      >
+        product designer
+      </p>
+      <p
+        className="carousel-text"
+      >
+        Drinking vinegar polaroid street art echo park, actually semiotics next level butcher master cleanse hammock flexitarian ethical paleo.
+      </p>
+      <FaQuoteRight
+        className="carousel-icon"
+      />
+    </article>
+    <article
+      className="carousel-article carousel-article-lastSlide"
+      key="4"
+    >
+      <img
+        alt="susan andersen"
+        className="carousel-person-img"
+        src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg"
+      />
+      <h4>
+        susan andersen
+      </h4>
+      <p
+        className="carousel-title"
+      >
+        the boss
+      </p>
+      <p
+        className="carousel-text"
+      >
+        Marfa af yr 3 wolf moon kogi, readymade distillery asymmetrical seitan kale chips fingerstache cloud bread mustache twee messenger bag. 
+      </p>
+      <FaQuoteRight
+        className="carousel-icon"
+      />
+    </article>
+    <button
+      className="carousel-prev"
+      onClick={[Function]}
+    >
+      <FiChevronLeft />
+    </button>
+    <button
+      className="carousel-next"
+      onClick={[Function]}
+    >
+      <FiChevronRight />
+    </button>
+  </div>
+</section>
+`;

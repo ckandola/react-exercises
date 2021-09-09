@@ -1,5 +1,26 @@
 [
     {
+        "company": "Faithlife", 
+        "dates": "October 2019 - January 2020",
+        "duties": [
+            "Using GIT.",
+            "Learning ReactJS.", 
+            "Learning to improve user interactions with React hooks", 
+            "Worked on media editor features, including a QR Code menu, adding shortcuts, and modifying a color picker."
+        ],
+        "title": "Software Developer Intern"
+    },
+    {
+        "company": "Cornerstone Systems NW", 
+        "dates": "April 2019 - July 2019",
+        "duties": [
+            "Learning Javascript.", 
+            "Learning DevTools.", 
+            "Researching encryption algorithms included in Node.js Crypto module. Chose an algorithm based on security and speed requirements, created module for both encryption and decryption."
+        ],
+        "title": "Software Developer Intern"
+    },
+    {
         "company": "Sehome Diner", 
         "dates": "August 2012 - February 2020",
         "duties": [
@@ -14,29 +35,8 @@
         "company": "Lowe's", 
         "dates": "September 2019 - October 2019, January 2020 - present",
         "duties": [
-            "Cashiering" 
+            "Cashiering, although I also witnessed the transition to a new POS system, which had a LOT of issues." 
         ],
         "title": "Garden Cashier (present)"
-    },
-    {
-        "company": "Cornerstone Systems NW", 
-        "dates": "April 2019 - July 2019",
-        "duties": [
-            "Learning Javascript.", 
-            "Learning DevTools.", 
-            "Researching encryption algorithms included in Node.js Crypto module. Chose an algorithm based on security and speed requirements, created module for both encryption and decryption."
-        ],
-        "title": "Software Developer Intern"
-    },
-    {
-        "company": "Faithlife", 
-        "dates": "October 2019 - January 2020",
-        "duties": [
-            "Using GIT.",
-            "Learning ReactJS.", 
-            "Learning to improve user interactions with React hooks", 
-            "Worked on media editor features, including a QR Code menu, adding shortcuts, and modifying a color picker."
-        ],
-        "title": "Software Developer Intern"
     }
 ]

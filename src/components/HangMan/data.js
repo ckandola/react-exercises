@@ -1,0 +1,10 @@
+const wordList = [
+    'THE GOLDEN SHILLELAGH',
+    'THAT MOVIE WAS RICH IN BORING ME TO DEATH',
+    'JOHNNY BRAVO IS NOT A DOOFUS',
+    'DONNY OSMOND', 
+    'DONNY WAHLBERG FROM THE NEW KIDS ON THE BLOCK', 
+    "MAN I'M PRETTY"
+];
+
+export default wordList;

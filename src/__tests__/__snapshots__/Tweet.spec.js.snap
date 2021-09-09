@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tweet tests TweetContainer tests matches the snapshot for TweetContainer 1`] = `
+<section
+  className="tweet-section"
+>
+  <form
+    className="tweet-form"
+    onSubmit={[Function]}
+  >
+    <label
+      htmlFor="username"
+    >
+      Username
+    </label>
+    <input
+      id="username"
+      onChange={[Function]}
+      type="text"
+      value="new_user"
+    />
+    <label
+      htmlFor="name"
+    >
+      Display Name
+    </label>
+    <input
+      id="name"
+      onChange={[Function]}
+      type="text"
+      value="Rick"
+    />
+    <div
+      className="tweet-message-input-box"
+    >
+      <label
+        htmlFor="message"
+      >
+        Message
+      </label>
+      <textarea
+        cols="30"
+        id="message"
+        name="message"
+        onChange={[Function]}
+        placeholder="Enter up to 280 characters"
+        rows="3"
+        value=""
+      />
+      <input
+        className="tweet-message-btn"
+        type="submit"
+        value="Tweet"
+      />
+    </div>
+  </form>
+  <Tweet
+    date="6/05/1999"
+    key="0"
+    message="Gravy!"
+    name="ed"
+    username="chickensrock"
+  />
+  <Tweet
+    date="7/02/1999"
+    key="1"
+    message="If elected, inflation will be a thing of the gas!"
+    name="eddy"
+    username="Mucho-Dinero"
+  />
+  <Tweet
+    date="7/05/1999"
+    key="2"
+    message="Messy, messy, messy!"
+    name="edd"
+    username="my_kingdom_for_sunscreen"
+  />
+</section>
+`;
+
+exports[`Tweet tests matches the snapshot for Tweet 1`] = `
+<Fragment>
+  <div
+    className="tweet-box-outer"
+  >
+    <span
+      className="tweet-span"
+    >
+      <div
+        className="tweet-name"
+      >
+        JONNY 2X4
+      </div>
+      <div
+        className="tweet-separator"
+      >
+        ·
+      </div>
+      <div
+        className="tweet-user"
+      >
+        <a
+          href="https://twitter.com/captain_melonhead"
+        >
+          @
+          captain_melonhead
+        </a>
+      </div>
+      <div
+        className="tweet-separator"
+      >
+        ·
+      </div>
+      <div
+        className="tweet-date"
+      >
+        Sun Nov 08 2009 00:00:00 GMT-0800 (Pacific Standard Time)
+      </div>
+    </span>
+    <div
+      className="tweet-box-inner"
+    >
+      <div
+        className="tweet-message"
+      >
+        I'm going to miss Captain Melonhead. Plank says he'll miss Splinter the Wonderwood.
+      </div>
+      <span
+        className="tweet-btn-span"
+      >
+        <button
+          className="tweet-btn"
+        >
+          <IoChatbubbleOutline />
+        </button>
+        <button
+          className="tweet-btn"
+        >
+          <AiOutlineRetweet />
+        </button>
+        <button
+          className="tweet-btn"
+        >
+          <AiOutlineHeart />
+        </button>
+        <button
+          className="tweet-btn"
+        >
+          <FiUpload />
+        </button>
+      </span>
+    </div>
+  </div>
+</Fragment>
+`;

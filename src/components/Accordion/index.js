@@ -1,23 +1,29 @@
-import React, {useState} from 'react';
-import {BsFillPlusCircleFill, BsDashCircleFill} from 'react-icons/bs';
+import React from 'react';
+import AccordionItem from './AccordionItem';
+import accordionData from './data';
 import './Accordion.css';
+import PropTypes from 'prop-types';
 
-
-const Accordion = ({question, answer}) => {
-    const [isOpen, setIsOpen] = useState(false);
+const Accordion = ({title}) => {
     
     return (
-        <article className="accordion-question">
-            <header>
-                <h4>{question}</h4>
-                <button className="accordion-btn" onClick={() => setIsOpen(!isOpen)}>
-                    {isOpen ? <BsDashCircleFill /> : <BsFillPlusCircleFill />}
-                </button>
-
-            </header>
-            {isOpen && <p>{answer}</p>}
-        </article>
+        <div className="accordion-main">
+            <div className="accordion-container">
+                <h3>{title}</h3>
+                <section>
+                {accordionData.map(accordion => {
+                    return (
+                    <AccordionItem key={accordion.id} question={accordion.title} answer={accordion.info} />
+                    );
+                })}
+                </section>
+            </div>
+        </div>
     );
 };
 
 export default Accordion;
+
+Accordion.propTypes = {
+    title: PropTypes.string,
+};

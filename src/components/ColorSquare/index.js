@@ -8,7 +8,10 @@ class ColorSquare extends Component {
   }
   render() {
     const changeColor = () => {
-      const randomIndex = Math.floor(Math.random() * colorList.length);
+      let randomIndex = Math.floor(Math.random() * colorList.length);
+      while(colorList[randomIndex] === this.state.color) {
+        randomIndex = Math.floor(Math.random() * colorList.length);
+      }
       this.setState({ color: colorList[randomIndex] });
     };
 
@@ -25,23 +28,28 @@ class ColorSquare extends Component {
   }
 }
 
-const colorList = [
-  "aliceblue",
+export const colorList = [
   "brown",
-  "coral",
+  "sandybrown",
   "cornsilk",
-  "navy",
-  "lawngreen",
+  "coral",
+  "pink",
   "mediumvioletred",
   "yellow",
   "orange",
-  "pink",
-  "skyblue",
   "purple",
   "yellowgreen",
   "forestgreen",
+  "lawngreen",
+  "green",
+  "skyblue",
+  "aliceblue",
   "blue",
+  "navy",
+  "indigo",
   "red",
+  "firebrick",
+  "darkred",
   "maroon",
   "silver",
   "black"

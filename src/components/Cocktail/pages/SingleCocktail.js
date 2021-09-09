@@ -57,12 +57,14 @@ const SingleCocktail = () => {
 
     if (!cocktail) {
         return (
-            <h2 className="cocktail-section-title">No cocktail to display</h2>
+            <div className="cocktail-error-container">
+                <h2 className="cocktail-section-title">No cocktail to display</h2>
+                <Link to="/Cocktail" className="cocktail-btn-primary">Back Home</Link>
+            </div>
         );
     };
 
     const {name, img, category, isAlcoholic, glass, ingredients, instructions} = cocktail;
-    console.log(ingredients);
     return (
         <section className="cocktails-section cocktail-section">
             <Link to={"/cocktail"} className="cocktail-btn cocktail-btn-primary">Back Home</Link>

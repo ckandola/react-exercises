@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ToDo from "../ToDo";
+import ToDo from "./ToDo";
 import "./ToDoList.css";
 
 const ToDoList = () => {
@@ -12,10 +12,29 @@ const ToDoList = () => {
     "feed the pets",
     "eat"
   ]);
+  const [isEditingAnother, setIsEditingAnother] = useState(false);
+  const [error, setError] = useState({value: false, msg: ''});
   let textInput = React.createRef();
 
+  const changeEditing = () => {
+    setIsEditingAnother(!isEditingAnother);
+  }
+
+  const checkEditingStatus = () => {
+    return isEditingAnother;
+  }
+
+  const isValidTask = taskName => {
+    return (/\S/).test(taskName);
+  }
+
   const onSubmit = () => {
-    if (text && !todos.includes(text)) {
+    if (!isValidTask(text)) {
+      setError({value: true, msg: 'Cannot add blank space as a task'});
+    } else if(todos.includes(text)) {
+      setError({value: true, msg: 'This task has already been added'});
+    } else {
+      setError({value: false, msg: ''});
       const todoCopy = todos.slice();
       todoCopy.push(text);
       setTodos(todoCopy);
@@ -36,8 +55,13 @@ const ToDoList = () => {
   const onEdit = (newTask, oldTask) => {
     const todoCopy = todos.slice();
     const index = todoCopy.indexOf(oldTask);
-    todoCopy[index] = newTask;
-    setTodos(todoCopy);
+    todoCopy[index] = '';
+    if (!todoCopy.includes(newTask)) {
+      todoCopy[index] = newTask;
+      setTodos(todoCopy);
+      return true;
+    }
+    return false;
   };
 
   return (
@@ -46,7 +70,7 @@ const ToDoList = () => {
       <ul>
         {todos.map(item => {
           return (
-            <ToDo key={item} task={item} onDelete={onDelete} onEdit={onEdit} />
+            <ToDo key={item} task={item} onDelete={onDelete} onEdit={onEdit} isEditingAnother={checkEditingStatus} changeEditing={changeEditing} />
           );
         })}
       </ul>
@@ -60,6 +84,9 @@ const ToDoList = () => {
         />
         <input type="submit" value="Add New Task" onClick={onSubmit} />
       </div>
+      {error.value && (
+        <p className="todo-add-error">{error.msg}</p>
+      )}
     </div>
   );
 };

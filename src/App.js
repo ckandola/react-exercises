@@ -8,13 +8,9 @@ import {
   Link,
 } from "react-router-dom";
 
-import FirstComponent from "./components/FirstComponent";
-import SecondComponent from "./components/SecondComponent";
-import NamedComponent from "./components/NamedComponent";
+import FirstComponents from "./components/FirstComponents";
 
-import Tweet from "./components/Tweet";
-
-import Person from "./components/Person";
+import TweetContainer from "./components/Tweet";
 
 import Pokedex from "./components/Pokedex";
 
@@ -31,6 +27,8 @@ import HangMan from "./components/HangMan";
 import RadioGroup from "./components/Radio/RadioGroup";
 
 import BasicMenu from './components/BasicMenu';
+import MenuAbout from './components/BasicMenu/pages/About';
+import MenuContact from './components/BasicMenu/pages/Contact';
 
 import Tooltip from './components/Tooltip';
 
@@ -43,8 +41,6 @@ import Tours from './components/Tours';
 import Reviews from './components/Reviews';
 
 import Accordion from './components/Accordion';
-import accordionData from './components/Accordion/data';
-import './components/Accordion/Accordion.css';
 
 import FoodMenuProject from "./components/FoodMenuProject";
 
@@ -74,15 +70,15 @@ import StripeMenu from './components/StripeMenu';
 import Cart from './components/Cart';
 
 import CocktailMain from './components/Cocktail';
+import SingleCocktail from './components/Cocktail/pages/SingleCocktail';
+import CocktailAbout from "./components/Cocktail/pages/About";
+import CocktailError from "./components/Cocktail/pages/Error";
 
 const App = () => {
 
   const componentNames = [
-    'FirstComponent',
-    'SecondComponent',
-    'NamedComponent',
+    'First Components',
     'Tweet',
-    'Person',
     'Pokedex',
     'ColorGrid',
     'ToDoList',
@@ -146,46 +142,11 @@ const App = () => {
                 </div>
                 
                 <Switch>
-                  <Route path="/FirstComponent">
-                    <FirstComponent />
-                  </Route>
-                  <Route path="/SecondComponent">
-                    <SecondComponent />
-                  </Route>
-                  <Route path="/NamedComponent">
-                    <NamedComponent name="ckandola"/>
+                  <Route path="/First Components">
+                    <FirstComponents name="ckandola" />
                   </Route>
                   <Route path="/Tweet">
-                    <Tweet 
-                      username="chickensrock"
-                      name="ed"
-                      date="6/05/99"
-                      message="Gravy!"/>
-                      <Tweet
-                      username="Mucho-Dinero"
-                      name="eddy"
-                      date="7/02/99"
-                      message="If elected, inflation will be a thing of the gas!"
-                    />
-                    <Tweet
-                      username="my_kingdom_for_sunscreen"
-                      name="edd"
-                      date="7/05/99"
-                      message="Messy, messy, messy!"
-                    />
-                  </Route>
-                  <Route path="/Person">
-                    <Person
-                      name="AgeEight"
-                      age="8"
-                      hobbies={["running", "schooling", "eating"]}
-                    />
-                    <Person
-                      name="TooLongOfAName"
-                      age="20"
-                      hobbies={["thinking", "pondering", "querying", "imagining"]}
-                    />
-                    <Person name="Bob" age="30" hobbies={["building", "fixing it"]} />
+                    <TweetContainer />
                   </Route>
                   <Route path="/Pokedex">
                     <Pokedex />
@@ -206,13 +167,27 @@ const App = () => {
                     <HangMan />
                   </Route>
                   <Route path="/RadioGroup">
-                    <RadioGroup name="radio-group" labels={["Credit card", "Paypal", "Check"]} 
+                    <RadioGroup name={'example'} labels={["Credit card", "Paypal", "Check"]} 
                       onSubmit={selection => console.log(`Selected ${selection}`)} 
                       submitDesc={"see selection in console"}/>
                   </Route>
-                  <Route path="/BasicMenu">
+                  
+                  <Route exact path="/BasicMenu">
                     <BasicMenu />
                   </Route>
+                  <Route exact path="/BasicMenu/About">
+                    <BasicMenu />
+                    <MenuAbout />
+                  </Route>
+                  <Route exact path="/BasicMenu/Resume">
+                    <BasicMenu />
+                    <ResumeTabs />
+                  </Route>
+                  <Route exact path="/BasicMenu/Contact">
+                    <BasicMenu />
+                    <MenuContact />
+                  </Route>
+
                   <Route path="/Tooltip">
                     <Tooltip text={"There's some priceless information here."} textPosition='top'>{'Read me'}</Tooltip>
                   </Route>
@@ -229,18 +204,7 @@ const App = () => {
                     <Reviews />
                   </Route>
                   <Route path="/Accordion">
-                  <div className="accordion-main">
-                    <div className="accordion-container">
-                      <h3>Login Questions</h3>
-                      <section>
-                        {accordionData.map(accordion => {
-                          return (
-                            <Accordion key={accordion.id} question={accordion.title} answer={accordion.info} />
-                          );
-                        })}
-                      </section>
-                    </div>
-                  </div>
+                    <Accordion title={'Login Questions'} />
                   </Route>
                   <Route path="/FoodMenuProject">
                     <FoodMenuProject />
@@ -268,7 +232,9 @@ const App = () => {
                   </Route>
                   <Route path="/Modal">
                     <Home />
-                    <Modal />
+                    <Modal>
+                      <h3>Modal Content</h3>
+                    </Modal>
                   </Route>
                   <Route path="/StripeMenu">
                     <StripeMenu />
@@ -276,8 +242,17 @@ const App = () => {
                   <Route path="/Cart">
                     <Cart />
                   </Route>
-                  <Route path="/Cocktail">
+                  <Route exact path="/Cocktail">
                     <CocktailMain />
+                  </Route>
+                  <Route path="/cocktail/:id">
+                    <SingleCocktail />
+                </Route>
+                  <Route exact path="/Cocktail_about">
+                    <CocktailAbout />
+                  </Route>
+                  <Route path="/Cocktail_*">
+                    <CocktailError />
                   </Route>
                 </Switch>
 

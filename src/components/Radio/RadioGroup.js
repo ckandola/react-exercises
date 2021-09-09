@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './RadioGroup.css';
+import PropTypes from 'prop-types';
 
 const RadioGroup = ({name, labels, onSubmit, submitDesc}) => {
     const [selected, setSelected] = useState(null);
@@ -32,3 +33,10 @@ const RadioGroup = ({name, labels, onSubmit, submitDesc}) => {
 };
 
 export default RadioGroup;
+
+RadioGroup.propTypes = {
+    name: PropTypes.string,
+    labels: PropTypes.arrayOf(PropTypes.string),
+    onSubmit: PropTypes.func,
+    submitDesc: PropTypes.string
+};

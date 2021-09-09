@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioGroup tests matches the snapshot 1`] = `
+<div>
+  <h3
+    className="radio-center-text"
+  >
+    Submit to 
+    test this out.
+  </h3>
+  <form
+    className="radio-form"
+    onSubmit={[Function]}
+  >
+    <div
+      key="0"
+    >
+      <input
+        id={0}
+        name="temp"
+        onClick={[Function]}
+        type="radio"
+      />
+      <label
+        className="radio-label"
+        htmlFor={0}
+      >
+        Credit card
+      </label>
+    </div>
+    <div
+      key="1"
+    >
+      <input
+        id={1}
+        name="temp"
+        onClick={[Function]}
+        type="radio"
+      />
+      <label
+        className="radio-label"
+        htmlFor={1}
+      >
+        Paypal
+      </label>
+    </div>
+    <div
+      key="2"
+    >
+      <input
+        id={2}
+        name="temp"
+        onClick={[Function]}
+        type="radio"
+      />
+      <label
+        className="radio-label"
+        htmlFor={2}
+      >
+        Check
+      </label>
+    </div>
+    <div
+      className="radio-center-text"
+    >
+      <button
+        className="radio-submit"
+        type="submit"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+`;

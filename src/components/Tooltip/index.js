@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Tooltip.css';
+import PropTypes from 'prop-types';
 
 const Tooltip = ({
     text, 
-    canToggleWithClick = true,
     textPosition = "bottom",
     children 
 }) => {
@@ -51,3 +51,14 @@ const Tooltip = ({
 };
 
 export default Tooltip;
+
+Tooltip.propTypes = {
+    text: PropTypes.string,
+    textPosition: PropTypes.string,
+    children: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.node,
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.element
+    ])
+};

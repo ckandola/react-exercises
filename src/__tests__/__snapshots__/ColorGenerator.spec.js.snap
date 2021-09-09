@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorGenerator tests matches the snapshot 1`] = `
+<ColorGenerator>
+  <div
+    className="cgen-container"
+  >
+    <h3>
+      Color Generator
+    </h3>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        className="cgen-input null"
+        onChange={[Function]}
+        type="text"
+        value="#8b0000"
+      />
+      <input
+        className="cgen-input cgen-input-num"
+        onChange={[Function]}
+        placeholder={10}
+        step={1}
+        type="number"
+      />
+      <button
+        className="cgen-btn"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+  <ColorPicker
+    onClick={[Function]}
+  >
+    <section>
+      <div
+        className="cgen-color-picker"
+      >
+        <div
+          className="cgen-color-btn"
+          key="0"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#000000",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="1"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#C0C0C0",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="2"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#804040",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="3"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#B5744D",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="4"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FEDBB8",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="5"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#5600AC",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="6"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#AC77F9",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="7"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#051a8d",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="8"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#0000ff",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="9"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#0080ff",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="10"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#00f0ff",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="11"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#23af89",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="12"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#008000",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="13"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#13B517",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="14"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#00ff00",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="15"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#eedc02",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="16"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ffff00",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="17"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ff8000",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="18"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ffA851",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="19"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#800000",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="20"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ff0000",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="21"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ff80C0",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="22"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ff00ff",
+            }
+          }
+        />
+        <div
+          className="cgen-color-btn"
+          key="23"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ffffff",
+            }
+          }
+        />
+      </div>
+    </section>
+  </ColorPicker>
+  <section
+    className="cgen-colors"
+  />
+</ColorGenerator>
+`;

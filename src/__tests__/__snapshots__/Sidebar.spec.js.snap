@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar tests matches the snapshot 1`] = `
+<div>
+  <main
+    className="sidebar-main"
+  >
+    <button
+      className="sidebar-toggle"
+      onClick={[Function]}
+    >
+      <FaBars />
+    </button>
+  </main>
+  <aside
+    className="sidebar false"
+  >
+    <div
+      className="sidebar-header"
+    >
+      <img
+        alt="logo"
+        className="sidebar-logo"
+        src="logo.svg"
+      />
+      <button
+        className="sidebar-close-btn"
+        onClick={[Function]}
+      >
+        <FaTimes />
+      </button>
+    </div>
+    <ul
+      className="sidebar-links"
+    >
+      <li
+        key="1"
+      >
+        <a
+          href="#"
+        >
+          <FaHome />
+          home
+        </a>
+      </li>
+      <li
+        key="2"
+      >
+        <a
+          href="#"
+        >
+          <FaUserFriends />
+          team
+        </a>
+      </li>
+      <li
+        key="3"
+      >
+        <a
+          href="#"
+        >
+          <FaFolderOpen />
+          projects
+        </a>
+      </li>
+      <li
+        key="4"
+      >
+        <a
+          href="#"
+        >
+          <FaCalendarAlt />
+          calendar
+        </a>
+      </li>
+      <li
+        key="5"
+      >
+        <a
+          href="#"
+        >
+          <FaWpforms />
+          documents
+        </a>
+      </li>
+    </ul>
+    <ul
+      className="sidebar-social-icons"
+    >
+      <li
+        key="1"
+      >
+        <a
+          href="https://www.facebook.com"
+        >
+          <FaFacebook />
+        </a>
+      </li>
+      <li
+        key="2"
+      >
+        <a
+          href="https://www.twitter.com"
+        >
+          <FaTwitter />
+        </a>
+      </li>
+      <li
+        key="3"
+      >
+        <a
+          href="https://www.linkedin.com"
+        >
+          <FaLinkedin />
+        </a>
+      </li>
+      <li
+        key="4"
+      >
+        <a
+          href="https://www.behance.net"
+        >
+          <FaBehance />
+        </a>
+      </li>
+      <li
+        key="5"
+      >
+        <a
+          href="https://www.sketch.com"
+        >
+          <FaSketch />
+        </a>
+      </li>
+    </ul>
+  </aside>
+</div>
+`;

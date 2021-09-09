@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const FoodCategories = ({categoryList, filterItems}) => {
 
@@ -14,3 +15,8 @@ const FoodCategories = ({categoryList, filterItems}) => {
 };
 
 export default FoodCategories;
+
+FoodCategories.propTypes = {
+    categoryList: PropTypes.arrayOf(PropTypes.string),
+    filterItems: PropTypes.func
+};

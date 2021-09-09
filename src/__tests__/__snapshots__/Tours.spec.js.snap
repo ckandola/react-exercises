@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tours tests matches the snapshot 1`] = `
+<main
+  className="tours-main"
+>
+  <div
+    className="tour-loading"
+  >
+    <h1>
+      loading...
+    </h1>
+  </div>
+</main>
+`;

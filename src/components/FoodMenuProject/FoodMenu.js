@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const FoodMenu = ({items}) => {
     return (
@@ -21,3 +22,7 @@ const FoodMenu = ({items}) => {
 };
 
 export default FoodMenu;
+
+FoodMenu.propTypes = {
+    items: PropTypes.arrayOf(PropTypes.shape)
+};

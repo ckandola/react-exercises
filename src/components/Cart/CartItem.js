@@ -1,5 +1,6 @@
 import React from 'react';
 import { useGlobalContext } from './index';
+import PropTypes from 'prop-types';
 
 const CartItem = ({id, img, title, price, amount}) => {
     const { removeCartItem, increaseCartAmt, decreaseCartAmt } = useGlobalContext();
@@ -39,3 +40,13 @@ const CartItem = ({id, img, title, price, amount}) => {
 };
 
 export default CartItem;
+
+// id and price from the tutorial link will be strings; data.js has them as numbers.
+
+CartItem.propTypes = {
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    img: PropTypes.string,
+    title: PropTypes.string,
+    price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    amount: PropTypes.number
+};

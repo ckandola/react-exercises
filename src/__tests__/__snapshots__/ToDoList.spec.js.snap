@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToDoList tests ToDoList matches the snapshot 1`] = `
+<div
+  className="todo-background"
+>
+  <h2
+    className="todo-header"
+  >
+    ToDo List:
+  </h2>
+  <ul>
+    <ToDo
+      changeEditing={[Function]}
+      isEditingAnother={[Function]}
+      key="study"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      task="study"
+    />
+    <ToDo
+      changeEditing={[Function]}
+      isEditingAnother={[Function]}
+      key="work"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      task="work"
+    />
+    <ToDo
+      changeEditing={[Function]}
+      isEditingAnother={[Function]}
+      key="clean"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      task="clean"
+    />
+    <ToDo
+      changeEditing={[Function]}
+      isEditingAnother={[Function]}
+      key="dust"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      task="dust"
+    />
+    <ToDo
+      changeEditing={[Function]}
+      isEditingAnother={[Function]}
+      key="feed the pets"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      task="feed the pets"
+    />
+    <ToDo
+      changeEditing={[Function]}
+      isEditingAnother={[Function]}
+      key="eat"
+      onDelete={[Function]}
+      onEdit={[Function]}
+      task="eat"
+    />
+  </ul>
+  <div
+    className="todo-textEntry"
+  >
+    <input
+      className="todo-entry"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <input
+      onClick={[Function]}
+      type="submit"
+      value="Add New Task"
+    />
+  </div>
+</div>
+`;

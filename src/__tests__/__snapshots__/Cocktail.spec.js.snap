@@ -1,0 +1,479 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cocktail tests snapshots match About page matches the snapshot 1`] = `
+<section
+  className="cocktails-section cocktail-about-section"
+>
+  <h1
+    className="cocktail-section-title"
+  >
+    About Us
+  </h1>
+  <p>
+    Un jour je serai le meilleur dresseur. Je me battrai sans répit. Je ferai tout pour être vainqueur et gagner les défis. Je parcourrai la terre entière tracquant avec espoir les pokémons et leurs mystères, le secret de leurs pouvoirs. C'est notre histoire! Ensemble pour la victoire! Rien ne nous arrêtera; notre amitié triomphera. Même à notre âge, un voyage d'apprentissage. Ça demande du courage. Rien ni personne sur mon chemin ne pourra me briser car pour accomplir mon destin je suis déterminé. Quand il faudra passer à l'action nos amis seront là. Et tous ensemble nous gagnerons la dernière des combats.
+  </p>
+</section>
+`;
+
+exports[`Cocktail tests snapshots match CocktailList and Cocktail match the snapshot 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <CocktailList>
+      <section
+        className="cocktails-section"
+      >
+        <h2
+          className="cocktail-section-title"
+        >
+          Cocktails
+        </h2>
+        <div
+          className="cocktails-center"
+        >
+          <Cocktail
+            glass="glass"
+            id="0"
+            img="img"
+            isAlcoholic="Non-alcoholic"
+            key="0"
+            name="name"
+          >
+            <article
+              className="cocktail"
+            >
+              <img
+                alt="name"
+                className="cocktail-img"
+                src="img"
+              />
+              <div
+                className="cocktail-footer"
+              >
+                <h3>
+                  name
+                </h3>
+                <h4>
+                  glass
+                </h4>
+                <p>
+                  Non-alcoholic
+                </p>
+                <Link
+                  className="cocktail-btn cocktail-btn-primary cocktail-btn-details"
+                  to="/cocktail/0"
+                >
+                  <LinkAnchor
+                    className="cocktail-btn cocktail-btn-primary cocktail-btn-details"
+                    href="/cocktail/0"
+                    navigate={[Function]}
+                  >
+                    <a
+                      className="cocktail-btn cocktail-btn-primary cocktail-btn-details"
+                      href="/cocktail/0"
+                      onClick={[Function]}
+                    >
+                      Details
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </div>
+            </article>
+          </Cocktail>
+        </div>
+      </section>
+    </CocktailList>
+  </Router>
+</BrowserRouter>
+`;
+
+exports[`Cocktail tests snapshots match CocktailMain matches the snapshot 1`] = `
+<CocktailMain>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Navbar>
+        <nav
+          className="cocktail-navbar"
+        >
+          <div
+            className="cocktail-nav-center"
+          >
+            <Link
+              to="/Cocktail"
+            >
+              <LinkAnchor
+                href="/Cocktail"
+                navigate={[Function]}
+              >
+                <a
+                  href="/Cocktail"
+                  onClick={[Function]}
+                >
+                  <img
+                    alt="cocktail logo"
+                    className="cocktail-logo"
+                    src="logo.svg"
+                  />
+                </a>
+              </LinkAnchor>
+            </Link>
+            <ul
+              className="cocktail-nav-links"
+            >
+              <li>
+                <Link
+                  to="/Cocktail"
+                >
+                  <LinkAnchor
+                    href="/Cocktail"
+                    navigate={[Function]}
+                  >
+                    <a
+                      href="/Cocktail"
+                      onClick={[Function]}
+                    >
+                      Home
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cocktail_about"
+                >
+                  <LinkAnchor
+                    href="/cocktail_about"
+                    navigate={[Function]}
+                  >
+                    <a
+                      href="/cocktail_about"
+                      onClick={[Function]}
+                    >
+                      About
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </Navbar>
+      <Switch>
+        <Route
+          computedMatch={
+            Object {
+              "isExact": true,
+              "params": Object {
+                "0": "/",
+              },
+              "path": "*",
+              "url": "/",
+            }
+          }
+          location={
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            }
+          }
+          path="*"
+        >
+          <Error>
+            <section
+              className="cocktails-section cocktail-error-page"
+            >
+              <div
+                className="cocktail-error-container"
+              >
+                <h3>
+                  Oops! That page doesn't exist
+                </h3>
+                <Link
+                  className="cocktail-btn-primary"
+                  to="/Cocktail"
+                >
+                  <LinkAnchor
+                    className="cocktail-btn-primary"
+                    href="/Cocktail"
+                    navigate={[Function]}
+                  >
+                    <a
+                      className="cocktail-btn-primary"
+                      href="/Cocktail"
+                      onClick={[Function]}
+                    >
+                      Back Home
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </div>
+            </section>
+          </Error>
+        </Route>
+      </Switch>
+    </Router>
+  </BrowserRouter>
+</CocktailMain>
+`;
+
+exports[`Cocktail tests snapshots match Error page matches the snapshot 1`] = `
+<section
+  className="cocktails-section cocktail-error-page"
+>
+  <div
+    className="cocktail-error-container"
+  >
+    <h3>
+      Oops! That page doesn't exist
+    </h3>
+    <Link
+      className="cocktail-btn-primary"
+      to="/Cocktail"
+    >
+      Back Home
+    </Link>
+  </div>
+</section>
+`;
+
+exports[`Cocktail tests snapshots match Home and SingleCocktail components match the snapshot 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Home>
+      <main
+        className="none"
+      >
+        <SearchForm>
+          <section
+            className="cocktails-section cocktail-search"
+          >
+            <form
+              className="cocktail-search-form"
+              onSubmit={[Function]}
+            >
+              <div
+                className="cocktail-form-control"
+              >
+                <label
+                  htmlFor="name"
+                >
+                  Search your favorite cocktail
+                </label>
+                <input
+                  id="name"
+                  onChange={[Function]}
+                  type="text"
+                />
+              </div>
+            </form>
+          </section>
+        </SearchForm>
+        <CocktailList>
+          <section
+            className="cocktails-section"
+          >
+            <h2
+              className="cocktail-section-title"
+            >
+              Cocktails
+            </h2>
+            <div
+              className="cocktails-center"
+            >
+              <Cocktail
+                glass="glass"
+                id="0"
+                img="img"
+                isAlcoholic="Non-alcoholic"
+                key="0"
+                name="name"
+              >
+                <article
+                  className="cocktail"
+                >
+                  <img
+                    alt="name"
+                    className="cocktail-img"
+                    src="img"
+                  />
+                  <div
+                    className="cocktail-footer"
+                  >
+                    <h3>
+                      name
+                    </h3>
+                    <h4>
+                      glass
+                    </h4>
+                    <p>
+                      Non-alcoholic
+                    </p>
+                    <Link
+                      className="cocktail-btn cocktail-btn-primary cocktail-btn-details"
+                      to="/cocktail/0"
+                    >
+                      <LinkAnchor
+                        className="cocktail-btn cocktail-btn-primary cocktail-btn-details"
+                        href="/cocktail/0"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="cocktail-btn cocktail-btn-primary cocktail-btn-details"
+                          href="/cocktail/0"
+                          onClick={[Function]}
+                        >
+                          Details
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </div>
+                </article>
+              </Cocktail>
+            </div>
+          </section>
+        </CocktailList>
+      </main>
+    </Home>
+  </Router>
+</BrowserRouter>
+`;
+
+exports[`Cocktail tests snapshots match Loading matches the snapshot 1`] = `
+<div
+  className="cocktail-loader"
+>
+  <h2>
+    Loading
+  </h2>
+</div>
+`;
+
+exports[`Cocktail tests snapshots match NavBar matches the snapshot 1`] = `
+<nav
+  className="cocktail-navbar"
+>
+  <div
+    className="cocktail-nav-center"
+  >
+    <Link
+      to="/Cocktail"
+    >
+      <img
+        alt="cocktail logo"
+        className="cocktail-logo"
+        src="logo.svg"
+      />
+    </Link>
+    <ul
+      className="cocktail-nav-links"
+    >
+      <li>
+        <Link
+          to="/Cocktail"
+        >
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/cocktail_about"
+        >
+          About
+        </Link>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`Cocktail tests snapshots match SearchForm matches the snapshot 1`] = `
+<SearchForm>
+  <section
+    className="cocktails-section cocktail-search"
+  >
+    <form
+      className="cocktail-search-form"
+      onSubmit={[Function]}
+    >
+      <div
+        className="cocktail-form-control"
+      >
+        <label
+          htmlFor="name"
+        >
+          Search your favorite cocktail
+        </label>
+        <input
+          id="name"
+          onChange={[Function]}
+          type="text"
+        />
+      </div>
+    </form>
+  </section>
+</SearchForm>
+`;

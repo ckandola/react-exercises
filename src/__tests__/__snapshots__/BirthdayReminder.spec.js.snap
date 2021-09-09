@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BirthdayReminder tests contains the correct initial list of birthdays 1`] = `
+<main
+  className="birthday-main"
+>
+  <section
+    className="birthday-container birthday-section"
+  >
+    <div
+      className="birthday-input-section"
+    >
+      <h3>
+        Search for a birthday:
+      </h3>
+      <div
+        className="birthday-input-section-container"
+      >
+        <div
+          className="react-datepicker-wrapper"
+        >
+          <div
+            className="react-datepicker__input-container"
+          >
+            <input
+              className=""
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Enter a day!"
+              readOnly={false}
+              type="text"
+              value="06/28/2021"
+            />
+          </div>
+        </div>
+        <div
+          className="birthday-reset-sectn"
+        >
+          <button
+            className="birthday-reset-date-btn"
+            onClick={[Function]}
+          >
+            Return to today
+          </button>
+        </div>
+      </div>
+    </div>
+    <h3>
+      3 birthdays today
+    </h3>
+    <article
+      className="birthday-person"
+    >
+      <img
+        alt="Bertie Yates"
+        src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg"
+      />
+      <div>
+        <h4>
+          Bertie Yates
+        </h4>
+        <p>
+          29 years
+        </p>
+      </div>
+      <button
+        className="birthday-congrat-btn"
+        onClick={[Function]}
+      >
+        Congratulate
+      </button>
+    </article>
+    <article
+      className="birthday-person"
+    >
+      <img
+        alt="Larry Little"
+        src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg"
+      />
+      <div>
+        <h4>
+          Larry Little
+        </h4>
+        <p>
+          36 years
+        </p>
+      </div>
+      <button
+        className="birthday-congrat-btn"
+        onClick={[Function]}
+      >
+        Congratulate
+      </button>
+    </article>
+    <article
+      className="birthday-person"
+    >
+      <img
+        alt="Sean Walsh"
+        src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+      />
+      <div>
+        <h4>
+          Sean Walsh
+        </h4>
+        <p>
+          34 years
+        </p>
+      </div>
+      <button
+        className="birthday-congrat-btn"
+        onClick={[Function]}
+      >
+        Congratulate
+      </button>
+    </article>
+    <button
+      className="birthday-btn"
+      id="birthday-list-clear"
+      onClick={[Function]}
+    >
+      Clear All
+    </button>
+    <button
+      className="birthday-btn"
+      onClick={[Function]}
+    >
+      Reload
+    </button>
+  </section>
+</main>
+`;
