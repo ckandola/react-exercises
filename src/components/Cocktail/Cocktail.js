@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context';
+import PropTypes from 'prop-types';
 
 const Cocktail = ({img, name, id, isAlcoholic, glass}) => {
     return (
@@ -21,3 +22,11 @@ const Cocktail = ({img, name, id, isAlcoholic, glass}) => {
 
 export default Cocktail;
 export { useGlobalContext };
+
+Cocktail.propTypes = {
+    img: PropTypes.string,
+    name: PropTypes.string,
+    id: PropTypes.string,
+    isAlcoholic: PropTypes.string,
+    glass: PropTypes.string
+};
