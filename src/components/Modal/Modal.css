@@ -63,8 +63,10 @@ Variables
   .modal-container {
     background: var(--clr-white);
     border-radius: var(--radius);
+    padding-right: 2rem;
     width: 90vw;
-    height: 30vh;
+    max-height: fit-content;
+    min-height: 50vh;
     max-width: var(--fixed-width);
     text-align: center;
     display: grid;

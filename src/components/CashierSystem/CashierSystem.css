@@ -1,0 +1,42 @@
+.pos-sidebar {
+    font-size: 2rem;
+    width:25%;
+}
+
+.pos-sidebar-icon {
+    color: #909090;
+    height:60px;
+}
+
+.pos-sidebar-nav-show {
+    transform:translate(0);
+    transition: var(--transition);
+}
+
+.pos-sidebar-nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: var(--transition);
+    transform: translate(-120%);
+    background-color: #cabfbf;
+}
+
+.pos-sidebar button {
+    background-color: transparent;
+    padding: 0.2rem 0.5rem 0.5rem;
+    display: block;
+    border-color: transparent;
+    transition: var(--transition);
+
+}
+
+.pos-sidebar button:active {
+    background-color: #e0d3d3;
+}
+
+.pos-sidebar-whats-new {
+    margin:1rem;
+    list-style-type:disc;
+    text-align: left;
+}

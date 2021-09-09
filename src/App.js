@@ -74,6 +74,8 @@ import SingleCocktail from './components/Cocktail/pages/SingleCocktail';
 import CocktailAbout from "./components/Cocktail/pages/About";
 import CocktailError from "./components/Cocktail/pages/Error";
 
+import CashierSystem from "./components/CashierSystem";
+
 const App = () => {
 
   const componentNames = [
@@ -104,7 +106,8 @@ const App = () => {
     'Modal',
     'StripeMenu',
     'Cart',
-    'Cocktail'
+    'Cocktail',
+    'CashierSystem'
   ]
 
   const [currentProject, setCurrentProject] = useState();
@@ -253,6 +256,9 @@ const App = () => {
                   </Route>
                   <Route path="/Cocktail_*">
                     <CocktailError />
+                  </Route>
+                  <Route path="/CashierSystem">
+                    <CashierSystem />
                   </Route>
                 </Switch>
 
