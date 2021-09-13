@@ -1,16 +1,30 @@
+:root {
+    --pos-background: #cabfbf;
+}
+
+/* Main ----------------------------------------------------------------------- */
+.pos-system-main {
+    display: flex;
+}
+
+/* Sidebar ----------------------------------------------------------------------- */
 .pos-sidebar {
+    display:block;
     font-size: 2rem;
-    width:25%;
+    width:20vw;
 }
 
 .pos-sidebar-icon {
     color: #909090;
     height:60px;
+    margin-bottom: 0.5rem;
+    width: fit-content !important;
 }
 
 .pos-sidebar-nav-show {
     transform:translate(0);
     transition: var(--transition);
+    background-color: var(--pos-background);
 }
 
 .pos-sidebar-nav {
@@ -19,19 +33,19 @@
     left: 0;
     transition: var(--transition);
     transform: translate(-120%);
-    background-color: #cabfbf;
 }
 
-.pos-sidebar button {
-    background-color: transparent;
+.pos-sidebar-button {
+    background-color: var(--pos-background);
     padding: 0.2rem 0.5rem 0.5rem;
     display: block;
     border-color: transparent;
     transition: var(--transition);
-
+    width: 100%;
+    text-align: left;
 }
 
-.pos-sidebar button:active {
+.pos-sidebar-button:active {
     background-color: #e0d3d3;
 }
 
@@ -39,4 +53,29 @@
     margin:1rem;
     list-style-type:disc;
     text-align: left;
+}
+
+/* ItemContainer ----------------------------------------------------------------------- */
+.pos-itemcontainer {
+    background-color: aqua;
+    width: 50%;
+    display: block;
+}
+
+/* Lookup Pane ----------------------------------------------------------------------- */
+.pos-lookup-pane {
+    background-color: pink;
+    width: 25%;
+    height: 65vh;
+}
+
+.pos-lookup-btns-show {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-items: center;
+}
+
+.pos-lookup-btns {
+    display: none;
 }
