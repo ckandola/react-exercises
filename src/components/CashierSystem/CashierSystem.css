@@ -18,7 +18,7 @@
 
 .pos-sidebar-icon {
     color: #909090;
-    height:60px;
+    height:fit-content;
     margin-bottom: 0.5rem;
     width: fit-content !important;
 }
@@ -37,18 +37,23 @@
     transform: translate(-120%);
 }
 
-.pos-sidebar-button {
+.pos-sidebar-btn-basic {
     background-color: var(--pos-background);
     padding: 0.2rem 0.5rem 0.5rem;
+    width: 100%;
     display: block;
     border-color: transparent;
-    transition: var(--transition);
-    width: 100%;
-    text-align: left;
 }
 
-.pos-sidebar-button:active {
+
+.pos-sidebar-btn-basic:active {
     background-color: #e0d3d3;
+}
+
+.pos-sidebar-button {
+    font-size: 1.7rem;
+    transition: var(--transition);
+    text-align: left;
 }
 
 .pos-sidebar-whats-new {
@@ -63,6 +68,14 @@
     margin-left: 10%;
     width: 60%;
     display: block;
+}
+
+.pos-item-container-icon {
+    position: relative;
+    top: 40%;
+    left: 45%;
+    font-size: 5rem;
+    color: #90909050;
 }
 
 /* Lookup Pane ----------------------------------------------------------------------- */

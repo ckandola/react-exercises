@@ -1,9 +1,10 @@
 import React from 'react';
+import { FaCashRegister } from 'react-icons/fa';
 
 const ItemContainer = () => {
     return (
         <section className="pos-item-container">
-            Item Container
+            <FaCashRegister className="pos-item-container-icon" />
         </section>
     );
 };
