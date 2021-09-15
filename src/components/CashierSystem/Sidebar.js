@@ -28,7 +28,7 @@ const Sidebar = () => {
     }
 
     return (
-        <section className="pos-sidebar">
+        <nav className="pos-sidebar">
             <button className="pos-sidebar-icon pos-sidebar-button" onClick={toggleIsOpen}>
                 <GiHamburgerMenu />
             </button>
@@ -47,7 +47,7 @@ const Sidebar = () => {
                     <li>LogOff logic will be added if I decide to add a login screen</li>
                 </ul>
             </Modal>
-        </section>
+        </nav>
     );
 };
 

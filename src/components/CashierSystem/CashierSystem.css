@@ -5,11 +5,13 @@
 /* Main ----------------------------------------------------------------------- */
 .pos-system-main {
     display: flex;
+    margin: 2rem;
 }
 
 /* Sidebar ----------------------------------------------------------------------- */
 .pos-sidebar {
     display:block;
+    position: absolute;
     font-size: 2rem;
     width:20vw;
 }
@@ -56,9 +58,10 @@
 }
 
 /* ItemContainer ----------------------------------------------------------------------- */
-.pos-itemcontainer {
+.pos-item-container {
     background-color: aqua;
-    width: 50%;
+    margin-left: 10%;
+    width: 60%;
     display: block;
 }
 
@@ -69,13 +72,36 @@
     height: 65vh;
 }
 
-.pos-lookup-btns-show {
+.pos-lookup-btn-container-show {
+    margin: 1rem 0.7rem 0 0.7rem;
     display: grid;
     grid-template-columns: auto auto auto;
+    gap: 1rem 0.5rem;
     align-items: center;
     justify-items: center;
 }
 
-.pos-lookup-btns {
+.pos-lookup-btn-container {
     display: none;
+}
+
+.pos-lookup-show {
+    color: blue;
+}
+
+.pos-lookup-search {
+    display: none;
+}
+
+.pos-lookup-btn {
+    align-items: center;
+    justify-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--pos-background);
+    border-color: transparent;
+}
+
+.pos-lookup-icon {
+    font-size: 3.5rem;
 }
