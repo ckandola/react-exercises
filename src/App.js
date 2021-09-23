@@ -76,6 +76,8 @@ import CocktailError from "./components/Cocktail/pages/Error";
 
 import CashierSystem from "./components/CashierSystem";
 
+import BrokenPage from "./BrokenPage";
+
 const App = () => {
 
   const componentNames = [
@@ -243,7 +245,8 @@ const App = () => {
                     <StripeMenu />
                   </Route>
                   <Route path="/Cart">
-                    <Cart />
+                    <BrokenPage />
+                    {/* <Cart /> */}
                   </Route>
                   <Route exact path="/Cocktail">
                     <CocktailMain />
