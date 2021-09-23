@@ -67,7 +67,7 @@ import Home from './components/Modal/Home';
 
 import StripeMenu from './components/StripeMenu';
 
-import Cart from './components/Cart';
+// import Cart from './components/Cart';
 
 import CocktailMain from './components/Cocktail';
 import SingleCocktail from './components/Cocktail/pages/SingleCocktail';

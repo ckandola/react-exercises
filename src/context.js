@@ -46,7 +46,7 @@ const AppProvider = ({children}) => {
     }
 
     // Cart ---
-    const cartUrl = 'https://course-api.com/react-useReducer-cart-project';
+    // const cartUrl = 'https://course-api.com/react-useReducer-cart-project';
     const initialCartState = {
         cartLoading: false,
         cart: cartItems,
@@ -66,19 +66,19 @@ const AppProvider = ({children}) => {
     const decreaseCartAmt = id => {
         cartDispatch({type: 'DECREASE', payload: id});
     }
-    const fetchCartData = async () => {
-        cartDispatch({type: 'LOADING'});
-        const response = await fetch(cartUrl);
-        const cart = await response.json();
-        cartDispatch({type: 'DISPLAY_ITEMS', payload: cart});
-    }
+    // const fetchCartData = async () => {
+    //     cartDispatch({type: 'LOADING'});
+    //     const response = await fetch(cartUrl);
+    //     const cart = await response.json();
+    //     cartDispatch({type: 'DISPLAY_ITEMS', payload: cart});
+    // }
 
     useEffect(() => {
         cartDispatch({type: 'GET_TOTALS'});
     }, [cartState.cart]);
 
     useEffect(() => {
-        fetchCartData();
+        // fetchCartData();
     }, []);
 
     // CocktailDB ---
