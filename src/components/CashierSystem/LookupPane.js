@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import { CgPlayListAdd, CgPlayListSearch, CgUserList, CgPlayListCheck } from 'react-icons/cg';
+import { FaTimes } from 'react-icons/fa';
+import catalog from './data.json';
 
 const LookupPane = () => {
     const [choice, setChoice] = useState(null);
+    const [error, setError] = useState('');
+    const [textEntry, setTextEntry] = useState('');
+    const [loadType, setLoadType] = useState('CW');
+    const [quantity, setQuantity] = useState('1');
 
     const makeChoice = id => {
         switch(id) {
@@ -27,9 +33,52 @@ const LookupPane = () => {
         }
     }
 
+    const handleTextChange = e => {
+        setTextEntry(e.target.value);
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        handleItemEntry();
+    }
+
     const handleItemEntry = () => {
-        console.log('I need to save the string state and use it here.');
-        setChoice(null);
+        if (textEntry.length === 0) {
+            return;
+        }
+        let isValid = false;
+        const numQuantity = Number(quantity.replace(/[\D]/ig, ''));
+        if (numQuantity <= 0) {
+            setError(`ERROR: Quantity must contain at least one number.`);
+            return;
+        } 
+
+        for (let i = 0; i < catalog.length; i++) {
+            if (catalog[i]["item_num"] === textEntry) {
+                addItem(Number(textEntry), numQuantity, catalog[i]["desc"], loadType);
+                i = catalog.length;
+                isValid = true;
+            }
+
+            if (i === catalog.length - 1) {
+                console.log('Invalid item number')
+                setError(`ERROR: "${textEntry}" is an invalid item number.`);
+            }
+        }
+        if (isValid) {
+            setError('');
+            setTextEntry('');
+            setQuantity('1');
+            setChoice(null);
+        }
+    }
+
+    const closeError = () => {
+        setError('');
+    }
+
+    const addItem = (itemNum, amount, desc, load) => {
+        console.log(`I am adding ${amount} of ${desc}, (${itemNum}) to the ItemContainer as ${load}`)
     }
 
     return (
@@ -48,12 +97,50 @@ const LookupPane = () => {
                     <CgPlayListCheck className="pos-lookup-icon" />
                 </button>
             </div>
-            <div className={`pos-lookup-search${choice ? '-show' : ''}`}>
-                <input 
-                    type="text"
-                    placeholder="Enter an item number" />
-                <button onClick={handleItemEntry}>Submit</button>
-            </div>
+            {error.length > 0 && (
+                <div className="pos-lookup-error">
+                    <div className="pos-lookup-error-msg">
+                        {error}
+                    </div>
+                    <button onClick={closeError}><FaTimes /></button>
+                </div>
+            )}
+            <form className={`pos-lookup-search${choice ? '-show' : ''}`}
+                onSubmit={handleSubmit}>
+                <div className="pos-lookup-grid"> 
+                    {choice === 'entry' && (
+                        <div>Item entry</div>
+                    )}
+                    <input 
+                        type="text"
+                        value={textEntry}
+                        className={`${error && !error.includes('Quantity') ? 'pos-lookup-input-error' : ''}`}
+                        onChange={handleTextChange}
+                    />
+                </div>
+                {choice === 'entry' && (
+                    <div>
+                        <div className="pos-lookup-item-edit1">
+                            Select load type
+                            <button className={`${loadType === 'CW' ? 'pos-lookup-load-selected' : ''}`} type="button"
+                                onClick={() => setLoadType('CW')}>CW</button>
+                            <button className={`${loadType === 'NL' ? 'pos-lookup-load-selected' : ''}`} type="button"
+                                onClick={() => setLoadType('NL')}>NL</button>
+                            <button className={`${loadType === 'PL' ? 'pos-lookup-load-selected' : ''}`} type="button"
+                                onClick={() => setLoadType('PL')}>PL</button>
+                            <button className={`${loadType === 'LD' ? 'pos-lookup-load-selected' : ''}`} type="button"
+                                onClick={() => setLoadType('LD')}>LD</button>
+                        </div>
+                        <div className="pos-lookup-item-edit2">
+                            Quantity
+                            <input type="text" value={quantity} onChange={e => setQuantity(e.target.value)}
+                                className={`${error && error.includes('Quantity') ? 'pos-lookup-input-error' : ''}`}/>
+                        </div>
+                    </div>
+                )}
+                <button type="submit">Submit</button>
+
+            </form>
         </section>
     );
 };

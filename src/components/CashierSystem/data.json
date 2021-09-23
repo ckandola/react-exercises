@@ -1,19 +1,23 @@
 [
     {
         "item_num": "19183",
+        "desc": "Gray 12in x 12in paver",
         "price": "1.48"
     },
     {
         "item_num": "357656",
-        "price": "2.38"
+        "desc": "Old Manor 12in x 4in x 8in flagstone",
+        "price": "2.88"
     },
     {
         "item_num": "19186",
-        "price": "1.69"
+        "desc": "Matt log 16in x 3in x 6in Edger",
+        "price": "1.98"
     },
     {
         "item_num": "300845",
-        "price": "5.48"
+        "desc": "Gray 20in x 20in paver",
+        "price": "5.88"
     }
 
 ]

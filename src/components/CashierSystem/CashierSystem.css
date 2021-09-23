@@ -1,5 +1,7 @@
 :root {
-    --pos-background: #cabfbf;
+    --pos-background: #ffffff;
+    --pos-sidebar-icon-color: #909090;
+    --pos-gray: lightgray;
 }
 
 /* Main ----------------------------------------------------------------------- */
@@ -13,11 +15,16 @@
     display:block;
     position: absolute;
     font-size: 2rem;
-    width:20vw;
+    width:25vw;
+}
+
+.pos-sidebar-button p {
+    display: inline;
+    padding-left: 0.5rem;
 }
 
 .pos-sidebar-icon {
-    color: #909090;
+    color: var(--pos-sidebar-icon-color);
     height:fit-content;
     margin-bottom: 0.5rem;
     width: fit-content !important;
@@ -66,7 +73,7 @@
 .pos-item-container {
     background-color: aqua;
     margin-left: 10%;
-    width: 60%;
+    width: 55%;
     display: block;
 }
 
@@ -80,8 +87,9 @@
 
 /* Lookup Pane ----------------------------------------------------------------------- */
 .pos-lookup-pane {
-    background-color: pink;
-    width: 25%;
+    background-color: var(--pos-background);
+    border: 2px var(--pos-gray) solid;
+    width: 30%;
     height: 65vh;
 }
 
@@ -102,6 +110,34 @@
     color: blue;
 }
 
+
+.pos-lookup-search-show {
+    text-align: center;
+    padding: 2rem;
+}
+
+.pos-lookup-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.pos-lookup-search-show input {
+    border-color: blue;
+}
+
+.pos-lookup-search-show button {
+    background-color:white;
+    border-radius: 0.25rem;
+    border-color: blue;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+.pos-lookup-input-error {
+    border-color: red !important;
+}
+
 .pos-lookup-search {
     display: none;
 }
@@ -111,10 +147,62 @@
     justify-items: center;
     width: 5rem;
     height: 5rem;
-    background-color: var(--pos-background);
+    background-color: var(--pos-gray);
     border-color: transparent;
 }
 
 .pos-lookup-icon {
     font-size: 3.5rem;
+}
+
+.pos-lookup-item-edit1 {
+    align-items: center;
+    margin: 2rem 0.5rem;
+    display: flex;
+}
+
+.pos-lookup-item-edit1 button {
+    width: 3rem;
+    height: 3rem;
+}
+
+.pos-lookup-item-edit2 {
+    align-items: center;
+    margin: 2rem 2rem;
+    display: flex;
+}
+
+.pos-lookup-item-edit2 input {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1rem;
+}
+
+.pos-lookup-load-selected {
+    border-color: dodgerblue !important;
+    border: 4px solid;
+}
+
+.pos-lookup-error {
+    display: flex;
+    padding-left: 0.5rem;
+    transition: var(--transition);
+    /* transform: translateY(-50%); */
+    letter-spacing: .1rem;
+    background: rgb(248, 65, 65);
+}
+
+/* TODO: look up how to do transitions & how to make height change w/text */
+.pos-lookup-error-msg {
+    width: 90%;
+}
+
+.pos-lookup-error button {
+    position: relative;
+    transform: translate(-0.75rem, -0.75rem);
+    font-size: 2rem;
+    width: 10%;
+    background: transparent;
+    border-color: transparent;
+    color: rgb(99, 3, 3);
 }
