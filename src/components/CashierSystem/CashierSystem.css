@@ -69,18 +69,20 @@
     text-align: left;
 }
 
-/* ItemContainer ----------------------------------------------------------------------- */
-.pos-item-container {
-    background-color: aqua;
+/* Cart ----------------------------------------------------------------------- */
+.pos-cart {
+    background-color: var(--pos-background);
+    border: 2px var(--pos-gray) solid;
+    border-right: none;
     margin-left: 10%;
     width: 55%;
     display: block;
 }
 
-.pos-item-container-icon {
-    position: relative;
-    top: 40%;
-    left: 45%;
+.pos-cart-icon {
+    position: absolute;
+    top: 85%;
+    left: 35%;
     font-size: 5rem;
     color: #90909050;
 }
@@ -195,14 +197,4 @@
 /* TODO: look up how to do transitions & how to make height change w/text */
 .pos-lookup-error-msg {
     width: 90%;
-}
-
-.pos-lookup-error button {
-    position: relative;
-    transform: translate(-0.75rem, -0.75rem);
-    font-size: 2rem;
-    width: 10%;
-    background: transparent;
-    border-color: transparent;
-    color: rgb(99, 3, 3);
 }

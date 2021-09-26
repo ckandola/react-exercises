@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { CgPlayListAdd, CgPlayListSearch, CgUserList, CgPlayListCheck } from 'react-icons/cg';
-import { FaTimes } from 'react-icons/fa';
+import { useGlobalContext } from './index';
 import catalog from './data.json';
 
 const LookupPane = () => {
+    const { posCartState, setPOSCartState } = useGlobalContext();
     const [choice, setChoice] = useState(null);
     const [error, setError] = useState('');
     const [textEntry, setTextEntry] = useState('');
@@ -73,12 +74,11 @@ const LookupPane = () => {
         }
     }
 
-    const closeError = () => {
-        setError('');
-    }
-
     const addItem = (itemNum, amount, desc, load) => {
-        console.log(`I am adding ${amount} of ${desc}, (${itemNum}) to the ItemContainer as ${load}`)
+        console.log(`I am adding ${amount} of ${desc}, (${itemNum}) to the ItemContainer as ${load}`);
+        const tempCart = posCartState.slice();
+        tempCart.push({id: itemNum, amount, description: desc, load});
+        setPOSCartState(tempCart);
     }
 
     return (
@@ -102,7 +102,6 @@ const LookupPane = () => {
                     <div className="pos-lookup-error-msg">
                         {error}
                     </div>
-                    <button onClick={closeError}><FaTimes /></button>
                 </div>
             )}
             <form className={`pos-lookup-search${choice ? '-show' : ''}`}
@@ -114,7 +113,7 @@ const LookupPane = () => {
                     <input 
                         type="text"
                         value={textEntry}
-                        className={`${error && !error.includes('Quantity') ? 'pos-lookup-input-error' : ''}`}
+                        className={`${error.length > 0 && !error.includes('Quantity') ? 'pos-lookup-input-error' : ''}`}
                         onChange={handleTextChange}
                     />
                 </div>
@@ -134,7 +133,7 @@ const LookupPane = () => {
                         <div className="pos-lookup-item-edit2">
                             Quantity
                             <input type="text" value={quantity} onChange={e => setQuantity(e.target.value)}
-                                className={`${error && error.includes('Quantity') ? 'pos-lookup-input-error' : ''}`}/>
+                                className={`${error.length > 0 && error.includes('Quantity') ? 'pos-lookup-input-error' : ''}`}/>
                         </div>
                     </div>
                 )}

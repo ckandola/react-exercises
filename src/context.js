@@ -113,6 +113,9 @@ const AppProvider = ({children}) => {
         fetchDrinks();
     }, [fetchDrinks, cocktailSearchTerm]);
 
+    // POS-System ----
+    const [posCartState, setPOSCartState] = useState([]);
+
     return (
         <AppContext.Provider value={{
             isModalOpen, openModal, closeModal,
@@ -124,7 +127,9 @@ const AppProvider = ({children}) => {
             ...cartState, clearCart, removeCartItem, 
             increaseCartAmt, decreaseCartAmt,
 
-            cocktailLoading, cocktails, setCocktailSearchTerm
+            cocktailLoading, cocktails, setCocktailSearchTerm,
+
+            posCartState, setPOSCartState
         }}>
             {children}
         </AppContext.Provider>

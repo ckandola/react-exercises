@@ -1,19 +1,22 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import './CashierSystem.css';
-import ItemContainer from './ItemContainer';
+import Cart from './Cart';
 import LookupPane from './LookupPane';
+import { useGlobalContext } from '../../context';
 
 const CashierSystem = () => {
     return (
         <section>
             <div className="pos-system-main">
                 <Sidebar />
-                <ItemContainer />
+                <Cart />
                 <LookupPane />
             </div>
         </section>
     );
 }
+
+export { useGlobalContext };
 
 export default CashierSystem;
