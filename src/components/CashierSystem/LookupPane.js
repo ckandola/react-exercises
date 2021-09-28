@@ -4,7 +4,7 @@ import { useGlobalContext } from './index';
 import catalog from './data.json';
 
 const LookupPane = () => {
-    const { posCartState, setPOSCartState } = useGlobalContext();
+    const { posCartState, setPOSCartState, posCurrentItem, setPOSCurrentItem } = useGlobalContext();
     const [choice, setChoice] = useState(null);
     const [error, setError] = useState('');
     const [textEntry, setTextEntry] = useState('');
@@ -56,7 +56,7 @@ const LookupPane = () => {
 
         for (let i = 0; i < catalog.length; i++) {
             if (catalog[i]["item_num"] === textEntry) {
-                addItem(Number(textEntry), numQuantity, catalog[i]["desc"], loadType);
+                addItem(Number(textEntry), numQuantity, catalog[i]["desc"], loadType, Number(catalog[i]["price"]));
                 i = catalog.length;
                 isValid = true;
             }
@@ -74,10 +74,10 @@ const LookupPane = () => {
         }
     }
 
-    const addItem = (itemNum, amount, desc, load) => {
+    const addItem = (itemNum, amount, desc, load, price) => {
         console.log(`I am adding ${amount} of ${desc}, (${itemNum}) to the ItemContainer as ${load}`);
         const tempCart = posCartState.slice();
-        tempCart.push({id: itemNum, amount, description: desc, load});
+        tempCart.push({itemNum: itemNum, amount: amount, description: desc, load: load, price: price});
         setPOSCartState(tempCart);
     }
 

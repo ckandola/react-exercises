@@ -87,6 +87,78 @@
     color: #90909050;
 }
 
+/* Cart Item ----------------------------------------------------------------------- */
+.pos-cart-item {
+    margin: .5rem;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: auto 20% 20% 35%;
+}
+
+.pos-cart-item-desc {
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+.pos-cart-item-img {
+    width: 50px;
+    height: 50px;
+    margin: 0.75rem 1rem;
+    border: 1px solid black;
+}
+
+.pos-cart-item-num {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: gray;
+}
+
+.pos-cart-item-price::before {
+    content: '$';
+}
+
+.pos-cart-item-price {
+    font-size: 2rem;
+    align-self: center;
+    justify-self: center;
+}
+
+.pos-cart-item-price::after {
+    content: 'each';
+    display: block;
+    font-size: 1.5rem;
+    /* todo: find out how to align this properly */
+}
+
+.pos-cart-item-quantity::before {
+    content: 'x';
+    font-weight: normal;
+    font-size: 2.25rem;
+    margin: 0 0.5rem;
+}
+
+.pos-cart-item-quantity {
+    align-self: center;
+    justify-self: center;
+    font-weight: bold;
+    font-size: 2.25rem;
+}
+
+.pos-cart-item-total {
+    font-size: 2rem;
+    justify-self: center;
+    align-self: center;
+    /* todo: find out how to format numbers */
+}
+
+.pos-cart-item-loadtype {
+    align-self: end;
+    justify-self: center;
+    background-color: var(--pos-gray);
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+}
+
 /* Lookup Pane ----------------------------------------------------------------------- */
 .pos-lookup-pane {
     background-color: var(--pos-background);

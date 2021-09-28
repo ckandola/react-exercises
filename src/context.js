@@ -115,6 +115,7 @@ const AppProvider = ({children}) => {
 
     // POS-System ----
     const [posCartState, setPOSCartState] = useState([]);
+    const [posCurrentItem, setPOSCurrentItem] = useState(null);
 
     return (
         <AppContext.Provider value={{
@@ -129,7 +130,7 @@ const AppProvider = ({children}) => {
 
             cocktailLoading, cocktails, setCocktailSearchTerm,
 
-            posCartState, setPOSCartState
+            posCurrentItem, setPOSCurrentItem, posCartState, setPOSCartState
         }}>
             {children}
         </AppContext.Provider>
