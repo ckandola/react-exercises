@@ -18,7 +18,8 @@ const LookupPane = () => {
             setPOSChoice('edit');
             setPOSLoadType(posCurrentItem.loadType);
             setPOSQuantity(posCurrentItem.quantity.toString());
-        }}, [posCurrentItem, setPOSChoice, setPOSLoadType, setPOSQuantity]
+            setPOSError('');
+        }}, [posCurrentItem, setPOSChoice, setPOSLoadType, setPOSQuantity, setPOSError]
     )
 
     const makeChoice = id => {
