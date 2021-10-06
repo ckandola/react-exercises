@@ -26,7 +26,7 @@ const CartItem = ({index, itemNum, description, quantity, loadType, price, onCli
             <div className="pos-cart-item-price">{price}</div>
             <div className="pos-cart-item-quantity">{quantity}</div>
             <div style={{display: 'grid', gridTemplateRows: 'auto auto'}}>
-                <div className="pos-cart-item-total">${quantity * price}</div>
+                <div className="pos-cart-item-total">${(quantity * price).toLocaleString(undefined, { minimumFractionDigits: 2})}</div>
                 <div className="pos-cart-item-loadtype">{loadType}</div>
             </div>
         </div>
