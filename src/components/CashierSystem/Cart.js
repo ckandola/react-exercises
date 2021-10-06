@@ -4,10 +4,10 @@ import CartItem from './CartItem';
 import { useGlobalContext } from './index';
 
 const Cart = () => {
-    const { posCartState } = useGlobalContext();
+    const { posCartState, setPOSCurrentItem } = useGlobalContext();
 
-    const editItem = () => {
-        console.log("I want to edit this item.")
+    const editItem = item => {
+        setPOSCurrentItem(item);
     }
 
     return (
@@ -16,10 +16,11 @@ const Cart = () => {
                 return (
                     <CartItem 
                         key={index}
+                        index={index}
                         itemNum={item.itemNum}
-                        quantity={item.amount}
+                        quantity={item.quantity}
                         description={item.description}
-                        loadType={item.load}
+                        loadType={item.loadType}
                         price={item.price}
                         onClick={editItem}
                     />

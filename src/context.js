@@ -116,6 +116,11 @@ const AppProvider = ({children}) => {
     // POS-System ----
     const [posCartState, setPOSCartState] = useState([]);
     const [posCurrentItem, setPOSCurrentItem] = useState(null);
+    const [posLoadType, setPOSLoadType] = useState('CW');
+    const [posQuantity, setPOSQuantity] = useState('1');
+    const [posChoice, setPOSChoice] = useState(null);
+    const [posError, setPOSError] = useState('');
+    const [posTextEntry, setPOSTextEntry] = useState('');
 
     return (
         <AppContext.Provider value={{
@@ -130,7 +135,10 @@ const AppProvider = ({children}) => {
 
             cocktailLoading, cocktails, setCocktailSearchTerm,
 
-            posCurrentItem, setPOSCurrentItem, posCartState, setPOSCartState
+            posCurrentItem, setPOSCurrentItem, posCartState, setPOSCartState,
+            posLoadType, setPOSLoadType, posQuantity, setPOSQuantity,
+            posChoice, setPOSChoice, posError, setPOSError,
+            posTextEntry, setPOSTextEntry
         }}>
             {children}
         </AppContext.Provider>

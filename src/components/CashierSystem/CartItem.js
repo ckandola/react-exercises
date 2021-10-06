@@ -1,9 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-const CartItem = ({itemNum, description, quantity, loadType, price, onClick/* , img */}) => {
+const CartItem = ({index, itemNum, description, quantity, loadType, price, onClick/* , img */}) => {
+
+    const handleClick = () => {
+        onClick({
+            index,
+            itemNum,
+            description,
+            quantity,
+            loadType,
+            price
+        });
+    };
+
     return (
-        <div className="pos-cart-item" onClick={onClick}>
+        <div className="pos-cart-item" onClick={handleClick}>
             <div>
                 <p className="pos-cart-item-desc">{description}</p>
                 <div style={{display: 'flex'}}>
@@ -24,6 +36,7 @@ const CartItem = ({itemNum, description, quantity, loadType, price, onClick/* , 
 export default CartItem;
 
 CartItem.propTypes = {
+    index: PropTypes.number,
     itemNum: PropTypes.number,
     description: PropTypes.string,
     quantity: PropTypes.number,
