@@ -5,7 +5,8 @@ import catalog from './data.json';
 
 const LookupPane = () => {
     const {
-        posCartState, setPOSCartState, posCurrentItem,
+        posCartState, setPOSCartState, 
+        posCurrentItem, setPOSCurrentItem,
         posLoadType, setPOSLoadType,
         posQuantity, setPOSQuantity,
         posChoice, setPOSChoice,
@@ -60,7 +61,28 @@ const LookupPane = () => {
         if (posChoice !== 'edit' && posTextEntry.length === 0) {
             return;
         }
+        if (posChoice === 'price') {
+            for (let i = 0; i < catalog.length; i++) {
+                if (catalog[i]["item_num"] === posCurrentItem.itemNum) {
+                    if (Math.abs(Number(catalog[i]["price"]) - Number(posTextEntry)) > 10) {
+                        setPOSError('You need a manager override.')
+                        // todo: set manager override message
+                    } else {
+                        posCartState[posCurrentItem.index] = {...posCurrentItem, price: Number(posTextEntry)}
+                        setPOSTextEntry('');
+                        resetContextVars();
+                    }
+                    i = catalog.length;
+                }
+            }
+            return;
+        }
+
         let isValid = false;
+        if (posQuantity === '0' && posCurrentItem) {
+            removeItem();
+            return;
+        }
         const numQuantity = Number(posQuantity.replace(/[\D]/ig, ''));
         if (numQuantity <= 0) {
             setPOSError(`ERROR: Quantity must contain at least one number.`);
@@ -78,7 +100,7 @@ const LookupPane = () => {
         } else {
             for (let i = 0; i < catalog.length; i++) {
                 if (catalog[i]["item_num"] === posTextEntry) {
-                    addItem(Number(posTextEntry), numQuantity, catalog[i]["desc"], posLoadType, Number(catalog[i]["price"]));
+                    addItem(posTextEntry, numQuantity, catalog[i]["desc"], posLoadType, Number(catalog[i]["price"]));
                     i = catalog.length;
                     isValid = true;
                 }
@@ -90,10 +112,8 @@ const LookupPane = () => {
             }
         }
         if (isValid) {
-            setPOSError('');
             setPOSTextEntry('');
-            setPOSQuantity('1');
-            setPOSChoice(null);
+            resetContextVars();
         }
     }
 
@@ -102,6 +122,27 @@ const LookupPane = () => {
         const tempCart = posCartState.slice();
         tempCart.push({itemNum: itemNum, quantity: amount, description: desc, loadType: load, price: price});
         setPOSCartState(tempCart);
+    }
+
+    const removeItem = () => {
+        console.log('removing')
+        let tempCart = posCartState.slice();
+        tempCart.splice(posCurrentItem.index, 1);
+        setPOSCartState(tempCart);
+        resetContextVars();
+    }
+
+    const priceChange = () => {
+        setPOSChoice('price');
+        setPOSTextEntry(`${posCurrentItem.price}`);
+    }
+
+    const resetContextVars = () => {
+        setPOSCurrentItem(null);
+        setPOSLoadType('CW');
+        setPOSQuantity('1');
+        setPOSChoice(null);
+        setPOSError('');
     }
 
     return (
@@ -134,8 +175,30 @@ const LookupPane = () => {
                         <div>Item entry</div>
                     )}
                     
-                    {posChoice === 'edit' ? (
-                        <div>{posCurrentItem.itemNum}</div>
+                    {(posChoice === 'edit' || posChoice === 'price') ? (
+                        <div style={{width: '110%'}}>
+                            {posChoice === 'edit' && (
+                                <div>
+                                    <button type="button" className="pos-lookup-item-edit-btn" onClick={priceChange}>Edit</button>
+                                    <button type="button" className="pos-lookup-item-edit-delete-btn" onClick={removeItem}>Remove</button>
+                                </div>
+                            )}
+                            <div className="pos-lookup-grid">
+                                <div className="pos-lookup-item-edit-title">{`${(posCurrentItem.description).substring(0, 20)}${(posCurrentItem.description).length > 20 ? '...' : ''}` }</div>
+                                <div className="pos-lookup-item-edit-number">{posCurrentItem.itemNum}</div>
+                            </div>
+                            {posChoice === 'price' && (
+                                <div style={{display: 'flex'}}>
+                                <div>New Price: </div>
+                                <input 
+                                    type="number"
+                                    value={posTextEntry}
+                                    onChange={handleTextChange}
+                                    className="pos-lookup-item-edit-price"
+                                />
+                                </div>
+                            )}
+                        </div>
                     ) : (
                             <input 
                                 type="text"

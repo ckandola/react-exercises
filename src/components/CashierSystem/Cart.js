@@ -12,6 +12,7 @@ const Cart = () => {
 
     return (
         <section className="pos-cart">
+            <FaCashRegister className="pos-cart-icon" />
             {posCartState.map((item, index) => {
                 return (
                     <CartItem 
@@ -26,7 +27,6 @@ const Cart = () => {
                     />
                 )
             })}
-            <FaCashRegister className="pos-cart-icon" />
         </section>
     );
 };
