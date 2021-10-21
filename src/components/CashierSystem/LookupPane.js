@@ -97,6 +97,9 @@ const LookupPane = () => {
             tempCart[posCurrentItem.index] = tempItem;
             setPOSCartState(tempCart);
             isValid = true;
+        } else if (posChoice === 'search') {
+            searchForTerm(posTextEntry);
+            return;
         } else {
             for (let i = 0; i < catalog.length; i++) {
                 if (catalog[i]["item_num"] === posTextEntry) {
@@ -143,6 +146,27 @@ const LookupPane = () => {
         setPOSQuantity('1');
         setPOSChoice(null);
         setPOSError('');
+    }
+
+    // posTextEntry contains search term
+    /* we need to know if the search term is an item num, a description, or an alt term */
+    const searchForTerm = () => {
+        console.log(`Searching for ${posTextEntry}...`);
+        for (let i = 0; i < catalog.length; i++) {
+            if (posTextEntry === catalog[i].item_num) {
+                // display result
+            } else if (posTextEntry === catalog[i].desc) {
+                // display result
+            } else {
+                const splitEntry = posTextEntry.toLowerCase().split(' ');
+                for (let word of splitEntry) {
+                    if (catalog[i].tags.includes(word)) {
+                        // display result
+                        console.log(`item ${catalog[i].item_num} is a match!`);
+                    }
+                }
+            }
+        }
     }
 
     return (
@@ -205,6 +229,7 @@ const LookupPane = () => {
                                 value={posTextEntry}
                                 className={`${posError.length > 0 && !posError.includes('Quantity') ? 'pos-lookup-input-error' : ''}`}
                                 onChange={handleTextChange}
+                                placeholder={`${posChoice === 'search' ? 'Search by item number or description' : ''}`}
                             />
                         )
                     }
@@ -229,7 +254,7 @@ const LookupPane = () => {
                         </div>
                     </div>
                 )}
-                <button type="submit">{`${posChoice === 'edit' ? 'Save Changes' : 'Submit'}`}</button>
+                <button type="submit">{`${posChoice === 'edit' ? 'Save Changes' : posChoice === 'search' ? 'Search' : 'Submit'}`}</button>
 
             </form>
         </section>

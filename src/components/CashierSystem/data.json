@@ -2,22 +2,26 @@
     {
         "item_num": "19183",
         "desc": "Gray 12in x 12in paver",
-        "price": "1.48"
+        "price": "1.48",
+        "tags": ["gray", "paver", "pavers", "foot", "12 inches", "square", "square foot", "patio block", "patio blocks", "block", "blocks", "concrete"]
     },
     {
         "item_num": "357656",
         "desc": "Old Manor 12in x 4in x 8in flagstone",
-        "price": "2.88"
+        "price": "2.88",
+        "tags": ["gray", "arcadian", "12 inches", "concrete", "flagstone", "old manor", "patio block", "patio blocks", "paver", "pavers", "block", "blocks"]
     },
     {
         "item_num": "19186",
         "desc": "Matt log 16in x 3in x 6in Edger",
-        "price": "1.98"
+        "price": "1.98",
+        "tags": ["yellow", "concrete", "patio block", "patio blocks", "block", "blocks", "paver", "pavers", "edger", "edgers", "16 inches", "matt log"]
     },
     {
         "item_num": "300845",
         "desc": "Gray 20in x 20in paver",
-        "price": "5.88"
+        "price": "5.88",
+        "tags": ["gray", "paver", "pavers", "20 inches", "square", "patio block", "patio blocks", "block", "blocks", "concrete"]
     }
 
 ]

@@ -210,6 +210,8 @@
 
 .pos-lookup-search-show input {
     border-color: blue;
+    margin: 1rem auto;
+    width: 20vw;
 }
 
 .pos-lookup-search-show button {
