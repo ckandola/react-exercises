@@ -1,6 +1,6 @@
 {
   "name": "exercises",
-  "version": "0.1.0",
+  "version": "1.22.15",
   "private": true,
   "dependencies": {
     "@babel/preset-env": "^7.15.4",
@@ -22,7 +22,9 @@
     "values.js": "^2.0.0"
   },
   "babel": {
-    "presets": ["@babel/preset-env"],
+    "presets": [
+      "@babel/preset-env"
+    ],
     "plugins": []
   },
   "scripts": {
