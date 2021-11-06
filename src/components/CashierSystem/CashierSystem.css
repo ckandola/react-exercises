@@ -197,7 +197,7 @@
 }
 
 
-.pos-lookup-search-show {
+.pos-lookup-form-show {
     text-align: center;
     padding: 2rem;
 }
@@ -208,13 +208,18 @@
     text-align: center;
 }
 
-.pos-lookup-search-show input {
+.pos-lookup-back-btn {
+    margin: 0 0 4.5vh 0;
+    position: relative;
+}
+
+.pos-lookup-form-show input {
     border-color: blue;
     margin: 1rem auto;
     width: 20vw;
 }
 
-.pos-lookup-search-show button {
+.pos-lookup-form-show button {
     background-color:white;
     border-radius: 0.25rem;
     border-color: blue;
@@ -223,11 +228,52 @@
     margin-left: 0.5rem;
 }
 
+.pos-lookup-search {
+    display: none;
+}
+
+.pos-lookup-search-show {
+    max-height: 40vh;
+    width: 25vw;
+    margin: -1rem auto auto 0.5rem;
+    /* overflow-y: scroll; */
+    overflow-x: hidden;
+}
+
+.pos-lookup-search-inner {
+    overflow-y: scroll;
+}
+
+.pos-search-item {
+    display: flex;
+    margin: 0.25rem 0.25rem 0.5rem auto;
+    padding: 0.25rem;
+    background-color: white;
+    border: 2px solid blue;
+    height: 12vh;
+    overflow-x: hidden;
+}
+
+.pos-search-item-price {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+.pos-search-item-desc {
+    color: blue;
+    overflow-y: hidden;
+}
+
+.pos-search-item-num {
+    display: block;
+    position: relative;
+}
+
 .pos-lookup-input-error {
     border-color: red !important;
 }
 
-.pos-lookup-search {
+.pos-lookup-form {
     display: none;
 }
 

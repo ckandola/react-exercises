@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { CgPlayListAdd, CgPlayListSearch, CgUserList, CgPlayListCheck } from 'react-icons/cg';
 import { useGlobalContext } from './index';
+import SearchItem from './SearchItem';
 import catalog from './data.json';
 
 const LookupPane = () => {
@@ -11,8 +12,11 @@ const LookupPane = () => {
         posQuantity, setPOSQuantity,
         posChoice, setPOSChoice,
         posError, setPOSError,
-        posTextEntry, setPOSTextEntry
+        posTextEntry, setPOSTextEntry,
+        posSearchesState, setPOSSearchesState,
+        posSearchFound, setPOSSearchFound
     } = useGlobalContext();
+    const inputRef = useRef();
 
     useEffect(() => {
         if (posCurrentItem) {
@@ -20,7 +24,10 @@ const LookupPane = () => {
             setPOSLoadType(posCurrentItem.loadType);
             setPOSQuantity(posCurrentItem.quantity.toString());
             setPOSError('');
-        }}, [posCurrentItem, setPOSChoice, setPOSLoadType, setPOSQuantity, setPOSError]
+        } else if (posChoice && posTextEntry.length === 0) {
+            inputRef.current.focus();
+        }
+    }, [posCurrentItem, posTextEntry, posChoice, setPOSChoice, setPOSLoadType, setPOSQuantity, setPOSError]
     )
 
     const makeChoice = id => {
@@ -69,7 +76,6 @@ const LookupPane = () => {
                         // todo: set manager override message
                     } else {
                         posCartState[posCurrentItem.index] = {...posCurrentItem, price: Number(posTextEntry)}
-                        setPOSTextEntry('');
                         resetContextVars();
                     }
                     i = catalog.length;
@@ -115,7 +121,6 @@ const LookupPane = () => {
             }
         }
         if (isValid) {
-            setPOSTextEntry('');
             resetContextVars();
         }
     }
@@ -141,6 +146,7 @@ const LookupPane = () => {
     }
 
     const resetContextVars = () => {
+        setPOSTextEntry('');
         setPOSCurrentItem(null);
         setPOSLoadType('CW');
         setPOSQuantity('1');
@@ -152,21 +158,27 @@ const LookupPane = () => {
     /* we need to know if the search term is an item num, a description, or an alt term */
     const searchForTerm = () => {
         console.log(`Searching for ${posTextEntry}...`);
+        const tempSearches = [];
         for (let i = 0; i < catalog.length; i++) {
-            if (posTextEntry === catalog[i].item_num) {
-                // display result
-            } else if (posTextEntry === catalog[i].desc) {
-                // display result
+            if (posTextEntry === catalog[i].item_num || posTextEntry === catalog[i].desc) {
+                setPOSSearchesState([{itemNum: catalog[i].item_num, description: catalog[i].desc, price: catalog[i].price}]);
+                setPOSSearchFound('found');
+                i = catalog.length;
             } else {
                 const splitEntry = posTextEntry.toLowerCase().split(' ');
                 for (let word of splitEntry) {
                     if (catalog[i].tags.includes(word)) {
-                        // display result
                         console.log(`item ${catalog[i].item_num} is a match!`);
+                        tempSearches.push({itemNum: catalog[i].item_num, description: catalog[i].desc, price: catalog[i].price});
+                        setPOSSearchFound('found');
                     }
                 }
             }
+            if (tempSearches.length === 0) {
+                setPOSSearchFound('not found');
+            }
         }
+        setPOSSearchesState(tempSearches);
     }
 
     return (
@@ -192,9 +204,12 @@ const LookupPane = () => {
                     </div>
                 </div>
             )}
-            <form className={`pos-lookup-search${posChoice ? '-show' : ''}`}
+            <form className={`pos-lookup-form${posChoice ? '-show' : ''}`}
                 onSubmit={handleSubmit}>
-                <div className="pos-lookup-grid"> 
+                <div style={{textAlign: 'left'}}>
+                    <button type="button" className="pos-lookup-back-btn" onClick={resetContextVars}>Back</button>
+                </div>
+                <div className="pos-lookup-grid">
                     {posChoice === 'entry' && (
                         <div>Item entry</div>
                     )}
@@ -224,13 +239,40 @@ const LookupPane = () => {
                             )}
                         </div>
                     ) : (
-                            <input 
-                                type="text"
-                                value={posTextEntry}
-                                className={`${posError.length > 0 && !posError.includes('Quantity') ? 'pos-lookup-input-error' : ''}`}
-                                onChange={handleTextChange}
-                                placeholder={`${posChoice === 'search' ? 'Search by item number or description' : ''}`}
-                            />
+                            <div>
+                                <input 
+                                    type="text"
+                                    value={posTextEntry}
+                                    className={`${posError.length > 0 && !posError.includes('Quantity') ? 'pos-lookup-input-error' : ''}`}
+                                    onChange={handleTextChange}
+                                    placeholder={`${posChoice === 'search' ? 'Search by item number or description' : ''}`}
+                                    ref={inputRef}
+
+                                />
+                                <div className={`pos-lookup-search${posChoice === 'search' && posTextEntry.length > 0 ? '-show' : ''}`}>
+                                        
+                                    {posSearchFound === 'found' ? (
+                                        <div className="pos-lookup-search-inner">
+                                        {posSearchesState.map((searchResult, index) => {
+                                            return (
+                                                <SearchItem key={index} itemNum={searchResult.itemNum} description={searchResult.description} price={searchResult.price}
+                                                    onClick={() => {
+                                                        addItem(searchResult.itemNum, 1, searchResult.description, 'CW', Number(searchResult.price));
+                                                        setPOSSearchesState([]);
+                                                        resetContextVars();
+                                                    }}
+                                                />
+                                            );
+                                        })}
+                                        </div>
+                                    )
+                                    : posSearchFound === 'not found' ? (
+                                        <div>No results for {posTextEntry}</div>
+                                    )
+                                    : <div></div>
+                                    }
+                                </div>
+                            </div>
                         )
                     }
                 </div>

@@ -121,6 +121,8 @@ const AppProvider = ({children}) => {
     const [posChoice, setPOSChoice] = useState(null);
     const [posError, setPOSError] = useState('');
     const [posTextEntry, setPOSTextEntry] = useState('');
+    const [posSearchesState, setPOSSearchesState] = useState([]);
+    const [posSearchFound, setPOSSearchFound] = useState('');
 
     return (
         <AppContext.Provider value={{
@@ -138,7 +140,9 @@ const AppProvider = ({children}) => {
             posCurrentItem, setPOSCurrentItem, posCartState, setPOSCartState,
             posLoadType, setPOSLoadType, posQuantity, setPOSQuantity,
             posChoice, setPOSChoice, posError, setPOSError,
-            posTextEntry, setPOSTextEntry
+            posTextEntry, setPOSTextEntry,
+            posSearchesState, setPOSSearchesState,
+            posSearchFound, setPOSSearchFound
         }}>
             {children}
         </AppContext.Provider>
