@@ -13,9 +13,10 @@ const Cart = () => {
     return (
         <section className="pos-cart">
             <FaCashRegister className="pos-cart-icon" />
-            {posCartState.map((item, index) => {
-                return (
-                    <CartItem 
+            <div className="pos-cart-cart-items">
+                {posCartState.map((item, index) => {
+                    return (
+                        <CartItem 
                         key={index}
                         index={index}
                         itemNum={item.itemNum}
@@ -25,8 +26,15 @@ const Cart = () => {
                         price={item.price}
                         onClick={editItem}
                     />
-                )
-            })}
+                    )
+                })}
+            </div>
+            <div className="pos-cart-subtotal">
+                Subtotal: ${(posCartState.reduce((accum, currentItem) => {
+                    accum += Number(currentItem.price) * currentItem.quantity;
+                    return accum;
+                }, 0)).toLocaleString(undefined, { minimumFractionDigits: 2})}
+            </div>
         </section>
     );
 };

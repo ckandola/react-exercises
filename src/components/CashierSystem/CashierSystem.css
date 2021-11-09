@@ -3,7 +3,7 @@
     --pos-sidebar-icon-color: #909090;
     --pos-gray: lightgray;
 }
-
+/* TODO: change display to fixed size when screen shrinks too much */
 /* Main ----------------------------------------------------------------------- */
 .pos-system-main {
     display: flex;
@@ -88,6 +88,25 @@
     font-size: 5rem;
     color: #90909050;
     z-index: 1;
+}
+
+.pos-cart-cart-items {
+    position: relative;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.pos-cart-subtotal {
+    display: block;
+    text-align: right;
+    position: absolute;
+    bottom: -19vh;
+    font-size: 5vh;
+    background-color: #f0f0f0;
+    padding: 0.5rem 1vh;
+    width: 51.5%;
+    height: 6vw;
+    z-index: 100;
 }
 
 /* Cart Item ----------------------------------------------------------------------- */
