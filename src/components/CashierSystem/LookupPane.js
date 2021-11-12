@@ -41,7 +41,7 @@ const LookupPane = () => {
                 console.log('You chose item search.')
                 break;
             case 'add_account':
-                setPOSChoice('account');
+                setPOSChoice('add_account');
                 console.log('You are searching for either military, MyLowe\'s, invoiced, or tax-exempt.');
                 break;
             case 'invoice':
@@ -238,7 +238,47 @@ const LookupPane = () => {
                                 </div>
                             )}
                         </div>
-                    ) : (
+                    ) : posChoice === 'add_account' ? (
+                        <div>
+                            <input
+                                type="tel" required
+                                onChange={handleTextChange}
+                                ref={inputRef}
+                                value={posTextEntry}
+                                maxLength="10"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            />
+                            <input 
+                                type="radio" 
+                                id="account_choice1"
+                                name="accountType"
+                                value="my_lowes">
+                            </input>
+                            <label htmlFor="account_choice1">MyLowe's</label>
+                            <input 
+                                type="radio" 
+                                id="account_choice2"
+                                name="accountType"
+                                value="military">
+                            </input>
+                            <label htmlFor="account_choice2">Military</label>
+                            <input 
+                                type="radio" 
+                                id="account_choice3"
+                                name="accountType"
+                                value="invoice">
+                            </input>
+                            <label htmlFor="account_choice3">Recall Invoice</label>
+                            <input 
+                                type="radio" 
+                                id="account_choice4"
+                                name="accountType"
+                                value="tax_exempt">
+                            </input>
+                            <label htmlFor="account_choice4">Tax-Exempt</label>
+                        </div>
+                        )
+                    : (
                             <div>
                                 <input 
                                     type="text"

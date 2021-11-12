@@ -83,7 +83,7 @@
 
 .pos-cart-icon {
     position: absolute;
-    top: 85%;
+    top: 75%;
     left: 35%;
     font-size: 5rem;
     color: #90909050;
@@ -92,7 +92,7 @@
 
 .pos-cart-cart-items {
     position: relative;
-    height: 80%;
+    height: 82%;
     overflow-y: scroll;
 }
 
@@ -100,11 +100,11 @@
     display: block;
     text-align: right;
     position: absolute;
-    bottom: -19vh;
+    bottom: -15.25vh;
     font-size: 5vh;
     background-color: #f0f0f0;
     padding: 0.5rem 1vh;
-    width: 51.5%;
+    width: 51.25%;
     height: 6vw;
     z-index: 100;
 }
