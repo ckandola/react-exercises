@@ -20,7 +20,9 @@ const LookupPane = () => {
 
     useEffect(() => {
         if (posCurrentItem) {
-            setPOSChoice('edit');
+            if (posChoice !== 'price') {
+                setPOSChoice('edit');
+            }
             setPOSLoadType(posCurrentItem.loadType);
             setPOSQuantity(posCurrentItem.quantity.toString());
             setPOSError('');
@@ -277,44 +279,55 @@ const LookupPane = () => {
                             </input>
                             <label htmlFor="account_choice4">Tax-Exempt</label>
                         </div>
-                        )
+                    )
+                    : posChoice === 'invoice' ? (
+                        <div>
+                            <h4>Invoice options</h4>
+                            <input 
+                                type="text"
+                                ref={inputRef}
+                                value={posTextEntry}
+                                onChange={handleTextChange}
+                            />
+                        </div>
+                    )
+                    
                     : (
-                            <div>
-                                <input 
-                                    type="text"
-                                    value={posTextEntry}
-                                    className={`${posError.length > 0 && !posError.includes('Quantity') ? 'pos-lookup-input-error' : ''}`}
-                                    onChange={handleTextChange}
-                                    placeholder={`${posChoice === 'search' ? 'Search by item number or description' : ''}`}
-                                    ref={inputRef}
-
-                                />
-                                <div className={`pos-lookup-search${posChoice === 'search' && posTextEntry.length > 0 ? '-show' : ''}`}>
-                                        
-                                    {posSearchFound === 'found' ? (
-                                        <div className="pos-lookup-search-inner">
-                                        {posSearchesState.map((searchResult, index) => {
-                                            return (
-                                                <SearchItem key={index} itemNum={searchResult.itemNum} description={searchResult.description} price={searchResult.price}
-                                                    onClick={() => {
-                                                        addItem(searchResult.itemNum, 1, searchResult.description, 'CW', Number(searchResult.price));
-                                                        setPOSSearchesState([]);
-                                                        resetContextVars();
-                                                    }}
-                                                />
-                                            );
-                                        })}
-                                        </div>
-                                    )
-                                    : posSearchFound === 'not found' ? (
-                                        <div>No results for {posTextEntry}</div>
-                                    )
-                                    : <div></div>
-                                    }
-                                </div>
+                        <div>
+                            <input 
+                                type="text"
+                                value={posTextEntry}
+                                className={`${posError.length > 0 && !posError.includes('Quantity') ? 'pos-lookup-input-error' : ''}`}
+                                onChange={handleTextChange}
+                                placeholder={`${posChoice === 'search' ? 'Search by item number or description' : ''}`}
+                                ref={inputRef}
+                            />
+                            <div className={`pos-lookup-search${posChoice === 'search' && posTextEntry.length > 0 ? '-show' : ''}`}>
+                                    
+                                {posSearchFound === 'found' ? (
+                                    <div className="pos-lookup-search-inner">
+                                    {posSearchesState.map((searchResult, index) => {
+                                        return (
+                                            <SearchItem key={index} itemNum={searchResult.itemNum} description={searchResult.description} price={searchResult.price}
+                                                onClick={() => {
+                                                    addItem(searchResult.itemNum, 1, searchResult.description, 'CW', Number(searchResult.price));
+                                                    setPOSSearchesState([]);
+                                                    resetContextVars();
+                                                }}
+                                            />
+                                        );
+                                    })}
+                                    </div>
+                                )
+                                : posSearchFound === 'not found' ? (
+                                    <div>No results for {posTextEntry}</div>
+                                )
+                                : <div></div>
+                                }
                             </div>
-                        )
-                    }
+                        </div>
+                    )
+                }
                 </div>
                 {(posChoice === 'entry' || posChoice === 'edit') && (
                     <div>
