@@ -14,7 +14,8 @@ const LookupPane = () => {
         posError, setPOSError,
         posTextEntry, setPOSTextEntry,
         posSearchesState, setPOSSearchesState,
-        posSearchFound, setPOSSearchFound
+        posSearchFound, setPOSSearchFound,
+        posInvoiceLoad, setPOSInvoiceLoad
     } = useGlobalContext();
     const inputRef = useRef();
 
@@ -67,9 +68,18 @@ const LookupPane = () => {
     }
 
     const handleItemEntry = () => {
+        if (posChoice === 'invoice') {
+            console.log(posLoadType)
+            setPOSInvoiceLoad(posLoadType);
+            setPOSLoadType(null);
+            setPOSChoice(null);
+            setPOSTextEntry('');
+        }
+
         if (posChoice !== 'edit' && posTextEntry.length === 0) {
             return;
         }
+
         if (posChoice === 'price') {
             for (let i = 0; i < catalog.length; i++) {
                 if (catalog[i]["item_num"] === posCurrentItem.itemNum) {
@@ -111,7 +121,7 @@ const LookupPane = () => {
         } else {
             for (let i = 0; i < catalog.length; i++) {
                 if (catalog[i]["item_num"] === posTextEntry) {
-                    addItem(posTextEntry, numQuantity, catalog[i]["desc"], posLoadType, Number(catalog[i]["price"]));
+                    addItem(posTextEntry, numQuantity, catalog[i]["desc"], posLoadType ? posLoadType: posInvoiceLoad, Number(catalog[i]["price"]));
                     i = catalog.length;
                     isValid = true;
                 }
@@ -150,7 +160,7 @@ const LookupPane = () => {
     const resetContextVars = () => {
         setPOSTextEntry('');
         setPOSCurrentItem(null);
-        setPOSLoadType('CW');
+        setPOSLoadType(null);
         setPOSQuantity('1');
         setPOSChoice(null);
         setPOSError('');
@@ -310,7 +320,7 @@ const LookupPane = () => {
                                         return (
                                             <SearchItem key={index} itemNum={searchResult.itemNum} description={searchResult.description} price={searchResult.price}
                                                 onClick={() => {
-                                                    addItem(searchResult.itemNum, 1, searchResult.description, 'CW', Number(searchResult.price));
+                                                    addItem(searchResult.itemNum, 1, searchResult.description, posInvoiceLoad, Number(searchResult.price));
                                                     setPOSSearchesState([]);
                                                     resetContextVars();
                                                 }}
@@ -329,24 +339,30 @@ const LookupPane = () => {
                     )
                 }
                 </div>
-                {(posChoice === 'entry' || posChoice === 'edit') && (
+                {(posChoice === 'entry' || posChoice === 'edit' || posChoice === 'invoice') && (
                     <div>
                         <div className="pos-lookup-item-edit1">
                             Select load type
-                            <button className={`${posLoadType === 'CW' ? 'pos-lookup-load-selected' : ''}`} type="button"
+                            <button className={`${posLoadType ? (posLoadType === 'CW' ? 'pos-lookup-load-selected' : '') : 
+                                posInvoiceLoad === 'CW' ? 'pos-lookup-load-selected' : ''}`} type="button"
                                 onClick={() => setPOSLoadType('CW')}>CW</button>
-                            <button className={`${posLoadType === 'NL' ? 'pos-lookup-load-selected' : ''}`} type="button"
+                            <button className={`${posLoadType ? (posLoadType === 'NL' ? 'pos-lookup-load-selected' : '') :
+                                posInvoiceLoad === 'NL' ? 'pos-lookup-load-selected': ''}`} type="button"
                                 onClick={() => setPOSLoadType('NL')}>NL</button>
-                            <button className={`${posLoadType === 'PL' ? 'pos-lookup-load-selected' : ''}`} type="button"
+                            <button className={`${posLoadType ? (posLoadType === 'PL' ? 'pos-lookup-load-selected' : '') :
+                                posInvoiceLoad === 'PL' ? 'pos-lookup-load-selected' : ''}`} type="button"
                                 onClick={() => setPOSLoadType('PL')}>PL</button>
-                            <button className={`${posLoadType === 'LD' ? 'pos-lookup-load-selected' : ''}`} type="button"
+                            <button className={`${posLoadType ? (posLoadType === 'LD' ? 'pos-lookup-load-selected' : '') :
+                                posInvoiceLoad === 'LD' ? 'pos-lookup-load-selected' : ''}`} type="button"
                                 onClick={() => setPOSLoadType('LD')}>LD</button>
                         </div>
-                        <div className="pos-lookup-item-edit2">
-                            Quantity
-                            <input type="text" value={posQuantity} onChange={e => setPOSQuantity(e.target.value)}
-                                className={`${posError.length > 0 && posError.includes('Quantity') ? 'pos-lookup-input-error' : ''}`}/>
-                        </div>
+                        {posChoice !== 'invoice' && (
+                            <div className="pos-lookup-item-edit2">
+                                Quantity
+                                <input type="text" value={posQuantity} onChange={e => setPOSQuantity(e.target.value)}
+                                    className={`${posError.length > 0 && posError.includes('Quantity') ? 'pos-lookup-input-error' : ''}`}/>
+                            </div>
+                        )}
                     </div>
                 )}
                 <button type="submit">{`${posChoice === 'edit' ? 'Save Changes' : posChoice === 'search' ? 'Search' : 'Submit'}`}</button>
