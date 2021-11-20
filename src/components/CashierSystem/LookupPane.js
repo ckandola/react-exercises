@@ -71,7 +71,6 @@ const LookupPane = () => {
 
     const handleItemEntry = () => {
         if (posChoice === 'invoice') {
-            console.log(posLoadType)
             setPOSInvoiceLoad(posLoadType);
             setPOSLoadType(null);
             setPOSChoice(null);
@@ -83,17 +82,10 @@ const LookupPane = () => {
         }
 
         if (posChoice === 'price') {
-            for (let i = 0; i < catalog.length; i++) {
-                if (catalog[i]["item_num"] === posCurrentItem.itemNum) {
-                    if (Math.abs(Number(catalog[i]["price"]) - Number(posTextEntry)) > 10) {
-                        setPOSError('You need a manager override.')
-                        // todo: set manager override message
-                    } else {
-                        posCartState[posCurrentItem.index] = {...posCurrentItem, price: Number(posTextEntry)}
-                        resetContextVars();
-                    }
-                    i = catalog.length;
-                }
+            if (Number(posTextEntry) < 0) {
+                setPOSError(`ERROR: Price must be a positive number.`);
+            } else {
+                handlePriceChangeSubmit();
             }
             return;
         }
@@ -157,6 +149,21 @@ const LookupPane = () => {
     const priceChange = () => {
         setPOSChoice('price');
         setPOSTextEntry(`${posCurrentItem.price}`);
+    }
+
+    const handlePriceChangeSubmit = () => {
+        for (let i = 0; i < catalog.length; i++) {
+            if (catalog[i]["item_num"] === posCurrentItem.itemNum) {
+                if (Math.abs(Number(catalog[i]["price"]) - Number(posTextEntry)) > 10) {
+                    setPOSError('You need a manager override.')
+                    // todo: set manager override message
+                } else {
+                    posCartState[posCurrentItem.index] = {...posCurrentItem, price: Number(posTextEntry)}
+                    resetContextVars();
+                }
+                i = catalog.length;
+            }
+        }
     }
 
     const resetContextVars = () => {
@@ -245,6 +252,7 @@ const LookupPane = () => {
                                 <div>New Price: </div>
                                 <input 
                                     type="number"
+                                    min="0.00"
                                     value={posTextEntry}
                                     ref={inputRef}
                                     onChange={handleTextChange}
