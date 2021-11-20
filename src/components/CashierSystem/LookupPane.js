@@ -23,6 +23,8 @@ const LookupPane = () => {
         if (posCurrentItem) {
             if (posChoice !== 'price') {
                 setPOSChoice('edit');
+            } else {
+                inputRef.current.focus();
             }
             setPOSLoadType(posCurrentItem.loadType);
             setPOSQuantity(posCurrentItem.quantity.toString());
@@ -244,6 +246,7 @@ const LookupPane = () => {
                                 <input 
                                     type="number"
                                     value={posTextEntry}
+                                    ref={inputRef}
                                     onChange={handleTextChange}
                                     className="pos-lookup-item-edit-price"
                                 />

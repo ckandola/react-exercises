@@ -7,7 +7,7 @@ import { useGlobalContext } from '../../context';
 
 const CashierSystem = () => {
     return (
-        <section>
+        <section className="pos-system">
             <div className="pos-system-main">
                 <Sidebar />
                 <Cart />

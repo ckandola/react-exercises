@@ -3,30 +3,38 @@
     --pos-sidebar-icon-color: #909090;
     --pos-gray: lightgray;
 }
-/* TODO: change display to fixed size when screen shrinks too much */
+
+.pos-system {
+    width: 95vw;
+    height: 70vh;
+    background-color: var(--pos-gray);
+}
+
 /* Main ----------------------------------------------------------------------- */
 .pos-system-main {
     display: flex;
-    margin: 2rem;
+    margin: 15px;
 }
 
 /* Sidebar ----------------------------------------------------------------------- */
 .pos-sidebar {
     display:block;
     position: absolute;
-    font-size: 2rem;
-    width:25vw;
+    top: 367px;
+    font-size: 32px;
+    width:350px;
+    z-index: 50;
 }
 
 .pos-sidebar-button p {
     display: inline;
-    padding-left: 0.5rem;
+    padding-left: 10px;
 }
 
 .pos-sidebar-icon {
     color: var(--pos-sidebar-icon-color);
     height:fit-content;
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
     width: fit-content !important;
 }
 
@@ -46,94 +54,97 @@
 
 .pos-sidebar-btn-basic {
     background-color: var(--pos-background);
-    padding: 0.2rem 0.5rem 0.5rem;
+    padding: 3.2px 8px 8px;
     width: 100%;
     display: block;
     border-color: transparent;
 }
 
-
-.pos-sidebar-btn-basic:active {
+.pos-sidebar-btn-basic:hover, .pos-sidebar-btn-basic:active {
     background-color: #e0d3d3;
 }
 
 .pos-sidebar-button {
-    font-size: 1.7rem;
+    font-size: 27px;
     transition: var(--transition);
     text-align: left;
 }
 
 .pos-sidebar-whats-new {
-    margin:1rem;
+    margin:30px;
     list-style-type:disc;
     text-align: left;
 }
 
 /* Cart ----------------------------------------------------------------------- */
 .pos-cart {
+    position: absolute;
+    top: 365px;
+    left: 0px;
     background-color: var(--pos-background);
     border: 2px var(--pos-gray) solid;
     border-right: none;
-    margin-left: 10%;
-    width: 70%;
+    margin-left: 140px;
+    width: 700px;
     display: block;
-    height: 65vh;
+    height: 500px;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .pos-cart-icon {
     position: absolute;
-    top: 75%;
-    left: 35%;
-    font-size: 5rem;
+    top: 200px;
+    left: 280px;
+    font-size: 80px;
     color: #90909050;
     z-index: 1;
 }
 
 .pos-cart-cart-items {
     position: relative;
-    height: 82%;
+    height: 400px;
     overflow-y: scroll;
 }
 
 .pos-cart-subtotal {
+    position: absolute;
     display: block;
     text-align: right;
-    position: absolute;
-    bottom: -15.25vh;
+    top: 400px;
     font-size: 5vh;
     background-color: #f0f0f0;
-    padding: 0.5rem 1vh;
-    width: 51.25%;
-    height: 6vw;
+    padding: 8px 50px;
+    width: 700px;
+    height: 98px;
     z-index: 100;
 }
 
 /* Cart Item ----------------------------------------------------------------------- */
 .pos-cart-item {
     position: relative;
-    margin: .5rem;
+    margin: 8px;
     border: 2px solid black;
     display: grid;
-    grid-template-columns: 35% 20% 20% 25%;
+    grid-template-columns: 240px 124px 124px 155px;
     background-color: white;
     z-index: 10;
 }
 
 .pos-cart-item-desc {
     font-weight: bold;
-    margin: 0.5rem;
+    margin: 8px;
 }
 
 .pos-cart-item-img {
     width: 50px;
     height: 50px;
-    margin: 0.75rem 1rem;
+    margin: 12px 16px;
     border: 1px solid black;
 }
 
 .pos-cart-item-num {
-    font-size: 2vw;
+    font-size: 18px;
     font-weight: bold;
     color: gray;
 }
@@ -143,7 +154,7 @@
 }
 
 .pos-cart-item-price {
-    font-size: 2.5vw;
+    font-size: 22.5px;
     align-self: center;
     justify-self: center;
     max-width: 100%;
@@ -153,28 +164,28 @@
 .pos-cart-item-price::after {
     content: 'each';
     display: block;
-    margin: 0 0.5rem;
-    font-size: 2vw;
+    margin: 0 8px;
+    font-size: 18px;
 }
 
 .pos-cart-item-quantity::before {
     content: 'x';
     font-weight: normal;
-    font-size: 3vw;
-    margin: 0 0.25rem 0 -1rem;
+    font-size: 27px;
+    margin: 0 4px 0 -16px;
 }
 
 .pos-cart-item-quantity {
     align-self: center;
     justify-self: center;
     font-weight: bold;
-    font-size: 3.5vw;
+    font-size: 31.5px;
     max-width: 100%;
     overflow-wrap: break-word;
 }
 
 .pos-cart-item-total {
-    font-size: 2.5vw;
+    font-size: 22.5px;
     justify-self: center;
     align-self: center;
     max-width: 100%;
@@ -185,24 +196,27 @@
     align-self: end;
     justify-self: center;
     background-color: var(--pos-gray);
-    padding: 0.5rem 1rem;
-    margin-bottom: 0.5rem;
+    padding: 8px 16px;
+    margin-bottom: 8px;
     font-weight: 600;
 }
 
 /* Lookup Pane ----------------------------------------------------------------------- */
 .pos-lookup-pane {
+    position: absolute;
+    top: 365px;
+    left: 838px;
     background-color: var(--pos-background);
     border: 2px var(--pos-gray) solid;
-    min-width: 35%;
-    height: 65vh;
+    width: 500px;
+    height: 500px;
 }
 
 .pos-lookup-btn-container-show {
-    margin: 1rem 0.7rem 0 0.7rem;
+    margin: 20px 25px 0 12px;
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 1rem 0.5rem;
+    gap: 20px 8px;
     align-items: center;
     justify-items: center;
 }
@@ -218,7 +232,7 @@
 
 .pos-lookup-form-show {
     text-align: center;
-    padding: 2rem;
+    padding: 32px;
 }
 
 .pos-lookup-grid {
@@ -228,23 +242,23 @@
 }
 
 .pos-lookup-back-btn {
-    margin: 0 0 4.5vh 0;
+    margin: 0 0 32px 0;
     position: relative;
 }
 
 .pos-lookup-form-show input {
     border-color: blue;
-    margin: 1rem auto;
-    width: 20vw;
+    margin: 16px auto;
+    width: 300px;
 }
 
 .pos-lookup-form-show button {
     background-color:white;
-    border-radius: 0.25rem;
+    border-radius: 4px;
     border-color: blue;
-    letter-spacing: 0.1rem;
+    letter-spacing: 1.6px;
     font-weight: 500;
-    margin-left: 0.5rem;
+    margin-left: 8px;
 }
 
 .pos-lookup-search {
@@ -252,10 +266,10 @@
 }
 
 .pos-lookup-search-show {
-    max-height: 40vh;
-    width: 25vw;
-    margin: -1rem auto auto 0.5rem;
-    /* overflow-y: scroll; */
+    height: 300px;
+    width: 425px;
+    margin: -8px auto auto 8px;
+    overflow-y: scroll;
     overflow-x: hidden;
 }
 
@@ -265,17 +279,17 @@
 
 .pos-search-item {
     display: flex;
-    margin: 0.25rem 0.25rem 0.5rem auto;
-    padding: 0.25rem;
-    background-color: white;
+    margin: 8px 4px 8px auto;
+    padding: 4px;
+    background-color: rgb(170, 155, 155);
     border: 2px solid blue;
-    height: 12vh;
+    height: 99px;
     overflow-x: hidden;
 }
 
 .pos-search-item-price {
     font-weight: bold;
-    padding: 0 0.5rem;
+    padding: 0 8px;
 }
 
 .pos-search-item-desc {
@@ -299,74 +313,61 @@
 .pos-lookup-btn {
     align-items: center;
     justify-items: center;
-    width: 5rem;
-    height: 5rem;
+    width: 90px;
+    height: 90px;
     background-color: var(--pos-gray);
     border-color: transparent;
 }
 
 .pos-lookup-icon {
-    font-size: 3.5rem;
+    font-size: 60px;
 }
 
 .pos-lookup-item-edit-btn {
-    left:-6vw;
-    top: -1vw;
+    left: -15px;
     position:relative;
 }
 
 .pos-lookup-item-edit-delete-btn {
-    top: -1vw;
-    left: 6vw;
+    left: 100px;
     position:relative;
 }
 
 .pos-lookup-item-edit-title {
     overflow-wrap: break-word;
-    max-width: 15vw;
-    max-height: 3rem;
+    max-width: 220px;
+    max-height: 48px;
 }
 
 .pos-lookup-item-edit-number {
-    width: 8vw;
+    width: 100px;
 }
 
 .pos-lookup-item-edit-price {
-    width: 50%;
-    margin: 1rem;
     position: relative;
-}
-
-/* where is this? */
-.pos-lookup-item-edit-price::before {
-    content: 'New Price:';
-    display: block;
-    font-size: 30rem;
-    z-index: 30;
-    color: black;
 }
 
 .pos-lookup-item-edit1 {
     align-items: center;
-    margin: 2rem 0.5rem;
+    margin: 32px 8px;
     display: flex;
 }
 
 .pos-lookup-item-edit1 button {
-    width: 3rem;
-    height: 3rem;
+    width: 48px;
+    height: 48px;
 }
 
 .pos-lookup-item-edit2 {
     align-items: center;
-    margin: 2rem 2rem;
+    margin: 32px 32px;
     display: flex;
 }
 
 .pos-lookup-item-edit2 input {
-    width: 3rem;
-    height: 3rem;
-    margin-left: 1rem;
+    width: 48px;
+    height: 48px;
+    margin-left: 16px;
 }
 
 .pos-lookup-load-selected {
@@ -376,14 +377,14 @@
 
 .pos-lookup-error {
     display: flex;
-    padding-left: 0.5rem;
+    padding-left: 8px;
     transition: var(--transition);
     /* transform: translateY(-50%); */
-    letter-spacing: .1rem;
+    letter-spacing: 1.6px;
     background: rgb(248, 65, 65);
 }
 
 /* TODO: look up how to do transitions & how to make height change w/text */
 .pos-lookup-error-msg {
-    width: 90%;
+    width: 100%;
 }
